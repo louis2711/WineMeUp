@@ -1,0 +1,33 @@
+<div class="container container-show-bottle">
+  <div class="subcontainer-show-bottle">
+    <div class="bottle-banner">
+      <% if @bottle.photo.attached? %>
+        <div class="bottle-banner bottle-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @bottle.photo.key %>')">
+          <div class="bottle-info">
+            <h1><%= @bottle.domain %></h1>
+            <p><%= @bottle.year %></p>
+          </div>
+        </div>
+      <% else %>
+        <div class="bottle-banner bottle-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('#’)">
+          <div class="bottle-info">
+            <h1><%= @bottle.domain %></h1>
+            <p><%= @bottle.year %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <br>
+  <div class="bottle-infos-show">
+    <p><span class="subtitle">Description:</span> <%= @bottle.description %></p>
+  </div>
+  <div class="bottle-price_range">
+    <p><span class="subtitle">Price:</span> <%= @bottle.price_range %></p>
+  </div>
+  <div class="banner-content">
+    <div class="show-buttons">
+      <%= link_to "< Back to Bottles", bottles_path, class: "btn" %>
+    </div>
+  </div>
+</div>

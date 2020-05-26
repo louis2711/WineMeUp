@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 require "open-uri"
 
 puts "cleaning the data base"
@@ -12,9 +13,15 @@ puts "cleaning the data base"
 # Bottle.destroy_all
 # Booking.destroy_all
 # User.destroy_all
+
+
+Question.destroy_all
+User.destroy_all
+
 puts "data base cleaned"
 
 puts "creating users"
+
 
 louis = User.create(email: "louis@lewagon.fr", first_name: "louis", last_name: "f", password: "testtest")
 louis.save!
@@ -22,11 +29,14 @@ louis.save!
 stan = User.create(email: "stan@lewagon.fr", first_name: "stan", last_name: "s", password: "testtest")
 stan.save!
 
+
 hughes = User.create(email: "hughes@lewagon.fr", first_name: "hughes", last_name: "s", password: "testtest")
 hughes.save!
 
+
 jeanne = User.create(email: "jeanne@lewagon.fr", first_name: "jeanne", last_name: "l", password: "testtest")
 jeanne.save!
+
 
 puts "creating bottles"
 amiral_de_beychevelle = Bottle.new(appellation: "Saint Julien", vineyard_name: "Amiral de Beychevelle", vintage: "2015", color: "Red", grape_variety: "57% Cabernet Sauvignon, 43% Merlot", aroma: "Fruity", characteristic: "Round and tannic", country: "France", region: "Bordeaux")
