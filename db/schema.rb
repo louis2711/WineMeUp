@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_26_100002) do
+
+ActiveRecord::Schema.define(version: 2020_05_26_101701) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.string "content"
+    t.string "tag"
+    t.bigint "question_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
 
   create_table "bottles", force: :cascade do |t|
     t.integer "year"
@@ -29,10 +40,10 @@ ActiveRecord::Schema.define(version: 2020_05_26_100002) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.string "question"
-    t.integer "answer_id"
+    t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "question_type"
   end
 
   create_table "users", force: :cascade do |t|
@@ -49,4 +60,5 @@ ActiveRecord::Schema.define(version: 2020_05_26_100002) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "questions"
 end
