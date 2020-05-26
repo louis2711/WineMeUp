@@ -1,8 +1,10 @@
 import Typed from "typed.js";
 
 const typed = new Typed('.element', {
-  strings: ["First sentence.", "Second sentence."],
-  typeSpeed: 30
+  strings: ["dinner", "your friend"],
+  typeSpeed: 50,
+  backSpeed: 50,
+  loop: true
 });
 
 export { typed };
