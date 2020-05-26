@@ -1,0 +1,33 @@
+<div class="container">
+  <h1 class="title-index-bottles">Bottles to Discover</h1>
+    <div class="searchbar">
+        <%= form_tag bottles_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find The Perfect Bottle"
+        %>
+      <%= submit_tag "Search", class: "btn btn-searchbar" %>
+      <% end %>
+    </div>
+  <div class="card-container cards">
+    <% @bottles.each do |bottle|  %>
+      <%= link_to bottle_path(bottle), style: 'text-decoration: none' do %>
+        <div class="card-bottle">
+          <% if bottle.photo.attached? %>
+            <%= cl_image_tag bottle.photo.key, height: 300, width: 400, crop: :fill %>
+          <% else  %>
+            <img src="#" alt="">
+          <% end %>
+          <div class="card-bottle-infos">
+            <div>
+              <h2><%= bottle.title %></h2>
+              <p class="bottle-domain"><%= bottle.domain %></p>
+            </div>
+            <h2 class="card-bottle-price_range"><%= bottle.price_range %></h2>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
