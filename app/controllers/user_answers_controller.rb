@@ -10,7 +10,8 @@ class UserAnswersController < ApplicationController
   private
 
   def user_answer_params
-    params.require(:user_answer).permit(:question_one, :question_two, :question_three, :question_four, :question_five, :question_six, :question_seven, :question_eight, :question_nine, :question_ten)
+    params.require(:user_answer).permit(:question_name, :question_gender, :question_age, :question_city, :question_personnality, :question_reason, :question_vineyard_management, :question_mind, :question_nine, :question_ten)
   end
 
 end
+
