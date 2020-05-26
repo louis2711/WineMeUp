@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_26_123518) do
+ActiveRecord::Schema.define(version: 2020_05_26_143828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,14 @@ ActiveRecord::Schema.define(version: 2020_05_26_123518) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "feedbacks", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "content"
+    t.bigint "bottle_id", null: false
+    t.index ["bottle_id"], name: "index_feedbacks_on_bottle_id"
+  end
+
   create_table "questions", force: :cascade do |t|
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
@@ -59,4 +67,5 @@ ActiveRecord::Schema.define(version: 2020_05_26_123518) do
   end
 
   add_foreign_key "answers", "questions"
+  add_foreign_key "feedbacks", "bottles"
 end

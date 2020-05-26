@@ -1,7 +1,7 @@
 class Bottle < ApplicationRecord
   include Filterable
   has_one_attached :photo
-  has_many :reviews
+  has_many :feedbacks
   scope :filter_by_year, -> (year) { where year: year }
   scope :filter_by_region, -> (region) { where region: region }
   scope :filter_by_domain, -> (domain) { where domain: domain }
