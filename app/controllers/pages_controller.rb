@@ -10,6 +10,10 @@ class PagesController < ApplicationController
     devise_parameter_sanitizer.permit(:account_update, keys: [:username])
   end
 
+  def quiz
+    @user_answer = UserAnswer.new
+  end
+
   def home
   end
 end

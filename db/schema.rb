@@ -10,11 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2020_05_26_143828) do
+
 
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
 
 
   create_table "bottles", force: :cascade do |t|
@@ -42,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_05_26_143828) do
 
 
   create_table "feedbacks", force: :cascade do |t|
+
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "content"
@@ -49,11 +53,22 @@ ActiveRecord::Schema.define(version: 2020_05_26_143828) do
     t.index ["bottle_id"], name: "index_feedbacks_on_bottle_id"
   end
 
-  create_table "questions", force: :cascade do |t|
-    t.string "content"
+  create_table "user_answers", force: :cascade do |t|
+    t.string "question_name"
+    t.string "question_gender"
+    t.string "question_age"
+    t.string "question_city"
+    t.string "question_personnality"
+    t.string "question_reason"
+    t.string "question_vineyard_management"
+    t.string "question_mind"
+    t.string "question_nine"
+    t.string "question_ten"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "question_type"
+
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_user_answers_on_user_id"
 
   end
 
@@ -71,6 +86,9 @@ ActiveRecord::Schema.define(version: 2020_05_26_143828) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "answers", "questions"
+
+  add_foreign_key "user_answers", "users"
+
   add_foreign_key "feedbacks", "bottles"
+
 end
