@@ -1,0 +1,15 @@
+
+<div class="container">
+  <h2 class="question-title">What's your name?</h2>
+  <%= simple_form_for(@user_answer) do |f| %>
+    <%= f.input :question_name, label: "What's your name?" %>
+    <%= f.input :question_gender, label: "Are you?", collection: ["Male", "Female", "Non-binary"] %>
+    <%= f.input :question_age, label: "How old are you?", collection: 18..99 %>
+    <%= f.input :question_city, label: "Which city do you live in?" %>
+    <%= f.input :question_personnality, label: "When it comes to wine, your are?", collection: ["Informed", "Curious", "Skeptical"] %>
+    <%= f.input :question_reason, label: "For which occasion?", collection: ["To impress your friends, To build a cellar", "To bring at a dinner", "Simply to drink by yoursel"] %>
+    <%= f.input :question_vineyard_management, label: "Do you have a preference concerning the vineyards management?", collection: ["Bio", "Vegan", "Natural", "No one cares"] %>
+    <%= f.input :question_mind, label: "What's on your mind?", collection: ["Discovery", "Specific need"] %>
+    <%= f.button :submit, "Done", class: "btn" %>
+  <% end %>
+</div>
