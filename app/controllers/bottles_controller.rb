@@ -3,6 +3,7 @@ class BottlesController < ApplicationController
 
   def index
     @bottles = Bottle.all
+    @bottles = Bottle.filter(params.slice(:year, :region, :domain, :price_range, :grapes, :color, :description, :typical_meal))
   end
 
   def show
@@ -15,3 +16,6 @@ private
     params.require(:bottle).permit(:year, :region, :domain, :price_range, :grapes, :color, :description)
   end
 end
+
+
+
