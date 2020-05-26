@@ -30,7 +30,7 @@ jeanne.save!
 
 puts "creating questions"
 
-name_question = Question.create(content: "What's your name?", question_type: "blank")
+name_question = Question.create(content: "What's your name?", question_type: "blank", )
 name_question.save!
 
 gender_question = Question.create(content: "Are you?", question_type: "simple_choice")
