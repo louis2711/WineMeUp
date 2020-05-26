@@ -1,4 +1,5 @@
 <div class="container">
+
   <h1 class="title-index-bottles">Bottles to Discover</h1>
     <div class="searchbar">
         <%= form_tag bottles_path, method: :get do %>
@@ -7,9 +8,11 @@
           class: "form-control",
           placeholder: "Find The Perfect Bottle"
         %>
+      <br>
       <%= submit_tag "Search", class: "btn btn-searchbar" %>
       <% end %>
     </div>
+  <br>
   <div class="card-container cards">
     <% @bottles.each do |bottle|  %>
       <%= link_to bottle_path(bottle), style: 'text-decoration: none' do %>
@@ -30,4 +33,36 @@
       <% end %>
     <% end %>
   </div>
+
+  <form>
+    <input type="text" name="year">
+  </form>
+  <br>
+  <form>
+    <input type="text" name="region">
+  </form>
+  <br>
+  <form>
+    <input type="text" name="domain">
+  </form>
+  <br>
+  <form>
+    <input type="text" name="price_range">
+  </form>
+  <br>
+  <form>
+    <input type="text" name="grapes">
+  </form>
+  <br>
+  <form>
+    <input type="text" name="color">
+  </form>
+  <br>
+  <form>
+    <input type="text" name="description">
+  </form>
+  <br>
+  <form>
+    <input type="text" name="typical_meal">
+  </form>
 </div>

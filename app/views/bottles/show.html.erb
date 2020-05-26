@@ -28,7 +28,20 @@
   <div class="banner-content">
     <div class="show-buttons">
       <%= link_to "< Back to Bottles", bottles_path, class: "btn" %>
-      <%= render 'bookingform' %>
     </div>
   </div>
+
+  <h4 class="feedbacks-titles"><strong>Feedbacks</strong></h4>
+  <% if @bottle.feedbacks.empty? %>
+    <p class="feedback-titles">Be the first to share your experience</p>
+  <% else %>
+    <ul class="list-group">
+      <% @bottle.feedbacks.each do |feedback| %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <%= feedback.content %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <%= render "feedbacks/new", bottle: @bottle, feedback: @feedback %>
 </div>

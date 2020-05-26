@@ -1,11 +1,33 @@
 
-<div class="home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80);">
+<div class="home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1588961276207-f5b36cedfb91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);">
   <div class="container">
-    <h1>Find the perfect for <span class="element"></span></h1>
-    <p>Find the bottle right bottle, selected just for you</p>
+    <h1>Wine up your <span class="element"></span></h1>
+    <p>Find the right wine, personalized just for you</p>
 
-  <a href="#" class="btn">Take the quiz</a>
+
+   <h2><%= link_to "Take the quiz", question_path(Question.first), class: "btn-quiz" %></h2>
+    <h3 class="browse"><%= link_to "Browse all products", "#", class: "link-quiz" %></h3>
+
+
   </div>
 </div>
 
+<div class="container home-cards-container ">
 
+  <h4 class="text-center"><strong>Wine doesn't have to be complicated.<strong></h4>
+  <h4 class="text-center"><strong>We make it easy.<strong></h4>
+  <div class="cards">
+    <div class="card-category">
+     <p>Tell us a little about yourself. We’re good listeners.</p>
+    </div>
+
+    <div class="card-category">
+      <p>Get your personalized recommendation. Backed by experts and delivered to you.</p>
+    </div>
+
+    <div class="card-category">
+     <p>Keep the conversation going. We’ll adjust as your preferences needs change.</p>
+    </div>
+  </div>
+
+</div>
