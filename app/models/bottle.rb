@@ -1,4 +1,5 @@
 class Bottle < ApplicationRecord
+
   include Filterable
   has_one_attached :photo
   has_many :reviews
@@ -10,4 +11,5 @@ class Bottle < ApplicationRecord
   scope :filter_by_color, -> (color) { where color: color }
   scope :filter_by_description, -> (description) { where description: description }
   scope :filter_by_typical_meal, -> (typical_meal) { where typical_meal: typical_meal }
+
 end

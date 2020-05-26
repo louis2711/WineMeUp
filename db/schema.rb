@@ -12,8 +12,23 @@
 
 ActiveRecord::Schema.define(version: 2020_05_26_123518) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+
+  create_table "bottles", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "appellation"
+    t.string "vineyard_name"
+    t.string "vintage"
+    t.string "color"
+    t.string "grape_variety"
+    t.string "aroma"
+    t.string "characteristic"
+    t.string "country"
+    t.string "region"
 
   create_table "answers", force: :cascade do |t|
     t.string "content"
@@ -24,24 +39,14 @@ ActiveRecord::Schema.define(version: 2020_05_26_123518) do
     t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
-  create_table "bottles", force: :cascade do |t|
-    t.integer "year"
-    t.string "region"
-    t.string "domain"
-    t.integer "price_range"
-    t.string "grapes"
-    t.string "color"
-    t.string "description"
-    t.string "typical_meal"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+
 
   create_table "questions", force: :cascade do |t|
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "question_type"
+
   end
 
   create_table "users", force: :cascade do |t|
