@@ -12,6 +12,9 @@ class PagesController < ApplicationController
 
   def quiz
     @personnalities = ['Informed', 'Curious', 'Skeptical']
+    @production_types = ['Bio', 'Vegan', 'Natural', 'Who cares?']
+    @reasons = ['Impress your friends', 'Complete my cellar', 'Bring to dinner', 'Discovery']
+    @explorations = ['Regions', 'Grape varieties', 'Aromes', 'Vintage']
     @user_answer = UserAnswer.new
   end
 
