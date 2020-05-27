@@ -1,3 +1,37 @@
+// Specific CSS for your home-page
+.home-banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 700px;
+
+  h1 {
+    margin: 0 auto;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: left;
+    width: 464px;
+  }
+
+  h3 {
+    color: white;
+
+  }
+
+  p {
+    font-size: 20px;
+    color: white;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    margin-top: 15px;
+    margin-bottom: 40px;
+  }
+}
+
+  .container {
+    text-align: center;
 
 .typed-title {
   margin-left: 30%;
@@ -15,8 +49,6 @@
   font-size: 37px;
   margin-bottom: 60px;
 }
-
-
 
 
 
@@ -45,13 +77,13 @@
   }
 
 
+
 .browse {
   margin-top: 20px;
   font-size: 14px;
 }
 
 .link-quiz {
-
   color: white;
   text-decoration-line: underline;
 

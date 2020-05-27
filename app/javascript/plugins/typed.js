@@ -7,4 +7,4 @@ const typed = new Typed('.element', {
   loop: true
 });
 
-export { typed };
+export { homeType };

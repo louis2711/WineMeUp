@@ -27,14 +27,14 @@ import "bootstrap";
 
 
 // Internal imports, e.g:
-import { typed } from '../plugins/typed.js';
+
+import { homeType } from '../plugins/typed.js';
 import { initUpdateNavbarOnScroll } from '../components/navbar.js';
+import { customChoices } from '../components/choices_quiz.js';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initUpdateNavbarOnScroll();
-  // typed();
-
+  homeType();
+  customChoices();
 });
-
-
