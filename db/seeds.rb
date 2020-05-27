@@ -15,7 +15,6 @@ puts "cleaning the data base"
 # User.destroy_all
 
 
-Question.destroy_all
 User.destroy_all
 
 puts "data base cleaned"
@@ -88,8 +87,5 @@ pecorino_volo = Bottle.new(appellation: "Terre Di Chieti", vineyard_name: "Pecor
 file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740599.png")
 pecorino_volo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 pecorino_volo.save!
-
-
-
 
 
