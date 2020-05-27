@@ -35,34 +35,25 @@
   </div>
 
   <form>
-    <input type="text" name="year">
-  </form>
-  <br>
-  <form>
-    <input type="text" name="region">
-  </form>
-  <br>
-  <form>
-    <input type="text" name="domain">
-  </form>
-  <br>
-  <form>
-    <input type="text" name="price_range">
-  </form>
-  <br>
-  <form>
-    <input type="text" name="grapes">
-  </form>
-  <br>
-  <form>
-    <input type="text" name="color">
-  </form>
-  <br>
-  <form>
-    <input type="text" name="description">
-  </form>
-  <br>
-  <form>
-    <input type="text" name="typical_meal">
+    <p>Vintage</p>
+    <input type="text" name="color" value="<%= params[:color] %>">
+    <br>
+    <input type="text" name="grape_variety" value="<%= params[:grape_variety] %>">
+    <br>
+    <input type="text" name="aroma" value="<%= params[:aroma] %>">
+    <br>
+    <input type="text" name="characteristics" value="<%= params[:characteristics] %>">
+    <br>
+    <input type="text" name="country" value="<%= params[:country] %>">
+    <br>
+    <input type="text" name="region" value="<%= params[:region] %>">
+    <br>
+    <input type="text" name="vintage" value="<%= params[:vintage] %>">
+    <br>
+    <input type="text" name="typical_meal" value="<%= params[:typical_meal] %>">
+    <br>
+    <input type="text" name="price_range" value="<%= params[:price_range] %>">
+    <br>
+    <input type="submit">
   </form>
 </div>

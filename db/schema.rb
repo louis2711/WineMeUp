@@ -10,22 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_26_152532) do
+ActiveRecord::Schema.define(version: 2020_05_27_132150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bottles", force: :cascade do |t|
-    t.integer "year"
     t.string "region"
     t.string "domain"
     t.integer "price_range"
-    t.string "grapes"
     t.string "color"
-    t.string "description"
     t.string "typical_meal"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "appellation"
+    t.integer "vintage"
+    t.integer "grape_variety"
+    t.string "characteristics"
+    t.string "aroma"
+    t.string "country"
+    t.string "label"
   end
 
   create_table "feedbacks", force: :cascade do |t|
