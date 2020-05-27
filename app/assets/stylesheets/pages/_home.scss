@@ -13,7 +13,6 @@
     font-weight: bold;
     text-align: left;
     width: 464px;
-
   }
 
   h3 {
@@ -34,43 +33,50 @@
   .container {
     text-align: center;
 
-  .card-category {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .cards {
-    display: flex;
-
+.typed-title {
+  margin-left: 30%;
+  text-align: left;
+  width: 690px;
 }
 
-.card-category {
-  color: black;
-}
 
-.text-center {
-  font-size: 35px;
+.home-first-title {
+  font-size: 37px;
   margin-top: 85px;
 }
 
-
-  .btn-quiz {
-    padding: .75em 2em;
-    border-radius: 40px;
-    font-size: 18px;
-    background-color: #474B00;
-    color: white;
-    border: solid 1px #474B00;
-    text-decoration: none;
-
-
-    &:hover {
-    transition-duration: 0.3s;
-    background-color: white;
-    color: #474B00;
-  }
+.home-second-title {
+  font-size: 37px;
+  margin-bottom: 60px;
 }
+
+
+
+  h1 {
+
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 50px;
+    font-weight: bold;
+
+
+  }
+
+  h3 {
+  color: white;
+
+  }
+
+  p {
+    font-size: 20px;
+    color: white;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    margin-top: 15px;
+    margin-bottom: 40px;
+  }
+
+
 
 .browse {
   margin-top: 20px;
@@ -78,12 +84,16 @@
 }
 
 .link-quiz {
-
   color: white;
+  text-decoration-line: underline;
 
-
+&:hover {
+  color: white;
+  text-decoration: none;
 }
 
 }
+
+
 
 
