@@ -15,7 +15,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <div class="col-xs-12">
       <div class="form-post">
           <%= simple_form_for(@user_answer) do |f| %>
           <div class="row">
@@ -33,9 +33,27 @@
             <%= f.input :question_city, label: "Which city do you live in?" %>
           </div>
           <p>When it comes to wine, you are:</p>
-          <div class="personnality-choices">
+          <div class="grouped-choices">
             <% @personnalities.each_with_index do |personnality, index| %>
             <%= f.input :question_personnality, input_html: {type: :radio, id: "personnality-#{index}"}, value: personnality, label: personnality, wraper_html: {class: "form-check"} %>
+            <% end %>
+          </div>
+          <p>Do you have a preference on how the wine is produced?</p>
+          <div class="grouped-choices">
+            <% @production_types.each_with_index do |production_type, index| %>
+            <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}"}, value: production_type, label: production_type, wraper_html: {class: "form-check"} %>
+            <% end %>
+          </div>
+          <p>For which occasion?</p>
+          <div class="grouped-choices">
+            <% @reasons.each_with_index do |reason, index| %>
+            <%= f.input :question_reason, input_html: {type: :radio, id: "reason-#{index}"}, value: reason, label: reason, wraper_html: {class: "form-check"} %>
+            <% end %>
+          </div>
+          <p>What should we explore ?</p>
+          <div class="grouped-choices">
+            <% @explorations.each_with_index do |exploration, index| %>
+            <%= f.input :question_exploration, input_html: {type: :radio, id: "exploration-#{index}"}, value: exploration, label: exploration, wraper_html: {class: "form-check"} %>
             <% end %>
           </div>
           <% end %>
