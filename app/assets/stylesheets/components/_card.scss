@@ -11,9 +11,43 @@
 
 }
 
-
-
 .card-category p{
   color: black;
   font-size: 15px;
+}
+
+.home-card {
+  margin-top: 0;
+  min-height: 488px;
+  padding: 32px 64px;
+  text-align: left;
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.home-card1 {
+  width: 60%;
+  margin-right: 5%;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+}
+
+.quote {
+
+  background: white;
+  margin-right: -90%;
+  z-index: 2;
+  position: relative;
+  padding-bottom: 249px;
+  padding-top: 100px;
+
+    p {
+      color: black;
+      padding-right: 20px;
+      padding-left: 50px;
+    }
+}
+
+.juxta {
+  margin-top: 85px;
 }
