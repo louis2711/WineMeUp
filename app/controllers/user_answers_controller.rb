@@ -1,6 +1,7 @@
 class UserAnswersController < ApplicationController
 
 
+
   def create
     @user_answer = UserAnswer.new(user_answer_params)
     @user_answer.user = current_user

@@ -14,8 +14,6 @@ puts "cleaning the data base"
 # Booking.destroy_all
 # User.destroy_all
 
-
-Question.destroy_all
 User.destroy_all
 
 puts "data base cleaned"

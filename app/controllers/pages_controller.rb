@@ -11,6 +11,7 @@ class PagesController < ApplicationController
   end
 
   def quiz
+    @personnalities = ['Informed', 'Curious', 'Skeptical']
     @user_answer = UserAnswer.new
   end
 
