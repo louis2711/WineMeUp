@@ -5,14 +5,14 @@
         <div class="bottle-banner bottle-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @bottle.photo.key %>')">
           <div class="bottle-info">
             <h1><%= @bottle.domain %></h1>
-            <p><%= @bottle.year %></p>
+            <p><%= @bottle.vintage %></p>
           </div>
         </div>
       <% else %>
         <div class="bottle-banner bottle-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('#’)">
           <div class="bottle-info">
             <h1><%= @bottle.domain %></h1>
-            <p><%= @bottle.year %></p>
+            <p><%= @bottle.vintage %></p>
           </div>
         </div>
       <% end %>
@@ -20,7 +20,7 @@
   </div>
   <br>
   <div class="bottle-infos-show">
-    <p><span class="subtitle">Description:</span> <%= @bottle.description %></p>
+    <p><span class="subtitle">Characteristics:</span> <%= @bottle.characteristics %></p>
   </div>
   <div class="bottle-price_range">
     <p><span class="subtitle">Price:</span> <%= @bottle.price_range %></p>
