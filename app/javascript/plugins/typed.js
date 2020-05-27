@@ -1,7 +1,7 @@
 import Typed from "typed.js";
 
 const typed = new Typed('.element', {
-  strings: ["skills", "taste"],
+  strings: ["experience","skills", "taste"],
   typeSpeed: 50,
   backSpeed: 50,
   loop: true

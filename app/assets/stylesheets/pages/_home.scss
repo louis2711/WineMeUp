@@ -1,43 +1,33 @@
-// Specific CSS for your home-page
-.home-banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-  height: 700px;
+
+.typed-title {
+  margin-left: 30%;
+  text-align: left;
+  width: 690px;
 }
 
-  .container {
-    text-align: center;
 
-  .card-category {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .cards {
-    display: flex;
-
-}
-
-.card-category {
-  color: black;
-}
-
-.text-center {
-  font-size: 35px;
+.home-first-title {
+  font-size: 37px;
   margin-top: 85px;
 }
 
+.home-second-title {
+  font-size: 37px;
+  margin-bottom: 60px;
+}
+
+.banner-box {
+  text-align: center;
+
+}
 
   h1 {
-    margin: 0 auto;
+
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     font-size: 50px;
     font-weight: bold;
-    text-align: left;
-    width: 464px;
+
 
   }
 
@@ -55,22 +45,6 @@
     margin-bottom: 40px;
   }
 
-  .btn-quiz {
-    padding: .75em 2em;
-    border-radius: 40px;
-    font-size: 18px;
-    background-color: #474B00;
-    color: white;
-    border: solid 1px #474B00;
-    text-decoration: none;
-
-
-    &:hover {
-    transition-duration: 0.3s;
-    background-color: white;
-    color: #474B00;
-  }
-}
 
 .browse {
   margin-top: 20px;
@@ -80,10 +54,15 @@
 .link-quiz {
 
   color: white;
+  text-decoration-line: underline;
 
-
+&:hover {
+  color: white;
+  text-decoration: none;
 }
 
 }
+
+
 
 

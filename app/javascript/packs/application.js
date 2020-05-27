@@ -25,12 +25,16 @@ require("channels")
 // External imports
 import "bootstrap";
 
+
 // Internal imports, e.g:
 import { typed } from '../plugins/typed.js';
+import { initUpdateNavbarOnScroll } from '../components/navbar.js';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  typed();
+  initUpdateNavbarOnScroll();
+  // typed();
+
 });
 
 
