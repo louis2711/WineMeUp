@@ -26,11 +26,13 @@
 }
 
 .grouped-choices .form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #b7b7b7;
   border-radius: 5px;
   opacity: .4;
   flex: 0 0 30%;
-  text-align: center;
   width: 30rem;
   height: 5rem;
   &:hover {
@@ -47,6 +49,7 @@
 .grouped-choices .form-group label {
   display: block;
   vertical-align: center;
+  margin-bottom: 0;
 }
 
 .grouped-choices .form-group input {
