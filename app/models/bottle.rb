@@ -4,9 +4,9 @@ class Bottle < ApplicationRecord
   has_one_attached :photo
   has_many :feedbacks
   scope :filter_by_color, -> (color) { where color: color }
-  scope :filter_by_grape_variety, -> (grape_variety) { where grape_variety: grape_variety }
+  scope :filter_by_grape_variety, -> (grape_variety) { where "grape_variety ilike ?", "%#{grape_variety}%" }
   scope :filter_by_aroma, -> (aroma) { where aroma: aroma }
-  scope :filter_by_characteristics, -> (characteristics) { where characteristics: characteristics }
+  scope :filter_by_characteristics, -> (characteristics) { where "characteristics ilike ?", "%#{characteristics}%" }
   scope :filter_by_country, -> (country) { where country: country }
   scope :filter_by_region, -> (region) { where region: region }
   scope :filter_by_vintage, -> (vintage) { where vintage: vintage }
