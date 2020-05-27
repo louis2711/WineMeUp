@@ -30,25 +30,25 @@
   }
 }
 
-  .container {
+.container {
     text-align: center;
 
-.typed-title {
-  margin-left: 30%;
-  text-align: left;
-  width: 690px;
-}
+  .typed-title {
+    margin-left: 30%;
+    text-align: left;
+    width: 690px;
+  }
 
 
-.home-first-title {
-  font-size: 37px;
-  margin-top: 85px;
-}
+  .home-first-title {
+    font-size: 37px;
+    margin-top: 85px;
+  }
 
-.home-second-title {
-  font-size: 37px;
-  margin-bottom: 60px;
-}
+  .home-second-title {
+    font-size: 37px;
+    margin-bottom: 60px;
+  }
 
 
 
@@ -76,21 +76,21 @@
     margin-bottom: 40px;
   }
 
+  .browse {
+    margin-top: 20px;
+    font-size: 14px;
+  }
 
-
-.browse {
-  margin-top: 20px;
-  font-size: 14px;
 }
 
 .link-quiz {
   color: white;
   text-decoration-line: underline;
 
-&:hover {
-  color: white;
-  text-decoration: none;
-}
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
 
 }
 
