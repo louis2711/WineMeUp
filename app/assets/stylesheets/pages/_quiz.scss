@@ -12,6 +12,15 @@
     margin-bottom: 50px;
     margin-top: 0px;
   }
+  .row {
+    margin-left: 0px;
+  }
+  label {
+    color: rgb(30, 30, 30);
+  }
+  p {
+    color: rgb(30, 30, 30);
+  }
 }
 
 // .user_answer_question_personnality {
@@ -26,15 +35,20 @@
 }
 
 .grouped-choices .form-group {
-  background: #b7b7b7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 2px solid $green;
+  color: black;
+  opacity: 1;
   border-radius: 5px;
-  opacity: .4;
   flex: 0 0 30%;
-  text-align: center;
   width: 30rem;
   height: 5rem;
+
   &:hover {
-    opacity: 1;
+    opacity: 0.6;
     cursor: pointer;
   }
   &.active {
@@ -47,9 +61,17 @@
 .grouped-choices .form-group label {
   display: block;
   vertical-align: center;
+  margin-bottom: 0;
 }
 
 .grouped-choices .form-group input {
   display: none;
 }
+
+.btn-submit-quiz {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
 
