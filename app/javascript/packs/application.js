@@ -30,11 +30,11 @@ import "bootstrap";
 
 import { homeType } from '../plugins/typed.js';
 import { initUpdateNavbarOnScroll } from '../components/navbar.js';
-import { customChoices } from '../components/choices_quiz.js';
+import { choicesCustom } from '../components/choices_quiz.js';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initUpdateNavbarOnScroll();
   homeType();
-  customChoices();
+  choicesCustom();
 });
