@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_05_28_151811) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,7 +47,7 @@ ActiveRecord::Schema.define(version: 2020_05_28_151811) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "appellation"
     t.integer "vintage"
-    t.integer "grape_variety"
+    t.string "grape_variety"
     t.string "characteristics"
     t.string "aroma"
     t.string "country"
