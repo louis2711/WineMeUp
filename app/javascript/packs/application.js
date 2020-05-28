@@ -31,10 +31,16 @@ import "bootstrap";
 import { homeType } from '../plugins/typed.js';
 import { initUpdateNavbarOnScroll } from '../components/navbar.js';
 import { choicesCustom } from '../components/choices_quiz.js';
+import { handleQuizAnswers } from '../components/handle_quiz_answers.js';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initUpdateNavbarOnScroll();
   homeType();
-  choicesCustom();
+  if (document.querySelector('.grouped-choices')) {
+    choicesCustom();
+  };
+  if (document.querySelector("#new_user_answer")){
+    handleQuizAnswers();
+  };
 });
