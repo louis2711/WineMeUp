@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :user_answers, only: [:create]
 
   get 'quiz', to:'pages#quiz'
+
 end
