@@ -24,6 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import "bootstrap-slider";
 
 
 // Internal imports, e.g:
