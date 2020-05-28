@@ -10,7 +10,7 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 100px;
 }
 
 .navbar-lewagon-white {
@@ -28,3 +28,29 @@
     color: black;
   }
 }
+
+.imageb {
+  display: none;
+}
+
+.navbar-lewagon.active.navbar-light {
+
+  .imageb {
+    display: inline;
+  }
+
+  .imagew {
+    display: none;
+  }
+}
+
+#navbarSupportedContent {
+  position: absolute;
+  right: 0;
+}
+
+.logo {
+    flex: 1;
+    text-align: center;
+}
+
