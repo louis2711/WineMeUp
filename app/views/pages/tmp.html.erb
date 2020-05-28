@@ -1,0 +1,32 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-post">
+        <%= simple_form_for(@user_answer) do |f| %>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="questionone" role="tabpanel" aria-labelledby="questionone">
+              <div class="row">
+                <div class="col-xs-4">
+                  <%= f.input :question_name, label: "What's your name?" %>
+                </div>
+                <div class="col-xs-4">
+                  <%= f.input :question_gender, label: "Are you:", collection: ["Male", "Female", "Non-binary"] %>
+                </div>
+                <div class="col-xs-4">
+                  <%= f.input :question_age, label: "How old are you?", collection: 18..99 %>
+                </div>
+                  <a class="nav-link active" id="questiontwo" data-toggle="tab" href="#questiontwo" role="tab" aria-controls="home" aria-selected="true">Next</a>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="questiontwo" role="tabpanel" aria-labelledby="profile-tab">
+              <%= f.input :question_city, label: "Which city do you live in?" %>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
