@@ -34,13 +34,161 @@
     <% end %>
   </div>
 
-  <div class="container-filters">
-    <form>
-      <div class="color-filter">
-        <p>Color</p>
-        <input type="text" name="color" value="<%= params[:color] %>">
+  <form action="">
+    <div class="container-filters">
+      <div class="filter-section">
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#color" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Color
+          </a>
+        </p>
+        <div class="collapse" id="color">
+          <div class="card card-body"> <%= params[:color] %>
+            <div><label><input type="checkbox" <%= "checked" if params[:color].to_a.include?("Red") %> name="color[]" value="Red"> Red</label></div>
+            <div><label><input type="checkbox" name="color[]" value="White">White</label></div>
+            <div><label><input type="checkbox" name="color[]" value="Rosé">Rosé</label></div>
+          </div>
+        </div>
+
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#grapes" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Grape Variety
+          </a>
+        </p>
+        <div class="collapse" id="grapes">
+          <div class="card card-body">
+            <li>Red</li>
+            <li>White</li>
+            <li>Rosé</li>
+          </div>
+        </div>
+
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#aromas" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Aromas
+          </a>
+        </p>
+        <div class="collapse" id="aromas">
+          <div class="card card-body">
+            <li>Fruity</li>
+            <li>Floral</li>
+            <li>Herbal</li>
+            <li>Woody</li>
+            <li>Spicy</li>
+            <li>Mineral</li>
+          </div>
+        </div>
+
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#characteristics" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Characteristics
+          </a>
+        </p>
+        <div class="collapse" id="characteristics">
+          <div class="card card-body">
+            <li>Light</li>
+            <li>Structured</li>
+            <li>Powerful</li>
+            <li>Acid</li>
+            <li>Low Tannins</li>
+            <li>High Tannins</li>
+            <li>Dry</li>
+            <li>Sweet</li>
+          </div>
+        </div>
+
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#country" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Country
+          </a>
+        </p>
+        <div class="collapse" id="country">
+          <div class="card card-body">
+            <li>France</li>
+            <li>Italy</li>
+            <li>Spain</li>
+            <li>Portugal</li>
+            <li>Switzerland</li>
+            <li>Germany</li>
+            <li>Greece</li>
+            <li>Chile</li>
+            <li>Argentina</li>
+            <li>South Africa</li>
+            <li>Australia</li>
+            <li>New Zealand</li>
+            <li>United States</li>
+          </div>
+        </div>
+
+        <!-- <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#region" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Region
+          </a>
+        </p>
+        <div class="collapse" id="region">
+          <div class="card card-body">
+            <li>Bordeaux</li>
+            <li>Piemonte</li>
+            <li>Cataluña</li>
+            <li>Lisboa</li>
+            <li>Valais</li>
+          </div>
+        </div> -->
+
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#vintage" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Vintage
+          </a>
+        </p>
+        <div class="collapse" id="vintage">
+          <div class="card card-body">
+            <% 1990.upto(2019) do |vintage| %>
+              <li><%= vintage %></li>
+            <% end %>
+          </div>
+        </div>
+
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#meal" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Typical Meal
+          </a>
+        </p>
+        <div class="collapse" id="meal">
+          <div class="card card-body">
+            <li>Red Meat</li>
+            <li>White Meat</li>
+            <li>Fish</li>
+            <li>Cheese</li>
+            <li>Dessert</li>
+          </div>
+        </div>
+
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#prange" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Price Range
+            <!-- barre de jauge -->
+          </a>
+        </p>
+        <div class="collapse" id="prange">
+          <div class="card card-body">
+            <li>$</li>
+            <li>$$</li>
+            <li>$$$</li>
+          </div>
+        </div>
       </div>
-      <br>
+    </div>
+    <br>
+    <div>
+      <input type="submit">
+    </div>
+  </form>
+</div>
+
+
+  <!-- <div class="container-filters">
+    <form>
+    <br>
       <div>
         <p>Grape Variety</p>
         <input type="text" name="grape_variety" value="<%= params[:grape_variety] %>">
@@ -84,6 +232,5 @@
       <div>
         <input type="submit">
       </div>
-    </form>
-  </div>
-</div>
+    </form> -->
+  <!-- </div> -->
