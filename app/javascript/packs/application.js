@@ -31,10 +31,14 @@ import "bootstrap";
 import { homeType } from '../plugins/typed.js';
 import { initUpdateNavbarOnScroll } from '../components/navbar.js';
 import { choicesCustom } from '../components/choices_quiz.js';
+import { handleQuizAnswers } from '../components/handle_quiz_answers.js';
+
+handleQuizAnswers();
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initUpdateNavbarOnScroll();
   homeType();
   choicesCustom();
+  handleQuizAnswers();
 });
