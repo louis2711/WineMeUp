@@ -1,7 +1,7 @@
 
 <div class="home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1588961276207-f5b36cedfb91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);">
-  <div class="container">
-    <h1>Wine up your <span class="element"></span></h1>
+  <div class="banner-box">
+    <h1 class="typed-title">Wine up your <span class="element"></span></h1>
     <p>Find the right wine, personalized just for you</p>
 
 
@@ -13,21 +13,37 @@
 </div>
 
 <div class="container home-cards-container ">
-
-  <h4 class="text-center"><strong>Wine doesn't have to be complicated.<strong></h4>
-  <h4 class="text-center"><strong>We make it easy.<strong></h4>
+  <div class="title-cards">
+  <h4 class="text-center home-first-title "><strong>Wine doesn't have to be complicated.<strong></h4>
+  <h4 class="text-center home-second-title"><strong>We make it easy.<strong></h4>
+  </div>
   <div class="cards">
-    <div class="card-category">
+    <div class="row">
+    <div class="card-category col-md-4 col-sm-12">
+      <%= image_tag "speak.png" %>
      <p>Tell us a little about yourself. We’re good listeners.</p>
     </div>
 
-    <div class="card-category">
+    <div class="card-category col-md-4 col-sm-12">
+      <%= image_tag "expert.png" %>
       <p>Get your personalized recommendation. Backed by experts and delivered to you.</p>
     </div>
 
-    <div class="card-category">
+    <div class="card-category col-md-4 col-sm-12">
+      <%= image_tag "message.png" %>
      <p>Keep the conversation going. We’ll adjust as your preferences needs change.</p>
     </div>
   </div>
-
 </div>
+</div>
+
+  <div class=" juxta d-flex">
+    <div class="home-card">
+       <div class="quote">
+          <p><em>“Qui sait déguster ne boit plus jamais de vin mais goûte des secrets.” - Salvador Dali</em></p>
+      </div>
+    </div>
+    <div class="home-card1">
+    </div>
+</div>
+

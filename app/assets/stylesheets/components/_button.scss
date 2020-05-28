@@ -11,3 +11,20 @@
     color: $green;
   }
 }
+
+.btn-quiz {
+    padding: .75em 2em;
+    border-radius: 40px;
+    font-size: 18px;
+    background-color: #B67A82;
+    color: white;
+    border: solid 1px #B67A82;
+    text-decoration: none;
+
+&:hover {
+    transition-duration: 0.3s;
+    background-color: white;
+    color: #B67A82;
+    text-decoration: none;
+  }
+  }
