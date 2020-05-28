@@ -53,7 +53,7 @@
           <p>What should we explore ?</p>
           <div class=“grouped-choices”>
             <% @explorations.each_with_index do |exploration, index| %>
-            <%= f.input :question_exploration, input_html: {type: :radio, id: “exploration-#{index}“}, value: exploration, label: exploration, wraper_html: {class: “form-check”} %>
+            <%= f.input :question_exploration, input_html: {type: :radio, id: "exploration-#{index}"}, value: exploration, label: exploration, wraper_html: {class: "form-check"} %>
             <% end %>
           </div>
           <% end %>
