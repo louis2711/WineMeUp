@@ -44,15 +44,15 @@ const handleQuizAnswers = () => {
   // const explorations = document.querySelectorAll('.explorations');
   // explorations.forEach((exploration) => {
   //   exploration.addEventListener("click", (event) => {
-  //     const depedency = event.currentTarget.dataset.dependent;
-  //     const explorationDependencies = document.querySelectorAll('.dependent-group');
+  //     const explorationDependencies = document.querySelectorAll('.dependent-group-leveltwo');
+  //     console.log(explorationDependencies);
   //     explorationDependencies.forEach((explorationDependency) => {
-  //       if (event.currentTarget.dataset.dependent != null) {
-  //         if(event.currentTarget.dataset.dependent === explorationDependency.dataset.question) {
-  //           explorationDependency.style.display = "flex";
-  //         } else {
-  //           explorationDependency.style.display = "none";
-  //         };
+  //       console.log(event.currentTarget.dataset.dependent);
+  //       console.log(explorationDependency.dataset.question);
+  //       if(event.currentTarget.dataset.dependent === explorationDependency.dataset.question) {
+  //         explorationDependency.style.display = "flex";
+  //       } else {
+  //         explorationDependency.style.display = "none";
   //       };
   //     });
   //   });
