@@ -1,0 +1,16 @@
+.container-filters {
+  display:flex;
+  justify-content:space-between;
+  text-align: left;
+  background-color: #e8e4e1;
+  margin-right: 990px;
+  margin-left: -70px;
+  p {
+    font-size: 10px;
+    color: black;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    margin-top: 3px;
+    margin-bottom: 1px;
+  }
+}
