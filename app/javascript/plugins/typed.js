@@ -1,7 +1,7 @@
 import Typed from "typed.js";
 
 const homeType = () => {
-  if ($('.element').length > 0){
+  if (document.querySelector('.element')){
     const typed = new Typed('.element', {
       strings: ["experience", "skills", "taste"],
       typeSpeed: 50,
