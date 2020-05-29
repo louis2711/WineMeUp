@@ -16,7 +16,6 @@ class ScrapVinFrMva
       domain = html_doc.search(".product-title h2")[0].text
       vintage = html_doc.search(".product-title").search("p").text.split(" - ")[0].to_i
       vintage = html_doc.search(".product-title").search("p").text.split(" - ")[0].to_i
-      price = html_doc.search(".price").search("h2").to_i
       grape_variety = html_doc.search(".wine-type p").text.strip.split("Al")[0].split("Cépage(s)")[1].strip
       characteristics = html_doc.search(".wine-taste p")[1].text.strip
       path_image = html_doc.search(".product-main-image img").attribute("src").value
