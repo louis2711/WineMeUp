@@ -1,14 +1,14 @@
 .btn {
-  background-color: $green;
-  color: white;
+  background-color: white;
+  color: $green;
   border-radius: 5px;
   padding: 8px 12px;
   border: solid 1px $green;
 
   &:hover {
     transition-duration: 0.3s;
-    background-color: white;
-    color: $green;
+    background-color: $green;
+    color: white;
   }
 }
 
