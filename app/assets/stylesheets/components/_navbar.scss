@@ -29,8 +29,16 @@
   }
 }
 
-.imageb {
+.imagew  {
   display: none;
+}
+
+.changenav .imageb  {
+  display: none;
+}
+
+.changenav .imagew  {
+  display: inline;
 }
 
 .navbar-lewagon.active.navbar-light {
