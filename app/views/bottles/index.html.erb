@@ -170,12 +170,9 @@
             Price Range
           </a>
         </p>
-        <div class="collapse <%= "show" if params[:price_range] %>" id="prange">
+        <div class="collapse <%= "show" if params[:price_range] && params[:price_range] != "2,2000"  %>" id="prange">
           <div class="card card-body">
             <b><%= params[:price_range] ? params[:price_range].to_s.split(",")[0] : "2" %></b> <input name="price_range" id="ex2" type="text" class="span2" value="" data-slider-min="2" data-slider-max="2000" data-slider-step="5" data-slider-value="<%= params[:price_range] ? "[#{params[:price_range]}]" : "[2, 2000]" %>" data-provide="slider" data-slider-tooltip="show"/> <b><%= params[:price_range] ? params[:price_range].to_s.split(",")[1] : "2000" %></b>
-            <!--  <li>$</li>
-            <li>$$</li>
-            <li>$$$</li> -->
           </div>
         </div>
       </div>

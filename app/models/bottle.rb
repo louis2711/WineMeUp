@@ -11,5 +11,11 @@ class Bottle < ApplicationRecord
   scope :filter_by_region, -> (region) { where region: region }
   scope :filter_by_vintage, -> (vintage) { where vintage: vintage }
   scope :filter_by_typical_meal, -> (typical_meal) { where typical_meal: typical_meal }
-  scope :filter_by_price_range, -> (price_range) { where price_range: price_range }
+  scope :filter_by_price_range, -> (price_range) {
+    if price_range == "2,2000"
+      all
+    else
+      where "price_range > ? and price_range < ?", price_range.split(",")[0], price_range.split(",")[1]
+    end
+    }
 end
