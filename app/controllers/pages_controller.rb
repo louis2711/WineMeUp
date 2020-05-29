@@ -24,6 +24,7 @@ class PagesController < ApplicationController
     @grape_whites = ['Chardonnay', 'Sauvignon', 'Chenin', 'Gewurztraminer', 'Reisling', 'Viognier', 'Ugni blanc', 'Pinot gris', 'Sémillion']
     @grape_ports = ['Touriga Franca', 'Tinta Roriz', 'Titan Barroca', 'Touriga Nacional', 'Tinto Cao']
     @grape_sparklings = ['Chardonnay', 'Pinot noir', 'Pinot Meunier', 'Macabeo', 'Monastrell', 'Garnacha', 'Muscat Blanc à Petits Grains', 'Glera', 'Riesling']
+    @meals = ['Red Meat', 'White Meat', 'Fish', 'Cheese', 'Dessert']
     @user_answer = UserAnswer.new
   end
 

@@ -97,3 +97,4 @@ pecorino_volo = Bottle.new(appellation: "Terre Di Chieti", domain: "Pecorino Vol
 file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740599.png")
 pecorino_volo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 pecorino_volo.save!
+
