@@ -24,6 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import "bootstrap-slider";
 
 
 // Internal imports, e.g:
@@ -33,12 +34,14 @@ import { initUpdateNavbarOnScroll } from '../components/navbar.js';
 import { choicesCustom } from '../components/choices_quiz.js';
 import { handleQuizAnswers } from '../components/handle_quiz_answers.js';
 
-handleQuizAnswers();
-
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initUpdateNavbarOnScroll();
   homeType();
-  choicesCustom();
-  handleQuizAnswers();
+  if (document.querySelector('.grouped-choices')) {
+    choicesCustom();
+  };
+  if (document.querySelector("#new_user_answer")){
+    handleQuizAnswers();
+  };
 });

@@ -41,22 +41,22 @@ const handleQuizAnswers = () => {
       });
     });
   });
-  // const explorations = document.querySelectorAll('.explorations');
-  // explorations.forEach((exploration) => {
-  //   exploration.addEventListener("click", (event) => {
-  //     const depedency = event.currentTarget.dataset.dependent;
-  //     const explorationDependencies = document.querySelectorAll('.dependent-group');
-  //     explorationDependencies.forEach((explorationDependency) => {
-  //       if (event.currentTarget.dataset.dependent != null) {
-  //         if(event.currentTarget.dataset.dependent === explorationDependency.dataset.question) {
-  //           explorationDependency.style.display = "flex";
-  //         } else {
-  //           explorationDependency.style.display = "none";
-  //         };
-  //       };
-  //     });
-  //   });
-  // });
+  const colours = document.querySelectorAll('.colours');
+  colours.forEach((colour) => {
+    colour.addEventListener("click", (event) => {
+      const colourDependencies = document.querySelectorAll('.dependent-group-level-three-colours');
+      console.log(colourDependencies);
+      colourDependencies.forEach((colourDependency) => {
+        console.log(event.currentTarget.dataset.dependent);
+        console.log(colourDependency.dataset.question);
+        if(event.currentTarget.dataset.dependent === colourDependency.dataset.question) {
+          colourDependency.style.display = "flex";
+        } else {
+          colourDependency.style.display = "none";
+        };
+      });
+    });
+  });
 };
 
 
