@@ -1,47 +1,49 @@
 <div class="container container-show-bottle">
   <div class="subcontainer-show-bottle">
-    <div class="bottle-banner">
-      <% if @bottle.photo.attached? %>
-        <div class="bottle-banner bottle-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @bottle.photo.key %>')">
-          <div class="bottle-info">
-            <h1><%= @bottle.domain %></h1>
-            <p><%= @bottle.vintage %></p>
-          </div>
-        </div>
-      <% else %>
-        <div class="bottle-banner bottle-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('#’)">
-          <div class="bottle-info">
-            <h1><%= @bottle.domain %></h1>
-            <p><%= @bottle.vintage %></p>
-          </div>
-        </div>
-      <% end %>
+    <% if @bottle.photo.attached? %>
+      <%= cl_image_tag @bottle.photo.key, height: 400 %>
+    <% else %>
+      <%= image_tag "/#" %>
+    <% end %>
+  </div>
+  <div class="product-info">
+    <div class="bottle-info">
+      <h1><%= @bottle.domain %><%= @bottle.label %></h1>
+      <h2><%= @bottle.appellation %><%= " - " %><%= @bottle.region %></h2>
+      <h3><%= @bottle.vintage %></h3>
     </div>
-  </div>
-  <br>
-  <div class="bottle-infos-show">
-    <p><span class="subtitle">Characteristics:</span> <%= @bottle.characteristics %></p>
-  </div>
-  <div class="bottle-price_range">
-    <p><span class="subtitle">Price:</span> <%= @bottle.price_range %></p>
-  </div>
-  <div class="banner-content">
-    <div class="show-buttons">
-      <%= link_to "< Back to Bottles", bottles_path, class: "btn" %>
+    <br>
+    <div class="bottle-infos-show">
+      <p><%= @bottle.color %></p>
+      <p><%= @bottle.characteristics %></p>
+      <p><%= @bottle.aroma %></p>
     </div>
+    <div class="bottle-price_range">
+      <u>Price: <%= @bottle.price_range %></u>
+    </div>
+    <div class="other-info">
+      <u>Additionnal information:</u>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. </p>
+    </div>
+    <div class="banner-content">
+      <div class="show-buttons">
+        <%= link_to "< Back to Bottles", bottles_path, class: "btn" %>
+      </div>
+    </div>
+<!--
+    <h4 class="feedbacks-titles"><strong>Feedbacks</strong></h4>
+    <% if @bottle.feedbacks.empty? %>
+      <p class="feedback-titles">Be the first to share your experience</p>
+    <% else %>
+      <ul class="list-group">
+        <% @bottle.feedbacks.each do |feedback| %>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <%= feedback.content %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+    <%= render "feedbacks/new", bottle: @bottle, feedback: @feedback %>
+  -->
   </div>
-
-  <h4 class="feedbacks-titles"><strong>Feedbacks</strong></h4>
-  <% if @bottle.feedbacks.empty? %>
-    <p class="feedback-titles">Be the first to share your experience</p>
-  <% else %>
-    <ul class="list-group">
-      <% @bottle.feedbacks.each do |feedback| %>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <%= feedback.content %>
-        </li>
-      <% end %>
-    </ul>
-  <% end %>
-  <%= render "feedbacks/new", bottle: @bottle, feedback: @feedback %>
 </div>
