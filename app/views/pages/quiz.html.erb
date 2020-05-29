@@ -40,45 +40,108 @@
             </div>
             <div class="grouped-choices dependent-group" data-question='exploration'>
               <p>What should we explore ?</p>
-              <% @explorations.each_with_index do |exploration, index| %>
-                <% if exploration == 'Regions' %>
-                  <% dependent = 'regions-list' %>
-                <% elsif exploration == 'Grape varieties' %>
-                  <% dependent = 'colours-list' %>
-                <% elsif exploration == 'Aromas' %>
-                  <% dependent = 'aromas-list' %>
-                <% else %>
-                  <% dependent = 'vintage-range' %>
+              <div class="grouped-choices">
+                <% @explorations.each_with_index do |exploration, index| %>
+                  <% if exploration == 'Regions' %>
+                    <% dependent = 'regions-list' %>
+                  <% elsif exploration == 'Grape varieties' %>
+                    <% dependent = 'colours-list' %>
+                  <% elsif exploration == 'Aromas' %>
+                    <% dependent = 'aromas-list' %>
+                  <% else %>
+                    <% dependent = 'vintage-range' %>
+                  <% end %>
+                  <%= f.input :question_exploration, input_html: {type: :radio, id: "exploration-#{index}"}, value: exploration, label: exploration, wrapper_html: {class: "form-check explorations", data: {dependent:dependent}} %>
                 <% end %>
-                <%= f.input :question_exploration, input_html: {type: :radio, id: "exploration-#{index}"}, value: exploration, label: exploration, wrapper_html: {class: "form-check explorations", data: {dependent:dependent}} %>
-              <% end %>
+              </div>
             </div>
             <div class="grouped-choices dependent-group dependent-group-leveltwo" data-question='regions-list'>
-              <% @regions.each_with_index do |region, index| %>
-                <%= f.input :regions_list, input_html: {type: :radio, id: "region-#{index}"}, value: region, label: region, wrapper_html: {class: "form-check"} %>
-              <% end %>
+              <p>Which region?</p>
+              <div class="grouped-choices">
+                <% @regions.each_with_index do |region, index| %>
+                  <%= f.input :regions_list, input_html: {type: :radio, id: "region-#{index}"}, value: region, label: region, wrapper_html: {class: "form-check"} %>
+                <% end %>
+              </div>
             </div>
             <div class="grouped-choices dependent-group dependent-group-leveltwo" data-question='colours-list'>
-              <% @colours.each_with_index do |colour, index| %>
-                <%= f.input :question_colour, input_html: {type: :radio, id: "colour-#{index}"}, value: colour, label: colour, wrapper_html: {class: "form-check"} %>
-              <% end %>
+              <p>Which type of wine?</p>
+              <div class="grouped-choices">
+                <% @colours.each_with_index do |colour, index| %>
+                  <% if colour == 'Red' %>
+                    <% dependent = 'red-list' %>
+                  <% elsif colour == 'Rosé' %>
+                    <% dependent = 'rose-list' %>
+                  <% elsif colour == 'Sweet' %>
+                    <% dependent = 'sweet-list' %>
+                  <% elsif colour == 'White' %>
+                    <% dependent = 'white-list' %>
+                  <% elsif colour == 'Port' %>
+                    <% dependent = 'port-list' %>
+                  <% else %>
+                    <% dependent = 'sparkling-list' %>
+                  <% end %>
+                  <%= f.input :question_colour, input_html: {type: :radio, id: "colour-#{index}"}, value: colour, label: colour, wrapper_html: {class: "form-check colours", data: {dependent:dependent}} %>
+                <% end %>
+              </div>
             </div>
             <div class="grouped-choices dependent-group dependent-group-leveltwo" data-question='aromas-list'>
-              <% @aromas.each_with_index do |aroma, index| %>
-                <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}"}, value: aroma, label: aroma, wrapper_html: {class: "form-check"} %>
-              <% end %>
+              <p>Which aroma?</p>
+              <div class="grouped-choices">
+                <% @aromas.each_with_index do |aroma, index| %>
+                  <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}"}, value: aroma, label: aroma, wrapper_html: {class: "form-check"} %>
+                <% end %>
+              </div>
             </div>
-            <div class="grouped-choices dependent-group dependent-group-leveltwo">
+            <div class="dependent-group dependent-group-leveltwo" data-question='vintage-range'>
               <%= f.input :vintage_range, label: "Select a year", collection: 1970..2020 %>
-            <div class="grouped-choices grape-variety-choice grape-variety-red dependent-group">
-              <% @grape_reds.each_with_index do |grape_red, index| %>
-                <%= f.input :question_grape_red, input_html: {type: :radio, id: "grape-red-#{index}"}, value: grape_red, label: grape_red, wrapper_html: {class: "form-check"} %>
-              <% end %>
             </div>
-            <div class="grouped-choices grape-variety-choice grape-variety-rose dependent-group">
-              <% @grape_roses.each_with_index do |grape_rose, index| %>
-                <%= f.input :question_grape_rose, input_html: {type: :radio, id: "grape-rose-#{index}"}, value: grape_rose, label: grape_rose, wrapper_html: {class: "form-check"} %>
-              <% end %>
+            <div class="grouped-choices grape-variety-choice grape-variety-red dependent-group dependent-group-level-three-colours" data-question="red-list">
+              <p>Which variety?</p>
+              <div class="grouped-choices">
+                <% @grape_reds.each_with_index do |grape_red, index| %>
+                  <%= f.input :question_grape_red, input_html: {type: :radio, id: "grape-red-#{index}"}, value: grape_red, label: grape_red, wrapper_html: {class: "form-check"} %>
+                <% end %>
+              </div>
+            </div>
+            <div class="grouped-choices grape-variety-choice grape-variety-rose dependent-group dependent-group-level-three-colours" data-question="rose-list">
+              <p>Which variety?</p>
+              <div class="grouped-choices">
+                <% @grape_roses.each_with_index do |grape_rose, index| %>
+                  <%= f.input :question_grape_rose, input_html: {type: :radio, id: "grape-rose-#{index}"}, value: grape_rose, label: grape_rose, wrapper_html: {class: "form-check"} %>
+                <% end %>
+              </div>
+            </div>
+            <div class="grouped-choices grape-variety-choice grape-variety-sweet dependent-group dependent-group-level-three-colours" data-question="sweet-list">
+              <p>Which variety?</p>
+              <div class="grouped-choices">
+                <% @grape_sweets.each_with_index do |grape_sweet, index| %>
+                  <%= f.input :question_grape_sweet, input_html: {type: :radio, id: "grape-sweet-#{index}"}, value: grape_sweet, label: grape_sweet, wrapper_html: {class: "form-check"} %>
+                <% end %>
+              </div>
+            </div>
+            <div class="grouped-choices grape-variety-choice grape-variety-white dependent-group dependent-group-level-three-colours" data-question="white-list">
+              <p>Which variety?</p>
+              <div class="grouped-choices">
+                <% @grape_whites.each_with_index do |grape_white, index| %>
+                  <%= f.input :question_grape_white, input_html: {type: :radio, id: "grape-white-#{index}"}, value: grape_white, label: grape_white, wrapper_html: {class: "form-check"} %>
+                <% end %>
+              </div>
+            </div>
+            <div class="grouped-choices grape-variety-choice grape-variety-port dependent-group dependent-group-level-three-colours" data-question="port-list">
+              <p>Which variety?</p>
+              <div class="grouped-choices">
+                <% @grape_ports.each_with_index do |grape_port, index| %>
+                  <%= f.input :question_grape_port, input_html: {type: :radio, id: "grape-port-#{index}"}, value: grape_port, label: grape_port, wrapper_html: {class: "form-check"} %>
+                <% end %>
+              </div>
+            </div>
+            <div class="grouped-choices grape-variety-choice grape-variety-sparkling dependent-group dependent-group-level-three-colours" data-question="sparkling-list">
+              <p>Which variety?</p>
+              <div class="grouped-choices">
+                <% @grape_sparklings.each_with_index do |grape_sparkling, index| %>
+                  <%= f.input :question_grape_sparkling, input_html: {type: :radio, id: "grape-sparkling-#{index}"}, value: grape_sparkling, label: grape_sparkling, wrapper_html: {class: "form-check"} %>
+                <% end %>
+              </div>
             </div>
             <div class="btn-submit-quiz">
               <%= f.button :submit, "Done", class: "btn" %>
