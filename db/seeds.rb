@@ -37,14 +37,7 @@ jeanne = User.create(email: "jeanne@lewagon.fr", first_name: "jeanne", last_name
 jeanne.save!
 
 
-puts "creating bottles"
-infos_bottle = ScrapVinFrMva.new.call
-infos_bottle.each do |bottle|
-  bottle_temp = Bottle.new(appellation: "", domain: bottle[:domain], vintage: bottle[:vintage], color: "", grape_variety: bottle[:grape_variety], aroma: "", characteristics: bottle[:characteristics], country: bottle[:country], region: bottle[:region])
-  file = URI.open(bottle[:url_img])
-  bottle_temp.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-  bottle_temp.save!
-end
+
 
 amiral_de_beychevelle = Bottle.new(appellation: "Saint Julien", domain: "Amiral de Beychevelle", vintage: "2015", color: "Red", grape_variety: "57% Cabernet Sauvignon, 43% Merlot", aroma: "Fruity", characteristics: "Round and tannic", country: "France", region: "Bordeaux")
 file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/739231.png")
@@ -82,13 +75,13 @@ chateau_des_tours.photo.attach(io: file, filename: "nes.png", content_type: "ima
 chateau_des_tours.save!
 
 
-chardonnay_torrontes = Bottle.new(appellation: "Fantelli", domain: "Chardonnay Torrontes", vintage: "2019", color: "White", grape_variety: "55% Chardonnay, 45% Torrontes", aroma: "Fruity", characteristics: "Vivid and dry", country: "Argentina", region: "")
+chardonnay_torrontes = Bottle.new(appellation: "Fantelli", domain: "Chardonnay Torrontes", vintage: "2019", color: "White", grape_variety: "55% Chardonnay, 45% Torrontes", aroma: "Fruity", characteristics: "Vivid and dry", country: "Argentina", region: "Argentina")
 file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/743199.png")
 chardonnay_torrontes.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 chardonnay_torrontes.save!
 
 
-piedra_negra = Bottle.new(appellation: "Piedra Negra Alta Collection", domain: "Piedra Negra", vintage: "2019", color: "Red", grape_variety: "Malbec", aroma: "Fruity", characteristics: "Soft and velvety", country: "Argentina", region: "Mendoza")
+piedra_negra = Bottle.new(appellation: "Piedra Negra", domain: "Piedra Negra", vintage: "2019", color: "Red", grape_variety: "Malbec", aroma: "Fruity", characteristics: "Soft and velvety", country: "Argentina", region: "Mendoza")
 file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/744118.png")
 piedra_negra.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 piedra_negra.save!
@@ -104,3 +97,4 @@ pecorino_volo = Bottle.new(appellation: "Terre Di Chieti", domain: "Pecorino Vol
 file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740599.png")
 pecorino_volo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 pecorino_volo.save!
+

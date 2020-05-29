@@ -161,79 +161,37 @@
         <input type="submit">
       </div>
     </form>
-
+    
     <div class="card-container cards">
-      <div class="row">
-        <% @bottles.each do |bottle|  %>
-          <div class="col-md-6">
-            <%= link_to bottle_path(bottle), style: 'text-decoration: none' do %>
-              <div class="card-bottle">
+      <% @bottles.each do |bottle|  %>
+        <%= link_to bottle_path(bottle), style: 'text-decoration: none' do %>
+          <div class="card-bottle-index">
+            <div class="card-bottle-index-img">
+              <div class="img-bottle-index">
                 <% if bottle.photo.attached? %>
-                  <%= cl_image_tag bottle.photo.key, class: "card-img", crop: :fill %>
+                  <%= cl_image_tag bottle.photo.key, crop: :fill %>
                 <% else  %>
                   <img src="#" alt="">
                 <% end %>
-                <div class="card-bottle-infos">
-                  <div>
-                    <h4><%= bottle.appellation %></h4>
-                    <p class="bottle-domain"><%= bottle.domain %></p>
-                  </div>
-                  <h5 class="card-bottle-price_range"><%= bottle.price_range %> $</h5>
-                </div>
               </div>
-            <% end %>
+            </div>
+            <div class="card-bottle-index-infos">
+              <div>
+                <h2><%= bottle.appellation %></h2>
+                <p class="bottle-domain"><%= bottle.domain %></p>
+              </div>
+             </div>
+            <div class="card-footer-country-year">
+              <div class="card-footer-country">
+                <p><%= bottle.region.upcase %></p>
+              </div>
+              <div class="card-bottle-year">
+                <p><%= bottle.vintage %></p>
+              </div>
+            </div>
           </div>
         <% end %>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
-
-  <!-- <div class="container-filters">
-    <form>
-    <br>
-      <div>
-        <p>Grape Variety</p>
-        <input type="text" name="grape_variety" value="<%= params[:grape_variety] %>">
-      </div>
-      <br>
-      <div>
-        <p>Aroma</p>
-        <input type="text" name="aroma" value="<%= params[:aroma] %>">
-      </div>
-      <br>
-      <div>
-        <p>Characteristics</p>
-        <input type="text" name="characteristics" value="<%= params[:characteristics] %>">
-      </div>
-      <br>
-      <div>
-        <p>Country</p>
-        <input type="text" name="country" value="<%= params[:country] %>">
-      </div>
-      <br>
-      <div>
-        <p>Region</p>
-        <input type="text" name="region" value="<%= params[:region] %>">
-      </div>
-      <br>
-      <div>
-        <p>Vintage</p>
-        <input type="text" name="vintage" value="<%= params[:vintage] %>">
-      </div>
-      <br>
-      <div>
-        <p>Typical Meal</p>
-        <input type="text" name="typical_meal" value="<%= params[:typical_meal] %>">
-      </div>
-      <br>
-      <div>
-        <p>Price Range</p>
-        <input type="text" name="price_range" value="<%= params[:price_range] %>">
-      </div>
-      <br>
-      <div>
-        <input type="submit">
-      </div>
-    </form> -->
-  <!-- </div> -->
