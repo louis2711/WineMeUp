@@ -29,6 +29,7 @@ class PagesController < ApplicationController
   end
 
   def home
+    @changenav = true
   end
 
 end
