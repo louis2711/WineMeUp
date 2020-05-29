@@ -37,14 +37,7 @@ jeanne = User.create(email: "jeanne@lewagon.fr", first_name: "jeanne", last_name
 jeanne.save!
 
 
-puts "creating bottles"
-infos_bottle = ScrapVinFrMva.new.call
-infos_bottle.each do |bottle|
-  bottle_temp = Bottle.new(appellation: "", domain: bottle[:domain], vintage: bottle[:vintage], color: "", grape_variety: bottle[:grape_variety], aroma: "", characteristics: bottle[:characteristics], country: bottle[:country], region: bottle[:region])
-  file = URI.open(bottle[:url_img])
-  bottle_temp.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-  bottle_temp.save!
-end
+
 
 amiral_de_beychevelle = Bottle.new(appellation: "Saint Julien", domain: "Amiral de Beychevelle", vintage: "2015", color: "Red", grape_variety: "57% Cabernet Sauvignon, 43% Merlot", aroma: "Fruity", characteristics: "Round and tannic", country: "France", region: "Bordeaux")
 file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/739231.png")
