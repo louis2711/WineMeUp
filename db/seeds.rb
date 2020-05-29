@@ -45,7 +45,7 @@ amiral_de_beychevelle.photo.attach(io: file, filename: "nes.png", content_type: 
 amiral_de_beychevelle.save!
 
 
-chateau_du_tertre = Bottle.new(appellation: "Margaux", domain: "Château du Tertre", vintage: "2016", color: "Red", grape_variety: "75% Cabernet Sauvignon, 10% Merlot, 10% Cabernet Franc, 5% Petit Verdot", aroma: "Wooded", characteristics: "Soft and velvety", country: "France", region: "Bordeaux")
+chateau_du_tertre = Bottle.new(appellation: "Margaux", domain: "Château du Tertre", vintage: "2016", color: "Red", grape_variety: "75% Cabernet Sauvignon, 10% Merlot, 10% Cabernet Franc, 5% Petit Verdot", aroma: "Woody", characteristics: "Soft and velvety", country: "France", region: "Bordeaux")
 file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/734591.png")
 chateau_du_tertre.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 chateau_du_tertre.save!
