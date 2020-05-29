@@ -161,7 +161,7 @@
         <input type="submit">
       </div>
     </form>
-    
+
     <div class="card-container cards">
       <% @bottles.each do |bottle|  %>
         <%= link_to bottle_path(bottle), style: 'text-decoration: none' do %>
@@ -183,7 +183,9 @@
              </div>
             <div class="card-footer-country-year">
               <div class="card-footer-country">
-                <p><%= bottle.region.upcase %></p>
+                <% if bottle.region.present? %>
+                  <p><%= bottle.region.upcase %></p>
+                <% end %>
               </div>
               <div class="card-bottle-year">
                 <p><%= bottle.vintage %></p>
