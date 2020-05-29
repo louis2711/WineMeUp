@@ -75,13 +75,13 @@ chateau_des_tours.photo.attach(io: file, filename: "nes.png", content_type: "ima
 chateau_des_tours.save!
 
 
-chardonnay_torrontes = Bottle.new(appellation: "Fantelli", domain: "Chardonnay Torrontes", vintage: "2019", color: "White", grape_variety: "55% Chardonnay, 45% Torrontes", aroma: "Fruity", characteristics: "Vivid and dry", country: "Argentina", region: "")
+chardonnay_torrontes = Bottle.new(appellation: "Fantelli", domain: "Chardonnay Torrontes", vintage: "2019", color: "White", grape_variety: "55% Chardonnay, 45% Torrontes", aroma: "Fruity", characteristics: "Vivid and dry", country: "Argentina", region: "Argentina")
 file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/743199.png")
 chardonnay_torrontes.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 chardonnay_torrontes.save!
 
 
-piedra_negra = Bottle.new(appellation: "Piedra Negra Alta Collection", domain: "Piedra Negra", vintage: "2019", color: "Red", grape_variety: "Malbec", aroma: "Fruity", characteristics: "Soft and velvety", country: "Argentina", region: "Mendoza")
+piedra_negra = Bottle.new(appellation: "Piedra Negra", domain: "Piedra Negra", vintage: "2019", color: "Red", grape_variety: "Malbec", aroma: "Fruity", characteristics: "Soft and velvety", country: "Argentina", region: "Mendoza")
 file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/744118.png")
 piedra_negra.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 piedra_negra.save!
