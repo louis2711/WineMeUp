@@ -1,6 +1,7 @@
 .form-quiz {
   background: white;
-  margin-top: 50px;
+  margin-top: 100px;
+  margin-bottom: 80px
   padding: 20px;
   border-radius: 5px;
   justify-content: center;
@@ -49,6 +50,7 @@
   flex: 0 0 30%;
   width: 30rem;
   height: 5rem;
+
 
   &:hover {
     opacity: 0.6;
