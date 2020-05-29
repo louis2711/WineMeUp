@@ -14,3 +14,45 @@
     margin-bottom: 1px;
   }
 }
+
+.card-bottle-index {
+  background-color: white;
+  box-shadow: 0 0 5px rgb(40, 40, 40);
+  border-radius: 5px;
+  margin: 30px;
+  padding: 30px;
+  height: 370px;
+  width: 230px;
+  .img-bottle-index{
+    img{
+      height: 200px;
+      margin-right: 0px;
+      margin-bottom: 30px;
+    }
+  }
+  h2 {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(30, 30, 30);
+  }
+  p {
+    font-size: 14px;
+    font-style: italic;
+    color: rgb(30, 30, 30);
+  }
+  .card-bottle-index-img {
+    display: flex;
+    justify-content: space-around;
+  }
+  .card-footer-country-year{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    p {
+      font-size: 11px;
+      font-style: normal;
+    }
+
+  }
+}
