@@ -90,6 +90,18 @@
   display: none;
 }
 
-// .btn-to-hide {
-//   display: none;
-// }
+.btn-to-hide {
+  display: none;
+}
+
+.btn-false-link {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 65px;
+}
+
+.false-link{
+  display: flex;
+  justify-content: space-around;
+}
