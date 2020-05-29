@@ -19,7 +19,7 @@
   background-color: white;
   box-shadow: 0 0 5px rgb(40, 40, 40);
   border-radius: 5px;
-  margin: 30px;
+  margin: 10px;
   padding: 30px;
   height: 370px;
   width: 230px;
@@ -60,3 +60,9 @@
     transition-duration: 0.2s;
   }
 }
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+

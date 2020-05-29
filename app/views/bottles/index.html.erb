@@ -15,37 +15,39 @@
       <% end %>
     </div>
   <br>
-  <div class="card-container cards">
-    <% @bottles.each do |bottle|  %>
-      <%= link_to bottle_path(bottle), style: 'text-decoration: none' do %>
-        <div class="card-bottle-index">
-          <div class="card-bottle-index-img">
-            <div class="img-bottle-index">
-              <% if bottle.photo.attached? %>
-                <%= cl_image_tag bottle.photo.key, crop: :fill %>
-              <% else  %>
-                <img src="#" alt="">
-              <% end %>
+
+    <div class="card-container cards">
+      <% @bottles.each do |bottle|  %>
+        <%= link_to bottle_path(bottle), style: 'text-decoration: none' do %>
+          <div class="card-bottle-index">
+            <div class="card-bottle-index-img">
+              <div class="img-bottle-index">
+                <% if bottle.photo.attached? %>
+                  <%= cl_image_tag bottle.photo.key, crop: :fill %>
+                <% else  %>
+                  <img src="#" alt="">
+                <% end %>
+              </div>
+            </div>
+            <div class="card-bottle-index-infos">
+              <div>
+                <h2><%= bottle.appellation %></h2>
+                <p class="bottle-domain"><%= bottle.domain %></p>
+              </div>
+             </div>
+            <div class="card-footer-country-year">
+              <div class="card-footer-country">
+                <p><%= bottle.region.upcase %></p>
+              </div>
+              <div class="card-bottle-year">
+                <p><%= bottle.vintage %></p>
+              </div>
             </div>
           </div>
-          <div class="card-bottle-index-infos">
-            <div>
-              <h2><%= bottle.appellation %></h2>
-              <p class="bottle-domain"><%= bottle.domain %></p>
-            </div>
-          </div>
-          <div class="card-footer-country-year">
-            <div class="card-footer-country">
-              <p><%= bottle.region.upcase %></p>
-            </div>
-            <div class="card-bottle-year">
-              <p><%= bottle.vintage %></p>
-            </div>
-          </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+
 
   <form action="">
     <div class="container-filters">
