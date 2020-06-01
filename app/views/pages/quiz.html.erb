@@ -6,15 +6,6 @@
             <div class="row">
               <%= f.input :question_name, label: "What's your name?" %>
             </div>
-            <div class="row">
-              <%= f.input :question_gender, label: "Are you:", collection: ["Male", "Female", "Non-binary"] %>
-            </div>
-            <div class="row">
-              <%= f.input :question_age, label: "How old are you?", collection: 18..99 %>
-            </div>
-            <div class="row">
-              <%= f.input :question_city, label: "Which city do you live in?" %>
-            </div>
             <p>When it comes to wine, you are:</p>
             <div class="grouped-choices">
               <% @personnalities.each_with_index do |personnality, index| %>
@@ -34,6 +25,8 @@
                   <% dependent = 'exploration'  %>
                 <% elsif reason == 'Bring to dinner' %>
                   <% dependent = 'meals-list' %>
+                <% elsif reason == 'Complete my cellar' %>
+                  <% dependent = 'cellar-worlds' %>
                 <% end %>
                 <%= f.input :question_reason, input_html: {type: :radio, id: "reason-#{index}", value: reason}, label: reason, wrapper_html: {class: "form-check reasons", data: {dependent:dependent}} %>
               <% end %>
@@ -63,11 +56,26 @@
                 <% end %>
               </div>
             </div>
+            <div class="grouped-choices dependent-group" data-question='cellar-worlds'>
+              <p>From wich origin?</p>
+              <div class="grouped-choices">
+                <% @worlds.each_with_index do |world, index| %>
+                  <%= f.input :worlds_list, input_html: {type: :radio, id: "world-#{index}", value: world}, label: world, wrapper_html: {class: "form-check"} %>
+                <% end %>
+              </div>
+            </div>
             <div class="grouped-choices dependent-group dependent-group-leveltwo" data-question='regions-list'>
               <p>Which region?</p>
               <div class="grouped-choices">
                 <% @regions.each_with_index do |region, index| %>
-                  <%= f.input :regions_list, input_html: {type: :radio, id: "region-#{index}", value: region}, label: region, wrapper_html: {class: "form-check"} %>
+                <% if region == 'America' %>
+                  <% dependent = 'america-list' %>
+                <% elsif region == 'Europe' %>
+                  <% dependent = 'europe-list' %>
+                <% elsif region == 'Oceania' %>
+                  <% dependent = 'oceania-list' %>
+                <% end %>
+                  <%= f.input :regions_list, input_html: {type: :radio, id: "region-#{index}", value: region}, label: region, wrapper_html: {class: "form-check regions", data: {dependent:dependent}} %>
                 <% end %>
               </div>
             </div>
@@ -102,6 +110,30 @@
             </div>
             <div class="dependent-group dependent-group-leveltwo" data-question='vintage-range'>
               <%= f.input :vintage_range, label: "Select a year", collection: 1970..2020 %>
+            </div>
+            <div class="grouped-choices region-choice region-choice dependent-group dependent-group-level-three-regions" data-question='america-list'>
+              <p>Which country?</p>
+              <div class="grouped-choices">
+                <% @americas.each_with_index do |america, index| %>
+                  <%= f.input :america_list, input_html: {type: :radio, id: "america-#{index}", value: america}, label: america, wrapper_html: {class: "form-check"} %>
+                <% end %>
+              </div>
+            </div>
+            <div class="grouped-choices region-choice region-choice dependent-group dependent-group-level-three-regions" data-question='europe-list'>
+              <p>Which country?</p>
+              <div class="grouped-choices">
+                <% @europes.each_with_index do |europe, index| %>
+                  <%= f.input :europe_list, input_html: {type: :radio, id: "europe-#{index}", value: europe}, label: europe, wrapper_html: {class: "form-check"} %>
+                <% end %>
+              </div>
+            </div>
+            <div class="grouped-choices region-choice region-choice dependent-group dependent-group-level-three-regions" data-question='oceania-list'>
+              <p>Which country?</p>
+              <div class="grouped-choices">
+                <% @oceanias.each_with_index do |oceania, index| %>
+                  <%= f.input :oceania_list, input_html: {type: :radio, id: "oceania-#{index}", value: oceania}, label: oceania, wrapper_html: {class: "form-check"} %>
+                <% end %>
+              </div>
             </div>
             <div class="grouped-choices grape-variety-choice grape-variety-red dependent-group dependent-group-level-three-colours" data-question="red-list">
               <p>Which variety?</p>
