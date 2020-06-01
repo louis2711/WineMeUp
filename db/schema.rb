@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_29_091502) do
+ActiveRecord::Schema.define(version: 2020_06_01_084237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_05_29_091502) do
     t.string "aroma"
     t.string "country"
     t.string "label"
+    t.text "description"
   end
 
   create_table "feedbacks", force: :cascade do |t|
@@ -87,6 +88,10 @@ ActiveRecord::Schema.define(version: 2020_05_29_091502) do
     t.string "aromas_list"
     t.integer "vintage_range"
     t.string "meals_list"
+    t.string "america_list"
+    t.string "europe_list"
+    t.string "oceania_list"
+    t.string "worlds_list"
     t.index ["user_id"], name: "index_user_answers_on_user_id"
   end
 

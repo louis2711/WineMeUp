@@ -15,7 +15,8 @@ class PagesController < ApplicationController
     @production_types = ['Bio', 'Vegan', 'Natural', 'Who cares?']
     @reasons = ['Impress your friends', 'Complete my cellar', 'Bring to dinner', 'Discovery']
     @explorations = ['Regions', 'Grape varieties', 'Aromas', 'Vintage']
-    @regions = ['North America', 'South America', 'Europe', 'Australia', 'Asia', 'Africa']
+    @worlds = ['New world', 'Old world']
+    @regions = ['America', 'Europe', 'Oceania', 'Africa']
     @colours = ['Red', 'Rosé', 'Sweet', 'White', 'Port', 'Sparkling']
     @aromas = ['Fruit flavors', 'Herbal', 'Floral flavors', 'Woody', 'Spicy', 'Mineral']
     @grape_reds = ['Cabernet Sauvignon', 'Cabernet Franc', 'Merlot', 'Pinot Noir', 'Gamay', 'Syrah', 'Grenache', 'Cinsault', 'Malbec', 'Sangiovese']
@@ -25,6 +26,9 @@ class PagesController < ApplicationController
     @grape_ports = ['Touriga Franca', 'Tinta Roriz', 'Titan Barroca', 'Touriga Nacional', 'Tinto Cao']
     @grape_sparklings = ['Chardonnay', 'Pinot noir', 'Pinot Meunier', 'Macabeo', 'Monastrell', 'Garnacha', 'Muscat Blanc à Petits Grains', 'Glera', 'Riesling']
     @meals = ['Red Meat', 'White Meat', 'Fish', 'Cheese', 'Dessert']
+    @americas = ['United States', 'Chile', 'Argentina']
+    @europes = ['France', 'Italy', 'Spain', 'Portugal', 'Switzerland', 'Germany', 'Greece']
+    @oceanias = ['New-Zealand', 'Australia']
     @user_answer = UserAnswer.new
   end
 
