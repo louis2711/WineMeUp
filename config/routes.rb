@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :user_answers, only: [:create]
+  resources :user_profile, only: [:create]
 
   get 'quiz', to:'pages#quiz'
 

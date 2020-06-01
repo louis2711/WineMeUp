@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_01_084237) do
+ActiveRecord::Schema.define(version: 2020_06_01_152931) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,6 +93,14 @@ ActiveRecord::Schema.define(version: 2020_06_01_084237) do
     t.string "oceania_list"
     t.string "worlds_list"
     t.index ["user_id"], name: "index_user_answers_on_user_id"
+  end
+
+  create_table "user_profiles", force: :cascade do |t|
+    t.string "username"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "color"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
