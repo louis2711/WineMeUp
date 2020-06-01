@@ -49,3 +49,25 @@
   flex-wrap: wrap;
 }
 
+
+// .container-filters {
+//   text-align: left;
+//   margin-right: 100px;
+//   p {
+//     font-size: 10px;
+//     color: black;
+//     opacity: .7;
+//     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//     margin-top: 3px;
+//     margin-bottom: 1px;
+//   }
+// }
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-filters {
+  padding-right: 30px;
+}

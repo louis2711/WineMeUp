@@ -17,11 +17,14 @@
     <form action="">
       <div class="container-filters">
         <div class="filter-section">
-          <p>
-            <a data-toggle="collapse" href="#color" role="button" aria-expanded="false" aria-controls="color">
-              Color
-            </a>
-          </p>
+          <div class="flex-container">
+            <div>Color</div>
+            <div>
+              <a data-toggle="collapse" href="#color" role="button" aria-expanded="false" aria-controls="color">
+                <i class="fas fa-plus-square"></i>
+              </a>
+            </div>
+          </div>
           <div class="collapse <%= "show" if params[:color] %>" id="color">
             <div class="card card-body">
               <div><label><input type="checkbox" <%= "checked" if params[:color].to_a.include?("Red") %> name="color[]" value="Red"> Red</label></div>
@@ -30,11 +33,14 @@
             </div>
           </div>
 
-          <p>
-            <a data-toggle="collapse" href="#grapes" role="button" aria-expanded="false" aria-controls="grape_variety">
-              Grape Variety
-            </a>
-          </p>
+          <div class="flex-container">
+            <div>Grape Variety</div>
+            <div>
+              <a data-toggle="collapse" href="#grapes" role="button" aria-expanded="false" aria-controls="grape_variety">
+                <i class="fas fa-plus-square"></i>
+              </a>
+            </div>
+          </div>
           <div class="collapse <%= "show" if params[:grapes] %>" id="grapes">
             <div class="card card-body">
               <div><label><input type="checkbox" <%= "checked" if params[:grape_variety].to_a.include?("Red") %> name="grape_variety[]" value="Red"> Red</label></div>
@@ -43,11 +49,14 @@
             </div>
           </div>
 
-          <p>
-            <a ata-toggle="collapse" href="#aromas" role="button" aria-expanded="false" aria-controls="aroma">
-              Aroma
-            </a>
-          </p>
+          <div class="flex-container">
+            <div>Aroma</div>
+            <div>
+              <a data-toggle="collapse" href="#aromas" role="button" aria-expanded="false" aria-controls="aroma">
+                <i class="fas fa-plus-square"></i>
+              </a>
+            </div>
+          </div>
           <div class="collapse <%= "show" if params[:aroma] %>" id="aromas">
             <div class="card card-body">
               <div><label><input type="checkbox" <%= "checked" if params[:aroma].to_a.include?("Fruity") %> name="aroma[]" value="Fruity"> Fruity</label></div>
@@ -59,11 +68,14 @@
             </div>
           </div>
 
-          <p>
-            <a data-toggle="collapse" href="#characteristics" role="button" aria-expanded="false" aria-controls="characteristics">
-              Characteristics
-            </a>
-          </p>
+          <div class="flex-container">
+            <div>Characteristics</div>
+            <div>
+              <a data-toggle="collapse" href="#characteristics" role="button" aria-expanded="false" aria-controls="characteristics">
+                <i class="fas fa-plus-square"></i>
+              </a>
+            </div>
+          </div>
           <div class="collapse <%= "show" if params[:characteristics] %>" id="characteristics">
             <div class="card card-body">
               <div><label><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Light") %> name="characteristics[]" value="Light"> Light</label></div>
@@ -77,11 +89,14 @@
             </div>
           </div>
 
-          <p>
-            <a data-toggle="collapse" href="#country" role="button" aria-expanded="false" aria-controls="country">
-              Country
-            </a>
-          </p>
+          <div class="flex-container">
+            <div>Country</div>
+            <div>
+              <a data-toggle="collapse" href="#country" role="button" aria-expanded="false" aria-controls="country">
+                <i class="fas fa-plus-square"></i>
+              </a>
+            </div>
+          </div>
           <div class="collapse <%= "show" if params[:country] %>" id="country">
             <div class="card card-body">
               <div><label><input type="checkbox" <%= "checked" if params[:country].to_a.include?("France") %> name="country[]" value="France"> France</label></div>
@@ -113,11 +128,14 @@
             </div>
           </div> -->
 
-          <p>
-            <a data-toggle="collapse" href="#vintage" role="button" aria-expanded="false" aria-controls="vintage">
-              Vintage
-            </a>
-          </p>
+          <div class="flex-container">
+            <div>Vintage</div>
+            <div>
+              <a data-toggle="collapse" href="#vintage" role="button" aria-expanded="false" aria-controls="vintage">
+                <i class="fas fa-plus-square"></i>
+              </a>
+            </div>
+          </div>
           <div class="collapse <%= "show" if params[:vintage] %>" id="vintage">
             <div class="card card-body">
               <% 1990.upto(2019) do |vintage| %>
@@ -125,8 +143,8 @@
               <% end %>
             </div>
           </div>
-          
-          <p>
+
+          <!-- <p>
             <a data-toggle="collapse" href="#meal" role="button" aria-expanded="false" aria-controls="meal">
               Typical Meal
             </a>
@@ -142,11 +160,11 @@
           </div> -->
 
           <p>
-            <a data-toggle="collapse" href="#prange" role="button" aria-expanded="false" aria-controls="prange">
+            <p data-toggle="collapse" href="#prange" role="button" aria-expanded="false" aria-controls="prange">
               Price Range
-            </a>
+            </p>
           </p>
-          <div class="collapse <%= "show" if params[:price_range] && params[:price_range] != "2,2000"  %>" id="prange">
+          <div <%= "show" if params[:price_range] && params[:price_range] != "2,2000"  %>" id="prange">
             <div class="card card-body">
               <b><%= params[:price_range] ? params[:price_range].to_s.split(",")[0] : "2" %></b> <input name="price_range" id="ex2" type="text" class="span2" value="" data-slider-min="2" data-slider-max="2000" data-slider-step="5" data-slider-value="<%= params[:price_range] ? "[#{params[:price_range]}]" : "[2, 2000]" %>" data-provide="slider" data-slider-tooltip="show"/> <b><%= params[:price_range] ? params[:price_range].to_s.split(",")[1] : "2000" %></b>
             </div>
