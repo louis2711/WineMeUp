@@ -109,7 +109,7 @@ chappaz.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 chappaz.save!
 
 maye = Bottle.new(appellation: "Petite Arvine Valais", domain: "Simon Maye", vintage: "2019", color: "White", grape_variety: "Petite Arvine", aroma: "Fruity", characteristics: "Structured", country: "Switzerland", region: "Valais", price_range: "26", description: "Vin sec, expressif avec une acidité fine et salée soutenant des arômes de rhubarbe, fruit de la passion et pamplemousse")
-file = URI.open("https://images.lavinia.fr/spree/products/37818/product/1AUAU10025359.jpg?1588671809")
+file = URI.open("https://www.simonmaye.ch/wp-content/uploads/2018/11/PetiteArvine-min.png")
 maye.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 maye.save!
 
@@ -164,7 +164,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/19356/product/Harlan_C
 harlan.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 harlan.save!
 
-moraga = Bottle.new(appellation: "Moraga Bel Air", domain: "Moraga", vintage: "1998", color: "White", grape_variety: "Sauvgnon Blanc", aroma: "Floral", characteristics: "Dry", country: "USA", region: "Los Angeles County", price_range: "158", description: "Un blanc typique du domaine qui tient toutes ses promesses. Il se présente avec beaucoup de caractère et possède une éclatante puissance en bouche.")
+moraga = Bottle.new(appellation: "Moraga Bel Air", domain: "Moraga", vintage: "1998", color: "White", grape_variety: "Sauvignon Blanc", aroma: "Floral", characteristics: "Dry", country: "USA", region: "Los Angeles County", price_range: "158", description: "Un blanc typique du domaine qui tient toutes ses promesses. Il se présente avec beaucoup de caractère et possède une éclatante puissance en bouche.")
 file = URI.open("https://images.lavinia.fr/spree/products/14873/product/Moraga_Bel_Air_blanc_1998_11819.jpg?1459342777")
 moraga.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 moraga.save!
