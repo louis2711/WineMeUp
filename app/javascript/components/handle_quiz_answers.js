@@ -74,6 +74,13 @@ const handleQuizAnswers = () => {
       });
     });
   });
+  const personnalities = document.querySelectorAll('.personnalities');
+  personnalities.forEach((personnality) => {
+    personnality.addEventListener("click", (event) => {
+      const management_question = document.querySelector('.management-question')
+      management_question.style.display = "flex";
+    });
+  });
 };
 
 

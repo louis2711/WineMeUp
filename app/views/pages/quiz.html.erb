@@ -15,7 +15,7 @@
                 <p>When it comes to wine, you are:</p>
                 <div class="grouped-choices">
                   <% @personnalities.each_with_index do |personnality, index| %>
-                  <%= f.input :question_personnality, input_html: {type: :radio, id: "personnality-#{index}", value: personnality}, label: personnality, wrapper_html: {class: "form-check"} %>
+                  <%= f.input :question_personnality, input_html: {type: :radio, id: "personnality-#{index}", value: personnality}, label: personnality, wrapper_html: {class: "form-check personnalities"} %>
                   <% end %>
                   <a class="nav-link nav-link-quiz-hide" id="question_name-tab" data-toggle="tab" href="#question_name" role="tab" aria-controls="contact" aria-selected="false">Back</a>
                   <a class="nav-link nav-link-quiz-hide" id="question_vineyard_management-tab" data-toggle="tab" href="#question_vineyard_management" role="tab" aria-controls="contact" aria-selected="false">Next</a>
@@ -23,14 +23,16 @@
               </div>
 
               <div class="tab-pane fade" id="question_vineyard_management" role="tabpanel" aria-labelledby="question_vineyard_management-tab">
-                <p>Do you have a preference on how the wine is produced?</p>
-                <div class="grouped-choices">
-                  <% @production_types.each_with_index do |production_type, index| %>
-                    <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type}, label: production_type, wrapper_html: {class: "form-check"} %>
-                  <% end %>
+                <div class="grouped-choices management-question">
+                  <p>Do you have a preference on how the wine is produced?</p>
+                  <div class="grouped-choices">
+                    <% @production_types.each_with_index do |production_type, index| %>
+                      <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type}, label: production_type, wrapper_html: {class: "form-check"} %>
+                    <% end %>
+                  </div>
+                  <a class="nav-link nav-link-quiz-hide" id="question_personnality-tab" data-toggle="tab" href="#question_personnality" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                  <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="question_reason" aria-selected="false">Next</a>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_personnality-tab" data-toggle="tab" href="#question_personnality" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="question_reason" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="question_reason" role="tabpanel" aria-labelledby="question_reason-tab">
@@ -81,6 +83,7 @@
                   </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="worlds_list" role="tabpanel" aria-labelledby="worlds_list-tab">
@@ -149,6 +152,7 @@
                   </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="aromas_list" role="tabpanel" aria-labelledby="aromas_list-tab">
@@ -156,7 +160,7 @@
                   <%= f.input :vintage_range, label: "Select a year", collection: 1970..2020 %>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="america_list-tab" data-toggle="tab" href="#america_list" role="tab" aria-controls="america_list" aria-selected="false">Next</a>
+                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="america_list" role="tabpanel" aria-labelledby="america_list-tab">
@@ -169,7 +173,7 @@
                   </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="europe_list-tab" data-toggle="tab" href="#europe_list" role="tab" aria-controls="europe_list" aria-selected="false">Next</a>
+                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="europe_list" role="tabpanel" aria-labelledby="europe_list-tab">
@@ -182,7 +186,7 @@
                   </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="oceania_list-tab" data-toggle="tab" href="#oceania_list" role="tab" aria-controls="oceania_list" aria-selected="false">Next</a>
+                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="oceania_list" role="tabpanel" aria-labelledby="oceania_list-tab">
@@ -195,7 +199,7 @@
                     </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="question_grape_red-tab" data-toggle="tab" href="#question_grape_red_list" role="tab" aria-controls="question_grape_red_list" aria-selected="false">Next</a>
+                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_red" role="tabpanel" aria-labelledby="question_grape_red-tab">
@@ -208,7 +212,7 @@
                   </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="question_grape_rose-tab" data-toggle="tab" href="#question_grape_rose_list" role="tab" aria-controls="question_grape_rose_list" aria-selected="false">Next</a>
+                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_rose" role="tabpanel" aria-labelledby="question_grape_rose-tab">
@@ -221,7 +225,7 @@
                   </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="question_grape_sweet-tab" data-toggle="tab" href="#question_grape_sweet_list" role="tab" aria-controls="question_grape_sweet_list" aria-selected="false">Next</a>
+                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_sweet" role="tabpanel" aria-labelledby="question_grape_sweet-tab">
@@ -233,8 +237,8 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
                 <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_white" role="tabpanel" aria-labelledby="question_grape_white-tab">
@@ -246,8 +250,8 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
                 <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_port" role="tabpanel" aria-labelledby="question_grape_port-tab">
@@ -260,7 +264,7 @@
                   </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="question_grape_sparkling-tab" data-toggle="tab" href="#question_grape_sparkling_list" role="tab" aria-controls="question_grape_sparkling_list" aria-selected="false">Next</a>
+                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="question_sparkling_port" role="tabpanel" aria-labelledby="question_grape_sparkling-tab">
