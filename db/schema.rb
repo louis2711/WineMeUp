@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_06_01_084237) do
     t.string "aroma"
     t.string "country"
     t.string "label"
+    t.text "description"
   end
 
   create_table "feedbacks", force: :cascade do |t|

@@ -98,3 +98,63 @@ file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740599
 pecorino_volo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 pecorino_volo.save!
 
+
+# France
+
+pontet_canet = Bottle.new(appellation: "Terre Di Chieti", domain: "Château Pontet-Canet, 5ème Cru Classé", vintage: "2018", color: "White", grape_variety: "Pecorino", aroma: "Fruity", characteristics: "Vivid and dry", country: "Italy", region: "Abruzzo")
+file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740599.png")
+pontet_canet.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+pecorino_volo.save!
+
+pecorino_volo = Bottle.new(appellation: "Terre Di Chieti", domain: "Pecorino Volo", vintage: "2018", color: "White", grape_variety: "Pecorino", aroma: "Fruity", characteristics: "Vivid and dry", country: "Italy", region: "Abruzzo")
+file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740599.png")
+pecorino_volo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+pecorino_volo.save!
+
+pecorino_volo = Bottle.new(appellation: "Terre Di Chieti", domain: "Pecorino Volo", vintage: "2018", color: "White", grape_variety: "Pecorino", aroma: "Fruity", characteristics: "Vivid and dry", country: "Italy", region: "Abruzzo")
+file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740599.png")
+pecorino_volo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+pecorino_volo.save!
+
+
+pecorino_volo = Bottle.new(appellation: "Terre Di Chieti", domain: "Pecorino Volo", vintage: "2018", color: "White", grape_variety: "Pecorino", aroma: "Fruity", characteristics: "Vivid and dry", country: "Italy", region: "Abruzzo")
+file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740599.png")
+pecorino_volo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+pecorino_volo.save!
+
+pecorino_volo = Bottle.new(appellation: "Terre Di Chieti", domain: "Pecorino Volo", vintage: "2018", color: "White", grape_variety: "Pecorino", aroma: "Fruity", characteristics: "Vivid and dry", country: "Italy", region: "Abruzzo")
+file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740599.png")
+pecorino_volo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+pecorino_volo.save!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
