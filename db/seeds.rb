@@ -109,7 +109,7 @@ chappaz.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 chappaz.save!
 
 maye = Bottle.new(appellation: "Petite Arvine Valais", domain: "Simon Maye", vintage: "2019", color: "White", grape_variety: "Petite Arvine", aroma: "Fruity", characteristics: "Structured", country: "Switzerland", region: "Valais", price_range: "26", description: "Vin sec, expressif avec une acidité fine et salée soutenant des arômes de rhubarbe, fruit de la passion et pamplemousse")
-file = URI.open("https://images.lavinia.fr/spree/products/37818/product/1AUAU10025359.jpg?1588671809")
+file = URI.open("https://www.simonmaye.ch/wp-content/uploads/2018/11/PetiteArvine-min.png")
 maye.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 maye.save!
 
@@ -164,7 +164,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/19356/product/Harlan_C
 harlan.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 harlan.save!
 
-moraga = Bottle.new(appellation: "Moraga Bel Air", domain: "Moraga", vintage: "1998", color: "White", grape_variety: "Sauvgnon Blanc", aroma: "Floral", characteristics: "Dry", country: "USA", region: "Los Angeles County", price_range: "158", description: "Un blanc typique du domaine qui tient toutes ses promesses. Il se présente avec beaucoup de caractère et possède une éclatante puissance en bouche.")
+moraga = Bottle.new(appellation: "Moraga Bel Air", domain: "Moraga", vintage: "1998", color: "White", grape_variety: "Sauvignon Blanc", aroma: "Floral", characteristics: "Dry", country: "USA", region: "Los Angeles County", price_range: "158", description: "Un blanc typique du domaine qui tient toutes ses promesses. Il se présente avec beaucoup de caractère et possède une éclatante puissance en bouche.")
 file = URI.open("https://images.lavinia.fr/spree/products/14873/product/Moraga_Bel_Air_blanc_1998_11819.jpg?1459342777")
 moraga.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 moraga.save!
@@ -182,7 +182,7 @@ pontet_canet.photo.attach(io: file, filename: "nes.png", content_type: "image/pn
 pontet_canet.save!
 
 brane_cantenac = Bottle.new(appellation: "Margaux", domain: "Château Brane-Cantenac", vintage: "2016", color: "Red", grape_variety: "Merlot, Cabernet Franc, Cabernet Sauvignon, Carménère", aroma: "Fruity", characteristics: "Structured", country: "France", region: "Bordeaux", price_range: "100", description: "Les vins possèdent une grande richesse aromatique et une splendide trame tannique. Ils ont tous les atouts pour permettre une très longue garde. Le Millésime 2016 : un millésime exceptionnel et « exceptionnellement chanceux ». La chance a été présente de la floraison à la vendange. Les cabernets ont été absolument magnifiques, grâce à l’exceptionnelle résistance à la sécheresse de ce terroir. Un des, sinon le plus grand Brane !")
-file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740599.png")
+file = URI.open("https://images.lavinia.fr/spree/products/18083/product/Chateau-Brane-Cantenac_Margaux_2016_71243.jpg?1490966555")
 brane_cantenac.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 brane_cantenac.save!
 
@@ -192,7 +192,7 @@ la_lagune.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 la_lagune.save!
 
 
-gevrey = Bottle.new(appellation: "Gevrey-Chambertin", domain: "Domaine Alain Burguet, 1er cru Lavaux St Jacques", vintage: "2018", color: "White", grape_variety: "Pecorino", aroma: "Fruity", characteristics: "Powerful", country: "France", region: "Bourgogne", price_range: "120", description: "Situé dans le village bourguignon de Gevrey-Chambertin, le Domaine Alain Burguet produit, depuis le début des années 1990, des vins de Gevrey denses et parfumés. Accompagné de ses fils Jean-Luc et Eric qui l’accompagnent dans tous les travaux de la vigne et en cave, Alain Burguet privilégie une conduite proche de la culture biologique. Le Lavaux Saint Jacques offre des parfums de fruits noirs éclatants. La bouche, égalemment sur le fruit noir mais légèrement confituré, s'offre avec délice et puissance.")
+gevrey = Bottle.new(appellation: "Gevrey-Chambertin", domain: "Domaine Alain Burguet, 1er cru Lavaux St Jacques", vintage: "2018", color: "Red", grape_variety: "Pecorino", aroma: "Fruity", characteristics: "Powerful", country: "France", region: "Bourgogne", price_range: "120", description: "Situé dans le village bourguignon de Gevrey-Chambertin, le Domaine Alain Burguet produit, depuis le début des années 1990, des vins de Gevrey denses et parfumés. Accompagné de ses fils Jean-Luc et Eric qui l’accompagnent dans tous les travaux de la vigne et en cave, Alain Burguet privilégie une conduite proche de la culture biologique. Le Lavaux Saint Jacques offre des parfums de fruits noirs éclatants. La bouche, égalemment sur le fruit noir mais légèrement confituré, s'offre avec délice et puissance.")
 file = URI.open("https://images.lavinia.fr/spree/products/21907/product/73755_lavaux_burguet.jpg?1551437629")
 gevrey.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 gevrey.save!

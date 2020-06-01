@@ -2,13 +2,12 @@
 
   <h1 class="title-index-bottles">Bottles to Discover</h1>
     <div class="searchbar">
-        <%= form_tag bottles_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find The Perfect Bottle"
-        %>
-      <br>
+      <%= form_tag bottles_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Appellation - Domain"
+      %>
       <%= submit_tag "Search", class: "btn btn-searchbar" %>
       <% end %>
     </div>
@@ -91,8 +90,6 @@
               <div><label><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Portugal") %> name="country[]" value="Portugal"> Portugal</label></div>
               <div><label><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Switzerland") %> name="country[]" value="Switzerland"> Switzerland</label></div>
               <div><label><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Germany") %> name="country[]" value="Germany"> Germany</label></div>
-              <div><label><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Greece") %> name="country[]" value="Greece"> Greece</label></div>
-              <div><label><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Chile") %> name="country[]" value="Chile"> Chile</label></div>
               <div><label><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Argentina") %> name="country[]" value="Argentina"> Argentina</label></div>
               <div><label><input type="checkbox" <%= "checked" if params[:country].to_a.include?("South Africa") %> name="country[]" value="South Africa"> South Africa</label></div>
               <div><label><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Australia") %> name="country[]" value="Australia"> Australia</label></div>
@@ -128,7 +125,7 @@
               <% end %>
             </div>
           </div>
-
+          
           <p>
             <a data-toggle="collapse" href="#meal" role="button" aria-expanded="false" aria-controls="meal">
               Typical Meal
@@ -142,7 +139,7 @@
               <div><label><input type="checkbox" <%= "checked" if params[:typical_meal].to_a.include?("Cheese") %> name="typical_meal[]" value="Cheese"> Cheese</label></div>
               <div><label><input type="checkbox" <%= "checked" if params[:typical_meal].to_a.include?("Dessert") %> name="typical_meal[]" value="Dessert"> Dessert</label></div>
             </div>
-          </div>
+          </div> -->
 
           <p>
             <a data-toggle="collapse" href="#prange" role="button" aria-expanded="false" aria-controls="prange">
