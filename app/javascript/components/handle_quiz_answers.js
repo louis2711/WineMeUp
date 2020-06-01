@@ -57,6 +57,22 @@ const handleQuizAnswers = () => {
       });
     });
   });
+  const regions = document.querySelectorAll('.regions');
+  regions.forEach((region) => {
+    region.addEventListener("click", (event) => {
+      const regionDependencies = document.querySelectorAll('.dependent-group-level-three-regions');
+      console.log(regionDependencies);
+      regionDependencies.forEach((regionDependency) => {
+        console.log(event.currentTarget.dataset.dependent);
+        console.log(regionDependency.dataset.question);
+        if(event.currentTarget.dataset.dependent === regionDependency.dataset.question) {
+          regionDependency.style.display = "flex";
+        } else {
+          regionDependency.style.display = "none";
+        };
+      });
+    });
+  });
 };
 
 
