@@ -182,7 +182,7 @@ pontet_canet.photo.attach(io: file, filename: "nes.png", content_type: "image/pn
 pontet_canet.save!
 
 brane_cantenac = Bottle.new(appellation: "Margaux", domain: "Château Brane-Cantenac", vintage: "2016", color: "Red", grape_variety: "Merlot, Cabernet Franc, Cabernet Sauvignon, Carménère", aroma: "Fruity", characteristics: "Structured", country: "France", region: "Bordeaux", price_range: "100", description: "Les vins possèdent une grande richesse aromatique et une splendide trame tannique. Ils ont tous les atouts pour permettre une très longue garde. Le Millésime 2016 : un millésime exceptionnel et « exceptionnellement chanceux ». La chance a été présente de la floraison à la vendange. Les cabernets ont été absolument magnifiques, grâce à l’exceptionnelle résistance à la sécheresse de ce terroir. Un des, sinon le plus grand Brane !")
-file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740599.png")
+file = URI.open("https://images.lavinia.fr/spree/products/18083/product/Chateau-Brane-Cantenac_Margaux_2016_71243.jpg?1490966555")
 brane_cantenac.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 brane_cantenac.save!
 
