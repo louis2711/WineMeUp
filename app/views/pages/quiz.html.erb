@@ -1,195 +1,293 @@
 <div class="container">
+
+
   <div class="row">
     <div class="col-xs-12">
       <div class="container form-post form-quiz">
           <%= simple_form_for(@user_answer) do |f| %>
-            <div class="row">
-              <%= f.input :question_name, label: "What's your name?" %>
-            </div>
-            <p>When it comes to wine, you are:</p>
-            <div class="grouped-choices">
-              <% @personnalities.each_with_index do |personnality, index| %>
-              <%= f.input :question_personnality, input_html: {type: :radio, id: "personnality-#{index}", value: personnality}, label: personnality, wrapper_html: {class: "form-check"} %>
-              <% end %>
-            </div>
-            <p>Do you have a preference on how the wine is produced?</p>
-            <div class="grouped-choices">
-              <% @production_types.each_with_index do |production_type, index| %>
-              <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type}, label: production_type, wrapper_html: {class: "form-check"} %>
-              <% end %>
-            </div>
-            <p>For which occasion?</p>
-            <div class="grouped-choices">
-              <% @reasons.each_with_index do |reason, index| %>
-                <% if reason == 'Discovery' %>
-                  <% dependent = 'exploration'  %>
-                <% elsif reason == 'Bring to dinner' %>
-                  <% dependent = 'meals-list' %>
-                <% elsif reason == 'Complete my cellar' %>
-                  <% dependent = 'cellar-worlds' %>
-                <% end %>
-                <%= f.input :question_reason, input_html: {type: :radio, id: "reason-#{index}", value: reason}, label: reason, wrapper_html: {class: "form-check reasons", data: {dependent:dependent}} %>
-              <% end %>
-            </div>
-            <div class="grouped-choices dependent-group" data-question='exploration'>
-              <p>What should we explore ?</p>
-              <div class="grouped-choices">
-                <% @explorations.each_with_index do |exploration, index| %>
-                  <% if exploration == 'Regions' %>
-                    <% dependent = 'regions-list' %>
-                  <% elsif exploration == 'Grape varieties' %>
-                    <% dependent = 'colours-list' %>
-                  <% elsif exploration == 'Aromas' %>
-                    <% dependent = 'aromas-list' %>
-                  <% else %>
-                    <% dependent = 'vintage-range' %>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="question_name" role="tabpanel" aria-labelledby="question_name">
+                <%= f.input :question_name, label: "What's your name?" %>
+                <a class="nav-link nav-link-quiz" id="question_personnality-tab" data-toggle="tab" href="#question_personnality" role="tab" aria-controls="question_personnality" aria-selected="false">Next</a>
+              </div>
+
+              <div class="tab-pane fade" id="question_personnality" role="tabpanel" aria-labelledby="question_personnality-tab">
+                <p>When it comes to wine, you are:</p>
+                <div class="grouped-choices">
+                  <% @personnalities.each_with_index do |personnality, index| %>
+                  <%= f.input :question_personnality, input_html: {type: :radio, id: "personnality-#{index}", value: personnality}, label: personnality, wrapper_html: {class: "form-check"} %>
                   <% end %>
-                  <%= f.input :question_exploration, input_html: {type: :radio, id: "exploration-#{index}", value: exploration}, label: exploration, wrapper_html: {class: "form-check explorations", data: {dependent:dependent}} %>
-                <% end %>
+                  <a class="nav-link nav-link-quiz-hide" id="question_name-tab" data-toggle="tab" href="#question_name" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                  <a class="nav-link nav-link-quiz-hide" id="question_vineyard_management-tab" data-toggle="tab" href="#question_vineyard_management" role="tab" aria-controls="contact" aria-selected="false">Next</a>
+                </div>
               </div>
-            </div>
-            <div class="grouped-choices dependent-group" data-question='meals-list'>
-              <p>What are you gonna eat with your bottle?</p>
-              <div class="grouped-choices">
-                <% @meals.each_with_index do |meal, index| %>
-                  <%= f.input :meals_list, input_html: {type: :radio, id: "meal-#{index}", value: meal}, label: meal, wrapper_html: {class: "form-check"} %>
-                <% end %>
-              </div>
-            </div>
-            <div class="grouped-choices dependent-group" data-question='cellar-worlds'>
-              <p>From wich origin?</p>
-              <div class="grouped-choices">
-                <% @worlds.each_with_index do |world, index| %>
-                  <%= f.input :worlds_list, input_html: {type: :radio, id: "world-#{index}", value: world}, label: world, wrapper_html: {class: "form-check"} %>
-                <% end %>
-              </div>
-            </div>
-            <div class="grouped-choices dependent-group dependent-group-leveltwo" data-question='regions-list'>
-              <p>Which region?</p>
-              <div class="grouped-choices">
-                <% @regions.each_with_index do |region, index| %>
-                <% if region == 'America' %>
-                  <% dependent = 'america-list' %>
-                <% elsif region == 'Europe' %>
-                  <% dependent = 'europe-list' %>
-                <% elsif region == 'Oceania' %>
-                  <% dependent = 'oceania-list' %>
-                <% end %>
-                  <%= f.input :regions_list, input_html: {type: :radio, id: "region-#{index}", value: region}, label: region, wrapper_html: {class: "form-check regions", data: {dependent:dependent}} %>
-                <% end %>
-              </div>
-            </div>
-            <div class="grouped-choices dependent-group dependent-group-leveltwo" data-question='colours-list'>
-              <p>Which type of wine?</p>
-              <div class="grouped-choices">
-                <% @colours.each_with_index do |colour, index| %>
-                  <% if colour == 'Red' %>
-                    <% dependent = 'red-list' %>
-                  <% elsif colour == 'Rosé' %>
-                    <% dependent = 'rose-list' %>
-                  <% elsif colour == 'Sweet' %>
-                    <% dependent = 'sweet-list' %>
-                  <% elsif colour == 'White' %>
-                    <% dependent = 'white-list' %>
-                  <% elsif colour == 'Port' %>
-                    <% dependent = 'port-list' %>
-                  <% else %>
-                    <% dependent = 'sparkling-list' %>
+
+              <div class="tab-pane fade" id="question_vineyard_management" role="tabpanel" aria-labelledby="question_vineyard_management-tab">
+                <p>Do you have a preference on how the wine is produced?</p>
+                <div class="grouped-choices">
+                  <% @production_types.each_with_index do |production_type, index| %>
+                    <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type}, label: production_type, wrapper_html: {class: "form-check"} %>
                   <% end %>
-                  <%= f.input :question_colour, input_html: {type: :radio, id: "colour-#{index}", value: colour}, label: colour, wrapper_html: {class: "form-check colours", data: {dependent:dependent}} %>
-                <% end %>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="question_personnality-tab" data-toggle="tab" href="#question_personnality" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="question_reason" aria-selected="false">Next</a>
               </div>
-            </div>
-            <div class="grouped-choices dependent-group dependent-group-leveltwo" data-question='aromas-list'>
-              <p>Which aroma?</p>
-              <div class="grouped-choices">
-                <% @aromas.each_with_index do |aroma, index| %>
-                  <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma}, label: aroma, wrapper_html: {class: "form-check"} %>
-                <% end %>
+
+              <div class="tab-pane fade" id="question_reason" role="tabpanel" aria-labelledby="question_reason-tab">
+                <p>For which occasion?</p>
+                <div class="grouped-choices">
+                  <% @reasons.each_with_index do |reason, index| %>
+                    <% if reason == 'Discovery' %>
+                      <% dependent = 'question_exploration'  %>
+                    <% elsif reason == 'Bring to dinner' %>
+                      <% dependent = 'meals_list' %>
+                    <% elsif reason == 'Complete my cellar' %>
+                      <% dependent = 'cellar_worlds' %>
+                    <% end %>
+                    <%= f.input :question_reason, input_html: {type: :radio, id: "reason-#{index}", value: reason, "data-toggle" => "tab", "data-target" => "##{dependent}"}, label: reason, wrapper_html: {class: "form-check reasons", data: {dependent:dependent}} %>
+                  <% end %>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="question_vineyard_management-tab" data-toggle="tab" href="#question_vineyard_management" role="tab" aria-controls="contact" aria-selected="false">Back</a>
               </div>
-            </div>
-            <div class="dependent-group dependent-group-leveltwo" data-question='vintage-range'>
-              <%= f.input :vintage_range, label: "Select a year", collection: 1970..2020 %>
-            </div>
-            <div class="grouped-choices region-choice region-choice dependent-group dependent-group-level-three-regions" data-question='america-list'>
-              <p>Which country?</p>
-              <div class="grouped-choices">
-                <% @americas.each_with_index do |america, index| %>
-                  <%= f.input :america_list, input_html: {type: :radio, id: "america-#{index}", value: america}, label: america, wrapper_html: {class: "form-check"} %>
-                <% end %>
+
+              <div class="tab-pane fade" id="question_exploration" role="tabpanel" aria-labelledby="question_exploration-tab">
+                <div class="grouped-choices dependent-group" data-question='question_exploration'>
+                  <p>What should we explore ?</p>
+                  <div class="grouped-choices">
+                    <% @explorations.each_with_index do |exploration, index| %>
+                      <% if exploration == 'Regions' %>
+                        <% dependent = 'regions_list' %>
+                      <% elsif exploration == 'Grape varieties' %>
+                        <% dependent = 'colours_list' %>
+                      <% elsif exploration == 'Aromas' %>
+                        <% dependent = 'aromas_list' %>
+                      <% else %>
+                        <% dependent = 'vintage_range' %>
+                      <% end %>
+                      <%= f.input :question_exploration, input_html: {type: :radio, id: "exploration-#{index}", value: exploration, "data-toggle" => "tab", "data-target" => "##{dependent}"}, label: exploration, wrapper_html: {class: "form-check explorations", data: {dependent:dependent}} %>
+                    <% end %>
+                  </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="contact" aria-selected="false">Back</a>
               </div>
-            </div>
-            <div class="grouped-choices region-choice region-choice dependent-group dependent-group-level-three-regions" data-question='europe-list'>
-              <p>Which country?</p>
-              <div class="grouped-choices">
-                <% @europes.each_with_index do |europe, index| %>
-                  <%= f.input :europe_list, input_html: {type: :radio, id: "europe-#{index}", value: europe}, label: europe, wrapper_html: {class: "form-check"} %>
-                <% end %>
+
+              <div class="tab-pane fade" id="meals_list" role="tabpanel" aria-labelledby="meals_list-tab">
+                <div class="grouped-choices dependent-group" data-question='meals_list'>
+                  <p>What are you gonna eat with your bottle?</p>
+                  <div class="grouped-choices">
+                    <% @meals.each_with_index do |meal, index| %>
+                      <%= f.input :meals_list, input_html: {type: :radio, id: "meal-#{index}", value: meal}, label: meal, wrapper_html: {class: "form-check"} %>
+                    <% end %>
+                  </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="contact" aria-selected="false">Back</a>
               </div>
-            </div>
-            <div class="grouped-choices region-choice region-choice dependent-group dependent-group-level-three-regions" data-question='oceania-list'>
-              <p>Which country?</p>
-              <div class="grouped-choices">
-                <% @oceanias.each_with_index do |oceania, index| %>
-                  <%= f.input :oceania_list, input_html: {type: :radio, id: "oceania-#{index}", value: oceania}, label: oceania, wrapper_html: {class: "form-check"} %>
-                <% end %>
+
+              <div class="tab-pane fade" id="worlds_list" role="tabpanel" aria-labelledby="worlds_list-tab">
+                <div class="grouped-choices dependent-group" data-question='cellar_worlds'>
+                  <p>From wich origin?</p>
+                  <div class="grouped-choices">
+                    <% @worlds.each_with_index do |world, index| %>
+                      <%= f.input :worlds_list, input_html: {type: :radio, id: "world-#{index}", value: world}, label: world, wrapper_html: {class: "form-check"} %>
+                    <% end %>Ò
+                  </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
               </div>
-            </div>
-            <div class="grouped-choices grape-variety-choice grape-variety-red dependent-group dependent-group-level-three-colours" data-question="red-list">
-              <p>Which variety?</p>
-              <div class="grouped-choices">
-                <% @grape_reds.each_with_index do |grape_red, index| %>
-                  <%= f.input :question_grape_red, input_html: {type: :radio, id: "grape-red-#{index}", value: grape_red}, label: grape_red, wrapper_html: {class: "form-check"} %>
-                <% end %>
+
+              <div class="tab-pane fade" id="regions_list" role="tabpanel" aria-labelledby="regions_list-tab">
+                <div class="grouped-choices dependent-group dependent-group-leveltwo" data-question='regions_list'>
+                  <p>Which region?</p>
+                  <div class="grouped-choices">
+                    <% @regions.each_with_index do |region, index| %>
+                    <% if region == 'America' %>
+                      <% dependent = 'america_list' %>
+                    <% elsif region == 'Europe' %>
+                      <% dependent = 'europe_list' %>
+                    <% elsif region == 'Oceania' %>
+                      <% dependent = 'oceania_list' %>
+                    <% end %>
+                      <%= f.input :regions_list, input_html: {type: :radio, id: "region-#{index}", value: region, "data-toggle" => "tab", "data-target" => "##{dependent}"}, label: region, wrapper_html: {class: "form-check regions", data: {dependent:dependent}} %>
+                    <% end %>
+                  </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
               </div>
-            </div>
-            <div class="grouped-choices grape-variety-choice grape-variety-rose dependent-group dependent-group-level-three-colours" data-question="rose-list">
-              <p>Which variety?</p>
-              <div class="grouped-choices">
-                <% @grape_roses.each_with_index do |grape_rose, index| %>
-                  <%= f.input :question_grape_rose, input_html: {type: :radio, id: "grape-rose-#{index}", value: grape_rose}, label: grape_rose, wrapper_html: {class: "form-check"} %>
-                <% end %>
+
+              <div class="tab-pane fade" id="question-colour" role="tabpanel" aria-labelledby="question-colour-tab">
+                <div class="grouped-choices dependent-group dependent-group-leveltwo" data-question='colours_list'>
+                  <p>Which type of wine?</p>
+                  <div class="grouped-choices">
+                    <% @colours.each_with_index do |colour, index| %>
+                      <% if colour == 'Red' %>
+                        <% dependent = 'red_list' %>
+                      <% elsif colour == 'Rosé' %>
+                        <% dependent = 'rose_list' %>
+                      <% elsif colour == 'Sweet' %>
+                        <% dependent = 'sweet_list' %>
+                      <% elsif colour == 'White' %>
+                        <% dependent = 'white_list' %>
+                      <% elsif colour == 'Port' %>
+                        <% dependent = 'port_list' %>
+                      <% else %>
+                        <% dependent = 'sparkling_list' %>
+                      <% end %>
+                      <%= f.input :question_colour, input_html: {type: :radio, id: "colour-#{index}", value: colour, "data-toggle" => "tab", "data-target" => "##{dependent}"}, label: colour, wrapper_html: {class: "form-check colours", data: {dependent:dependent}} %>
+                    <% end %>
+                  </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
               </div>
-            </div>
-            <div class="grouped-choices grape-variety-choice grape-variety-sweet dependent-group dependent-group-level-three-colours" data-question="sweet-list">
-              <p>Which variety?</p>
-              <div class="grouped-choices">
-                <% @grape_sweets.each_with_index do |grape_sweet, index| %>
-                  <%= f.input :question_grape_sweet, input_html: {type: :radio, id: "grape-sweet-#{index}", value: grape_sweet}, label: grape_sweet, wrapper_html: {class: "form-check"} %>
-                <% end %>
+
+              <div class="tab-pane fade" id="aromas_list" role="tabpanel" aria-labelledby="aromas_list-tab">
+                <div class="grouped-choices dependent-group dependent-group-leveltwo" data-question='aromas_list'>
+                  <p>Which aroma?</p>
+                  <div class="grouped-choices">
+                    <% @aromas.each_with_index do |aroma, index| %>
+                      <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma}, label: aroma, wrapper_html: {class: "form-check"} %>
+                    <% end %>
+                  </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
               </div>
-            </div>
-            <div class="grouped-choices grape-variety-choice grape-variety-white dependent-group dependent-group-level-three-colours" data-question="white-list">
-              <p>Which variety?</p>
-              <div class="grouped-choices">
-                <% @grape_whites.each_with_index do |grape_white, index| %>
-                  <%= f.input :question_grape_white, input_html: {type: :radio, id: "grape-white-#{index}", value: grape_white}, label: grape_white, wrapper_html: {class: "form-check"} %>
-                <% end %>
+
+              <div class="tab-pane fade" id="aromas_list" role="tabpanel" aria-labelledby="aromas_list-tab">
+                <div class="dependent-group dependent-group-leveltwo" data-question='vintage_range'>
+                  <%= f.input :vintage_range, label: "Select a year", collection: 1970..2020 %>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="america_list-tab" data-toggle="tab" href="#america_list" role="tab" aria-controls="america_list" aria-selected="false">Next</a>
               </div>
-            </div>
-            <div class="grouped-choices grape-variety-choice grape-variety-port dependent-group dependent-group-level-three-colours" data-question="port-list">
-              <p>Which variety?</p>
-              <div class="grouped-choices">
-                <% @grape_ports.each_with_index do |grape_port, index| %>
-                  <%= f.input :question_grape_port, input_html: {type: :radio, id: "grape-port-#{index}", value: grape_port}, label: grape_port, wrapper_html: {class: "form-check"} %>
-                <% end %>
+
+              <div class="tab-pane fade" id="america_list" role="tabpanel" aria-labelledby="america_list-tab">
+                <div class="grouped-choices region-choice region-choice dependent-group dependent-group-level-three-regions" data-question='america_list'>
+                  <p>Which country?</p>
+                  <div class="grouped-choices">
+                    <% @americas.each_with_index do |america, index| %>
+                      <%= f.input :america_list, input_html: {type: :radio, id: "america-#{index}", value: america}, label: america, wrapper_html: {class: "form-check"} %>
+                    <% end %>
+                  </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="europe_list-tab" data-toggle="tab" href="#europe_list" role="tab" aria-controls="europe_list" aria-selected="false">Next</a>
               </div>
-            </div>
-            <div class="grouped-choices grape-variety-choice grape-variety-sparkling dependent-group dependent-group-level-three-colours" data-question="sparkling-list">
-              <p>Which variety?</p>
-              <div class="grouped-choices">
-                <% @grape_sparklings.each_with_index do |grape_sparkling, index| %>
-                  <%= f.input :question_grape_sparkling, input_html: {type: :radio, id: "grape-sparkling-#{index}", value: grape_sparkling}, label: grape_sparkling, wrapper_html: {class: "form-check"} %>
-                <% end %>
+
+              <div class="tab-pane fade" id="europe_list" role="tabpanel" aria-labelledby="europe_list-tab">
+                <div class="grouped-choices region-choice region-choice dependent-group dependent-group-level-three-regions" data-question='europe_list'>
+                  <p>Which country?</p>
+                  <div class="grouped-choices">
+                    <% @europes.each_with_index do |europe, index| %>
+                      <%= f.input :europe_list, input_html: {type: :radio, id: "europe-#{index}", value: europe}, label: europe, wrapper_html: {class: "form-check"} %>
+                    <% end %>
+                  </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="oceania_list-tab" data-toggle="tab" href="#oceania_list" role="tab" aria-controls="oceania_list" aria-selected="false">Next</a>
               </div>
-            </div>
-            <div class="btn-submit-quiz">
-              <%= f.button :submit, "Done", class: "btn btn-to-hide" %>
+
+              <div class="tab-pane fade" id="oceania_list" role="tabpanel" aria-labelledby="oceania_list-tab">
+                <div class="grouped-choices region-choice region-choice dependent-group dependent-group-level-three-regions" data-question='oceania_list'>
+                  <p>Which country?</p>
+                    <div class="grouped-choices">
+                      <% @oceanias.each_with_index do |oceania, index| %>
+                        <%= f.input :oceania_list, input_html: {type: :radio, id: "oceania-#{index}", value: oceania}, label: oceania, wrapper_html: {class: "form-check"} %>
+                      <% end %>
+                    </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_grape_red-tab" data-toggle="tab" href="#question_grape_red_list" role="tab" aria-controls="question_grape_red_list" aria-selected="false">Next</a>
+              </div>
+
+              <div class="tab-pane fade" id="question_grape_red" role="tabpanel" aria-labelledby="question_grape_red-tab">
+                <div class="grouped-choices grape-variety-choice grape-variety-red dependent-group dependent-group-level-three-colours" data-question="red_list">
+                  <p>Which variety?</p>
+                  <div class="grouped-choices">
+                    <% @grape_reds.each_with_index do |grape_red, index| %>
+                      <%= f.input :question_grape_red, input_html: {type: :radio, id: "grape-red-#{index}", value: grape_red}, label: grape_red, wrapper_html: {class: "form-check"} %>
+                    <% end %>
+                  </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_grape_rose-tab" data-toggle="tab" href="#question_grape_rose_list" role="tab" aria-controls="question_grape_rose_list" aria-selected="false">Next</a>
+              </div>
+
+              <div class="tab-pane fade" id="question_grape_rose" role="tabpanel" aria-labelledby="question_grape_rose-tab">
+                <div class="grouped-choices grape-variety-choice grape-variety-rose dependent-group dependent-group-level-three-colours" data-question="rose_list">
+                  <p>Which variety?</p>
+                  <div class="grouped-choices">
+                    <% @grape_roses.each_with_index do |grape_rose, index| %>
+                      <%= f.input :question_grape_rose, input_html: {type: :radio, id: "grape-rose-#{index}", value: grape_rose}, label: grape_rose, wrapper_html: {class: "form-check"} %>
+                    <% end %>
+                  </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_grape_sweet-tab" data-toggle="tab" href="#question_grape_sweet_list" role="tab" aria-controls="question_grape_sweet_list" aria-selected="false">Next</a>
+              </div>
+
+              <div class="tab-pane fade" id="question_grape_sweet" role="tabpanel" aria-labelledby="question_grape_sweet-tab">
+                <div class="grouped-choices grape-variety-choice grape-variety-sweet dependent-group dependent-group-level-three-colours" data-question="sweet_list">
+                  <p>Which variety?</p>
+                  <div class="grouped-choices">
+                    <% @grape_sweets.each_with_index do |grape_sweet, index| %>
+                      <%= f.input :question_grape_sweet, input_html: {type: :radio, id: "grape-sweet-#{index}", value: grape_sweet}, label: grape_sweet, wrapper_html: {class: "form-check"} %>
+                    <% end %>
+                  </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+              </div>
+
+              <div class="tab-pane fade" id="question_grape_white" role="tabpanel" aria-labelledby="question_grape_white-tab">
+                <div class="grouped-choices grape-variety-choice grape-variety-white dependent-group dependent-group-level-three-colours" data-question="white_list">
+                  <p>Which variety?</p>
+                  <div class="grouped-choices">
+                    <% @grape_whites.each_with_index do |grape_white, index| %>
+                      <%= f.input :question_grape_white, input_html: {type: :radio, id: "grape-white-#{index}", value: grape_white}, label: grape_white, wrapper_html: {class: "form-check"} %>
+                    <% end %>
+                  </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+              </div>
+
+              <div class="tab-pane fade" id="question_grape_port" role="tabpanel" aria-labelledby="question_grape_port-tab">
+                <div class="grouped-choices grape-variety-choice grape-variety-port dependent-group dependent-group-level-three-colours" data-question="port_list">
+                  <p>Which variety?</p>
+                  <div class="grouped-choices">
+                    <% @grape_ports.each_with_index do |grape_port, index| %>
+                      <%= f.input :question_grape_port, input_html: {type: :radio, id: "grape-port-#{index}", value: grape_port}, label: grape_port, wrapper_html: {class: "form-check"} %>
+                    <% end %>
+                  </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_grape_sparkling-tab" data-toggle="tab" href="#question_grape_sparkling_list" role="tab" aria-controls="question_grape_sparkling_list" aria-selected="false">Next</a>
+              </div>
+
+              <div class="tab-pane fade" id="question_sparkling_port" role="tabpanel" aria-labelledby="question_grape_sparkling-tab">
+                <div class="grouped-choices grape-variety-choice grape-variety-sparkling dependent-group dependent-group-level-three-colours" data-question="sparkling_list">
+                  <p>Which variety?</p>
+                  <div class="grouped-choices">
+                    <% @grape_sparklings.each_with_index do |grape_sparkling, index| %>
+                      <%= f.input :question_grape_sparkling, input_html: {type: :radio, id: "grape-sparkling-#{index}", value: grape_sparkling}, label: grape_sparkling, wrapper_html: {class: "form-check"} %>
+                    <% end %>
+                  </div>
+                </div>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
+              </div>
+
+              <div class="tab-pane fade" id="submit-button" role="tabpanel" aria-labelledby="submit-button-tab">
+                <div class="btn-submit-quiz">
+                  <%= f.button :submit, "Done", class: "btn btn-to-hide" %>
+                </div>
+                <div class="false-link">
+                  <a href="https://www.winemeup.wine/bottles?aroma%5B%5D=Woody" class="btn btn-false-link">Done</a>
+                </div>
+              </div>
+
             </div>
           <% end %>
-          <div class="false-link">
-            <a href="https://www.winemeup.wine/bottles?aroma%5B%5D=Woody" class="btn btn-false-link">Done</a>
-          </div>
+
       </div>
     </div>
   </div>

@@ -1,10 +1,3 @@
-// const handleQuizAnswers = () => {
-//   const element = document.getElementById('reason-3')
-//   element.addEventListener("click", (event) => {
-//     const changingElement = document.getElementById('colour-choices');
-//     changingElement.style.display = "flex";
-//   });
-// };
 
 const handleQuizAnswers = () => {
   const reasons = document.querySelectorAll('.reasons');
@@ -37,6 +30,14 @@ const handleQuizAnswers = () => {
           explorationDependency.style.display = "flex";
         } else {
           explorationDependency.style.display = "none";
+          const colours = document.querySelectorAll('.dependent-group-level-three-colours');
+          colours.forEach((colour) => {
+            colour.style.display = "none";
+          });
+          const regions = document.querySelectorAll('.dependent-group-level-three-regions');
+          regions.forEach((region) => {
+            region.style.display = "none";
+          });
         };
       });
     });
