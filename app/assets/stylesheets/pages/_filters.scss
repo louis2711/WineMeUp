@@ -70,4 +70,20 @@
 
 .container-filters {
   padding-right: 30px;
+  width: 300px;
+  padding-right: 10px;
+  a {
+    color: #b67a82;
+    text-decoration: none;
+  }
+}
+
+.btn-submit {
+  padding: 10px;
+}
+
+.submit {
+  background-color: #B67A82;
+  color: white;
+  padding: 5px;
 }
