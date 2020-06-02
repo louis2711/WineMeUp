@@ -33,11 +33,15 @@ import { homeType } from '../plugins/typed.js';
 import { initUpdateNavbarOnScroll } from '../components/navbar.js';
 import { choicesCustom } from '../components/choices_quiz.js';
 import { handleQuizAnswers } from '../components/handle_quiz_answers.js';
+import { collapseY } from '../components/collapse.js';
+import { collapseX } from '../components/collapse.js';
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initUpdateNavbarOnScroll();
   homeType();
+  collapseY();
   if (document.querySelector('.grouped-choices')) {
     choicesCustom();
   };
