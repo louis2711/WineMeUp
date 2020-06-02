@@ -6,22 +6,16 @@
       <div class="container form-post form-quiz">
           <%= simple_form_for(@user_answer) do |f| %>
             <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="question_name" role="tabpanel" aria-labelledby="question_name">
-                <%= f.input :question_name, label: "What's your name?" %>
 
-                  <a class="-nav-link nav-link-quiz" id="question_personnality-tab" data-toggle="tab" href="#question_personnality" role="tab" aria-controls="question_personnality" aria-selected="false">Next</a>
-
-              </div>
-
-              <div class="tab-pane fade" id="question_personnality" role="tabpanel" aria-labelledby="question_personnality-tab">
+              <div class="tab-pane fade show active" id="question_personnality" role="tabpanel" aria-labelledby="question_personnality-tab">
                 <p>When it comes to wine, you are:</p>
                 <div class="grouped-choices">
                   <% @personnalities.each_with_index do |personnality, index| %>
-                  <%= f.input :question_personnality, input_html: {type: :radio, id: "personnality-#{index}", value: personnality, "data-toggle" => "tab", "data-target" => "#question_vineyard_management" }, label: personnality, wrapper_html: {class: "form-check personnalities"} %>
+                  <%= f.input :question_personnality, input_html: {type: :radio, id: "personnality-#{index}", value: personnality, "data-toggle" => "tab", "data-target" => "#question_vineyard_management"}, label: personnality, wrapper_html: {class: "form-check personnalities"} %>
                   <% end %>
                   <div class= "button-back">
+                    <a class="nav-link nav-link-quiz-hide" id="question_name-tab" data-toggle="tab" href="#question_vineyard_management" role="tab" aria-controls="contact" aria-selected="false">Next</a>
                     <a class="nav-link nav-link-quiz-hide" id="question_name-tab" data-toggle="tab" href="#question_name" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                    <a class="nav-link nav-link-quiz-hide" id="question_vineyard_management-tab" data-toggle="tab" href="#question_vineyard_management" role="tab" aria-controls="contact" aria-selected="false">Next</a>
                   </div>
                 </div>
               </div>
@@ -38,7 +32,6 @@
                   </div>
                   <div class= "button-back">
                     <a class="nav-link nav-link-quiz-hide" id="question_personnality-tab" data-toggle="tab" href="#question_personnality" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                    <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="question_reason" aria-selected="false">Next</a>
                 </div>
                 </div>
               </div>
@@ -70,7 +63,7 @@
                       <% if exploration == 'Regions' %>
                         <% dependent = 'regions_list' %>
                       <% elsif exploration == 'Grape varieties' %>
-                        <% dependent = 'colours_list' %>
+                        <% dependent = 'question-colour' %>
                       <% elsif exploration == 'Aromas' %>
                         <% dependent = 'aromas_list' %>
                       <% else %>
@@ -94,7 +87,6 @@
                 </div>
                 <div class= "button-back">
                   <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                  <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
                 </div>
               </div>
 
@@ -130,22 +122,22 @@
               </div>
 
               <div class="tab-pane fade" id="question-colour" role="tabpanel" aria-labelledby="question-colour-tab">
-                <div class="grouped-choices dependent-group dependent-group-leveltwo" data-question='colours_list'>
+                <div class="grouped-choices dependent-group dependent-group-leveltwo" data-question='question-colour'>
                   <p>Which type of wine?</p>
                   <div class="grouped-choices">
                     <% @colours.each_with_index do |colour, index| %>
                       <% if colour == 'Red' %>
-                        <% dependent = 'red_list' %>
+                        <% dependent = 'rquestion_grape_red' %>
                       <% elsif colour == 'Rosé' %>
-                        <% dependent = 'rose_list' %>
+                        <% dependent = 'question_grape_rose' %>
                       <% elsif colour == 'Sweet' %>
-                        <% dependent = 'sweet_list' %>
+                        <% dependent = 'question_grape_sweet' %>
                       <% elsif colour == 'White' %>
-                        <% dependent = 'white_list' %>
+                        <% dependent = 'question_grape_white' %>
                       <% elsif colour == 'Port' %>
-                        <% dependent = 'port_list' %>
+                        <% dependent = 'question_grape_port' %>
                       <% else %>
-                        <% dependent = 'sparkling_list' %>
+                        <% dependent = 'question_grape_sparkling' %>
                       <% end %>
                       <%= f.input :question_colour, input_html: {type: :radio, id: "colour-#{index}", value: colour, "data-toggle" => "tab", "data-target" => "##{dependent}"}, label: colour, wrapper_html: {class: "form-check colours", data: {dependent:dependent}} %>
                     <% end %>
@@ -165,7 +157,6 @@
                 </div>
                 <div class= "button-back">
                   <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                  <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
                 </div>
               </div>
 
@@ -190,7 +181,6 @@
                 </div>
                 <div class= "button-back">
                   <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                  <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
                 </div>
               </div>
 
@@ -205,7 +195,6 @@
                 </div>
                 <div class= "button-back">
                   <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                  <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
                 </div>
               </div>
 
@@ -219,11 +208,10 @@
                     </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_red" role="tabpanel" aria-labelledby="question_grape_red-tab">
-                <div class="grouped-choices grape-variety-choice grape-variety-red dependent-group dependent-group-level-three-colours end-question" data-question="red_list">
+                <div class="grouped-choices grape-variety-choice grape-variety-red dependent-group dependent-group-level-three-colours end-question" data-question="question_grape_red">
                   <p>Which variety?</p>
                   <div class="grouped-choices">
                     <% @grape_reds.each_with_index do |grape_red, index| %>
@@ -232,11 +220,10 @@
                   </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_rose" role="tabpanel" aria-labelledby="question_grape_rose-tab">
-                <div class="grouped-choices grape-variety-choice grape-variety-rose dependent-group dependent-group-level-three-colours end-question" data-question="rose_list">
+                <div class="grouped-choices grape-variety-choice grape-variety-rose dependent-group dependent-group-level-three-colours end-question" data-question="question_grape_rose">
                   <p>Which variety?</p>
                   <div class="grouped-choices">
                     <% @grape_roses.each_with_index do |grape_rose, index| %>
@@ -245,11 +232,10 @@
                   </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_sweet" role="tabpanel" aria-labelledby="question_grape_sweet-tab">
-                <div class="grouped-choices grape-variety-choice grape-variety-sweet dependent-group dependent-group-level-three-colours end-question" data-question="sweet_list">
+                <div class="grouped-choices grape-variety-choice grape-variety-sweet dependent-group dependent-group-level-three-colours end-question" data-question="question_grape_sweet">
                   <p>Which variety?</p>
                   <div class="grouped-choices">
                     <% @grape_sweets.each_with_index do |grape_sweet, index| %>
@@ -258,11 +244,10 @@
                   </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_white" role="tabpanel" aria-labelledby="question_grape_white-tab">
-                <div class="grouped-choices grape-variety-choice grape-variety-white dependent-group dependent-group-level-three-colours end-question" data-question="white_list">
+                <div class="grouped-choices grape-variety-choice grape-variety-white dependent-group dependent-group-level-three-colours end-question" data-question="question_grape_white">
                   <p>Which variety?</p>
                   <div class="grouped-choices">
                     <% @grape_whites.each_with_index do |grape_white, index| %>
@@ -271,11 +256,10 @@
                   </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_port" role="tabpanel" aria-labelledby="question_grape_port-tab">
-                <div class="grouped-choices grape-variety-choice grape-variety-port dependent-group dependent-group-level-three-colours end-question" data-question="port_list">
+                <div class="grouped-choices grape-variety-choice grape-variety-port dependent-group dependent-group-level-three-colours end-question" data-question="question_grape_port">
                   <p>Which variety?</p>
                   <div class="grouped-choices">
                     <% @grape_ports.each_with_index do |grape_port, index| %>
@@ -284,11 +268,10 @@
                   </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="question_sparkling_port" role="tabpanel" aria-labelledby="question_grape_sparkling-tab">
-                <div class="grouped-choices grape-variety-choice grape-variety-sparkling dependent-group dependent-group-level-three-colours end-question" data-question="sparkling_list">
+                <div class="grouped-choices grape-variety-choice grape-variety-sparkling dependent-group dependent-group-level-three-colours end-question" data-question="question_grape_sparkling">
                   <p>Which variety?</p>
                   <div class="grouped-choices">
                     <% @grape_sparklings.each_with_index do |grape_sparkling, index| %>
@@ -297,16 +280,12 @@
                   </div>
                 </div>
                 <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
-                <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
               </div>
 
               <div class="tab-pane fade" id="submit-button" role="tabpanel" aria-labelledby="submit-button-tab">
                 <div class="btn-submit-quiz">
                   <%= f.button :submit, "Done", class: "btn" %>
                 </div>
-<!--                 <div class="false-link">
-                  <a href="https://www.winemeup.wine/bottles?aroma%5B%5D=Woody" class="btn btn-false-link">Done</a>
-                </div> -->
               </div>
 
             </div>

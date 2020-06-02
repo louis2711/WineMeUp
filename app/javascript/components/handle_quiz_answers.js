@@ -3,13 +3,10 @@ const handleQuizAnswers = () => {
   const reasons = document.querySelectorAll('.reasons');
   reasons.forEach((reason) => {
     reason.addEventListener("click", (event) => {
-      console.log(event.currentTarget.dataset);
+      reason.querySelector("input").checked = true;
       const dependency = event.currentTarget.dataset.dependent;
-      console.log(dependency);
       const reasonDependencies = document.querySelectorAll('.dependent-group');
       reasonDependencies.forEach((reasonDependency) => {
-        console.log(dependency);
-        console.log(event.currentTarget.dataset.dependent);
         if(event.currentTarget.dataset.dependent === reasonDependency.dataset.question) {
           reasonDependency.style.display = "flex";
         } else {
@@ -21,11 +18,9 @@ const handleQuizAnswers = () => {
   const explorations = document.querySelectorAll('.explorations');
   explorations.forEach((exploration) => {
     exploration.addEventListener("click", (event) => {
+      exploration.querySelector("input").checked = true;
       const explorationDependencies = document.querySelectorAll('.dependent-group-leveltwo');
-      console.log(explorationDependencies);
       explorationDependencies.forEach((explorationDependency) => {
-        console.log(event.currentTarget.dataset.dependent);
-        console.log(explorationDependency.dataset.question);
         if(event.currentTarget.dataset.dependent === explorationDependency.dataset.question) {
           explorationDependency.style.display = "flex";
         } else {
@@ -45,11 +40,9 @@ const handleQuizAnswers = () => {
   const colours = document.querySelectorAll('.colours');
   colours.forEach((colour) => {
     colour.addEventListener("click", (event) => {
+      colour.querySelector("input").checked = true;
       const colourDependencies = document.querySelectorAll('.dependent-group-level-three-colours');
-      console.log(colourDependencies);
       colourDependencies.forEach((colourDependency) => {
-        console.log(event.currentTarget.dataset.dependent);
-        console.log(colourDependency.dataset.question);
         if(event.currentTarget.dataset.dependent === colourDependency.dataset.question) {
           colourDependency.style.display = "flex";
         } else {
@@ -61,11 +54,9 @@ const handleQuizAnswers = () => {
   const regions = document.querySelectorAll('.regions');
   regions.forEach((region) => {
     region.addEventListener("click", (event) => {
+      region.querySelector("input").checked = true;
       const regionDependencies = document.querySelectorAll('.dependent-group-level-three-regions');
-      console.log(regionDependencies);
       regionDependencies.forEach((regionDependency) => {
-        console.log(event.currentTarget.dataset.dependent);
-        console.log(regionDependency.dataset.question);
         if(event.currentTarget.dataset.dependent === regionDependency.dataset.question) {
           regionDependency.style.display = "flex";
         } else {
@@ -74,22 +65,19 @@ const handleQuizAnswers = () => {
       });
     });
   });
-  // const personnalities = document.querySelectorAll('.personnalities');
-  // personnalities.forEach((personnality) => {
-  //   personnality.addEventListener("click", (event) => {
-  //     const management_question = document.querySelector('.management-question');
-  //     console.log(management_question);
-  //     management_question.style.display = "flex";
-  //   });
-  // });
-  // const endQuestions = document.querySelectorAll('.end-question');
-  // endQuestions.forEach((endQuestion) => {
-  //   endQuestion.addEventListener("click", (event) => {
-  //     const submitButtonPage = document.querySelector('#submit-button');
-  //     console.log(submitButtonPage);
-  //     submitButtonPage.style.display = "flex";
-  //   });
-  // });
+  const personnalities = document.querySelectorAll('.personnalities');
+  personnalities.forEach((personnality) => {
+    personnality.addEventListener("click", (event) => {
+      personnality.querySelector("input").checked = true;
+    });
+  });
+  const endQuestions = document.querySelectorAll('.end-question');
+  endQuestions.forEach((endQuestion) => {
+    endQuestion.addEventListener("click", (event) => {
+      endQuestion.querySelector("input").checked = true;
+
+    });
+  });
 };
 
 
