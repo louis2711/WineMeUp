@@ -6,6 +6,7 @@ class UserAnswersController < ApplicationController
     @user_answer = UserAnswer.new(user_answer_params)
     @user_answer.user = current_user
     @user_answer.save
+    raise
     redirect_to redirection(@user_answer)
   end
 
@@ -16,15 +17,14 @@ class UserAnswersController < ApplicationController
   end
 
   def redirection(answer)
-    # i = answer.length
-    # iterated_array = answer[]
-    url_array = []
-    answer.each do |key, value|
-      new_value = value.gsub(" ", "+")
-      filtered_url = "#{key} = #{value}"
-      url_array << filtered_url
+    if answer.question_reason == 'Impress your friends'
+      url = "TO DO"
+    elsif answer.worlds_list == 'New world'
+      url = 'country%5B%5D=Argentina&country%5B%5D=South+Africa&country%5B%5D=Australia&country%5B%5D=New+Zealand&country%5B%5D=United+States'
+    elsif answer.worlds_list == 'Old world'
+      url = '/bottles?country%5B%5D=France&country%5B%5D=Italy&country%5B%5D=Spain&country%5B%5D=Portugal&country%5B%5D=Switzerland'
     end
-    return "winemeup.wine/bottles?#{url_array.join('&')}"
+    return url
   end
 
 end
