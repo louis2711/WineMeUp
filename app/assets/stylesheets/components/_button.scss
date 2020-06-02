@@ -28,3 +28,18 @@
     text-decoration: none;
   }
   }
+
+.btn_show {
+  background-color: white;
+  color: #B67A82;
+  border-radius: 5px;
+  padding: 8px 12px;
+  border: solid 1px #B67A82;
+
+  &:hover {
+    transition-duration: 0.3s;
+    background-color: #B67A82;
+    color: white;
+    text-decoration: none;
+  }
+}
