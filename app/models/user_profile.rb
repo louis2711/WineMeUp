@@ -45,40 +45,44 @@ class UserProfile < ApplicationRecord
     else
       regions_list = "Africa"
     end
-    create!(regions_list: region, user_id: answer.user_id)
+    create!(region: regions_list, user_id: answer.user_id)
 
     if answer.america_list == "United States"
-      america_list = "United States"
+      american_country = "United States"
     elsif answer.america_list == "Chile"
-      america_list = "Chile"
+      american_country = "Chile"
     else
-      america_list = "Argentina"
+      american_country = "Argentina"
     end
-    create!(america_list: country, user_id: answer.user_id)
+
+    if american_country
+      create!(country: america_list, user_id: answer.user_id)
+    end
+
 
     if answer.europe_list == "France"
-      europe_list = "France"
+      european_list = "France"
     elsif answer.europe_list == "Italy"
-      europe_list = "Italy"
+      european_list = "Italy"
     elsif answer.europe_list == "Spain"
-      europe_list = "Spain"
+      european_list = "Spain"
     elsif answer.europe_list == "Portugal"
-      europe_list = "Portugal"
+      european_list = "Portugal"
     elsif answer.europe_list == "Switzerland"
-      europe_list = "Switzerland"
+      european_list = "Switzerland"
     elsif answer.europe_list == "Germany"
-      europe_list = "Germany"
+      european_list = "Germany"
     else
-      europe_list = "Greece"
+      european_list = "Greece"
     end
-    create!(europe_list: country, user_id: answer.user_id)
+    create!(country: european_list, user_id: answer.user_id)
 
     if answer.oceania_list == "Australia"
-      oceania_list = "Australia"
+      oceanian_list = "Australia"
     else
-      oceania_list = "New-Zealand"
+      oceanian_list = "New-Zealand"
     end
-    create!(oceania_list: country, user_id: answer.user_id)
+    create!(country: oceanian_list, user_id: answer.user_id)
 
     if answer.aromas_list == "Fruit flavors"
       aromas_list = "Fruit flavors"
@@ -93,112 +97,126 @@ class UserProfile < ApplicationRecord
     else
       aromas_list = "Mineral"
     end
-    create!(aromas_list: selected_aroma, user_id: answer.user_id)
+    create!(selected_aroma: aromas_list, user_id: answer.user_id)
 
     if answer.grape_reds == "Cabernet Sauvignon"
-      grape_reds = "Cabernet Sauvignon"
+      grape_red = "Cabernet Sauvignon"
     elsif answer.grape_reds == "Cabernet Franc"
-      grape_reds = "Cabernet Franc"
+      grape_red = "Cabernet Franc"
     elsif answer.grape_reds == "Merlot"
-      grape_reds = "Merlot"
+      grape_red = "Merlot"
     elsif answer.grape_reds == "Pinot Noir"
-      grape_reds = "Pinot Noir"
+      grape_red = "Pinot Noir"
     elsif answer.grape_reds == "Gamay"
-      grape_reds = "Gamay"
+      grape_red = "Gamay"
     elsif answer.grape_reds == "Syrah"
-      grape_reds = "Syrah"
+      grape_red = "Syrah"
     elsif answer.grape_reds == "Grenache"
-      grape_reds = "Grenache"
+      grape_red = "Grenache"
     elsif answer.grape_reds == "Cinsault"
-      grape_reds = "Cinsault"
-    elsif grape_reds == "Malbec"
-      grape_reds = "Malbec"
+      grape_red = "Cinsault"
+    elsif answer.grape_reds == "Malbec"
+      grape_red = "Malbec"
     else
-      grape_reds = "Sangiovese"
+      grape_red = "Sangiovese"
     end
-    create!(grape_reds: selected_grape, user_id: answer.user_id)
+    if grape_red
+      create!(selected_grape: grape_red, user_id: answer.user_id)
+    end
 
     if answer.grape_roses == "Syrah"
-      grape_roses = "Syrah"
+      grape_rose = "Syrah"
     elsif answer.grape_roses == "Grenache"
-      grape_roses = "Grenache"
+      grape_rose = "Grenache"
     elsif answer.grape_roses == "Cinsault"
-      grape_roses = "Cinsault"
+      grape_rose = "Cinsault"
     else
-      grape_roses = "Cabernet d\'Anjou"
+      grape_rose = "Cabernet d\'Anjou"
     end
-    create!(grape_roses: selected_grape, user_id: answer.user_id)
+    if grape_rose
+      create!(selected_grape: grape_rose, user_id: answer.user_id)
+    end
+
 
     if answer.grape_sweets == "Chardonnay"
-      grape_sweets = "Chardonnay"
+      grape_sweet = "Chardonnay"
     elsif answer.grape_sweets == "Muscadelle"
-      grape_sweets = "Muscadelle"
+      grape_sweet = "Muscadelle"
     elsif answer.grape_sweets == "Sémillion"
-      grape_sweets = "Sémillion"
+      grape_sweet = "Sémillion"
     elsif answer.grape_sweets == "Gewurztraminer"
-      grape_sweets = "Gewurztraminer"
+      grape_sweet = "Gewurztraminer"
     elsif answer.grape_sweets == "Riesling"
-      grape_sweets = "Riesling"
+      grape_sweet = "Riesling"
     elsif answer.grape_sweets == "Chenin"
-      grape_sweets = "Chenin"
+      grape_sweet = "Chenin"
     else
-      grape_sweets = "Furmint"
+      grape_sweet = "Furmint"
     end
-    create!(grape_sweets: selected_grape, user_id: answer.user_id)
+    if grape_sweet
+      create!(selected_grape: grape_sweet, user_id: answer.user_id)
+    end
 
     if answer.grape_whites == "Chardonnay"
-      grape_whites = "Chardonnay"
+      grape_white = "Chardonnay"
     elsif answer.grape_whites == "Sauvignon"
-      grape_whites = "Sauvignon"
+      grape_white = "Sauvignon"
     elsif answer.grape_whites == "Chenin"
-      grape_whites = "Chenin"
+      grape_white = "Chenin"
     elsif answer.grape_whites == "Gewurztraminer"
-      grape_whites = "Gewurztraminer"
+      grape_white = "Gewurztraminer"
     elsif answer.grape_whites == "Riesling"
-      grape_whites = "Riesling"
+      grape_white = "Riesling"
     elsif answer.grape_whites == "Viognier"
-      grape_whites = "Viognier"
+      grape_white = "Viognier"
     elsif answer.grape_whites == "Ugni Blanc"
-      grape_whites = "Ugni Blanc"
+      grape_white = "Ugni Blanc"
     elsif answer.grape_whites == "Pinot Gris"
-      grape_whites = "Pinot Gris"
+      grape_white = "Pinot Gris"
     else
-      grape_whites = "Sémillion"
+      grape_white = "Sémillion"
     end
-    create!(grape_whites: selected_grape, user_id: answer.user_id)
+    if grape_white
+      create!(selected_grape: grape_white, user_id: answer.user_id)
+    end
 
     if answer.grape_ports == "Touriga Franca"
-      grape_ports = "Touriga Franca"
+      grape_port = "Touriga Franca"
     elsif answer.grape_ports == "Tinta Roriz"
-      grape_ports = "Tinta Roriz"
+      grape_port = "Tinta Roriz"
     elsif answer.grape_ports == "Tinta Barroca"
-      grape_ports = "Tinta Barroca"
+      grape_port = "Tinta Barroca"
     elsif answer.grape_ports == "Touriga Nacional"
-      grape_ports = "Touriga Nacional"
+      grape_port = "Touriga Nacional"
     else
-      grape_ports = "Tinto Cao"
+      grape_port = "Tinto Cao"
     end
-    create!(grape_ports: selected_grape, user_id: answer.user_id)
+    if grape_port
+      create!(selected_grape: grape_port, user_id: answer.user_id)
+    end
+
 
     if answer.grape_sparklings == "Chardonnay"
-      grape_sparklings = "Chardonnay"
+      grape_sparkling = "Chardonnay"
     elsif answer.grape_sparklings == "Pinot Noir"
-      grape_sparklings = "Pinot Noir"
+      grape_sparkling = "Pinot Noir"
     elsif answer.grape_sparklings == "Pinot Meunier"
-      grape_sparklings = "Pinot Meunier"
+      grape_sparkling = "Pinot Meunier"
     elsif answer.grape_sparklings == "Macabeo"
-      grape_sparklings = "Macabeo"
+      grape_sparkling = "Macabeo"
     elsif answer.grape_sparklings == "Monastrell"
-      grape_sparklings = "Monastrell"
+      grape_sparkling = "Monastrell"
     elsif answer.grape_sparklings == "Garnacha"
-      grape_sparklings = "Garnacha"
+      grape_sparkling = "Garnacha"
     elsif answer.grape_sparklings == "Muscat Blanc à Petits Grains"
-      grape_sparklings = "Muscat Blanc à Petits Grains"
+      grape_sparkling = "Muscat Blanc à Petits Grains"
     elsif answer.grape_sparklings == "Glera"
-      grape_sparklings = "Glera"
+      grape_sparkling = "Glera"
     else
-      grape_sparklings = "Riesling"
+      grape_sparkling = "Riesling"
     end
-    create!(grape_sparklings: selected_grape, user_id: answer.user_id)
+    if grape_sparkling
+      create!(selected_grape: grape_sparkling, user_id: answer.user_id)
+    end
   end
 end
