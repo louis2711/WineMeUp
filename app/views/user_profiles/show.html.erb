@@ -1,6 +1,8 @@
 <%= @user_profile.username %>
 <%= @user_profile.color %>
 <%= @user_profile.selected_aroma %>
+<%= @user_profile.selected_grape %>
 <% @recommended_bottles.each do |bottle| %>
   <%= bottle.appellation %>
+  <%= bottle.domain %>
 <% end %>
