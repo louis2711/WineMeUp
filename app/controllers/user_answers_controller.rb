@@ -6,7 +6,6 @@ class UserAnswersController < ApplicationController
     @user_answer = UserAnswer.new(user_answer_params)
     @user_answer.user = current_user
     @user_answer.save
-    raise
     redirect_to redirection(@user_answer)
   end
 
@@ -18,11 +17,61 @@ class UserAnswersController < ApplicationController
 
   def redirection(answer)
     if answer.question_reason == 'Impress your friends'
-      url = "TO DO"
+      url = "/bottles?price_range=75%2C2000"
     elsif answer.worlds_list == 'New world'
-      url = 'country%5B%5D=Argentina&country%5B%5D=South+Africa&country%5B%5D=Australia&country%5B%5D=New+Zealand&country%5B%5D=United+States'
+      url = '/bottles?country%5B%5D=Argentina&country%5B%5D=South+Africa&country%5B%5D=Australia&country%5B%5D=New+Zealand&country%5B%5D=United+States'
     elsif answer.worlds_list == 'Old world'
       url = '/bottles?country%5B%5D=France&country%5B%5D=Italy&country%5B%5D=Spain&country%5B%5D=Portugal&country%5B%5D=Switzerland'
+    elsif answer.meals_list == 'Red Meat'
+      url = '/bottles?characteristics%5B%5D=Structured&characteristics%5B%5D=Powerful&characteristics%5B%5D=High+Tannins'
+    elsif answer.meals_list == 'White Meat'
+      url = '/bottles?characteristics%5B%5D=Light&characteristics%5B%5D=Low+Tannins&characteristics%5B%5D=Dry'
+    elsif answer.meals_list == 'Fish'
+      url = '/bottles?characteristics%5B%5D=Structured&characteristics%5B%5D=Light&characteristics%5B%5D=Low+Tannins&characteristics%5B%5D=Dry'
+    elsif answer.meals_list == 'Cheese'
+      url = '/bottles?characteristics%5B%5D=Structured&characteristics%5B%5D=Light&characteristics%5B%5D=Powerful&characteristics%5B%5D=Low+Tannins&characteristics%5B%5D=Dry&characteristics%5B%5D=High+Tannins'
+    elsif answer.meals_list == 'Dessert'
+      url = '/bottles?characteristics%5B%5D=Sweet&characteristics%5B%5D=Acid'
+    elsif answer.regions_list == 'Africa'
+      url == '/bottles?country%5B%5D=South+Africa'
+    elsif answer.america_list == 'United States'
+      url = '/bottles?country%5B%5D=United+States'
+    elsif answer.america_list == 'Chile'
+      url = '/bottles?country%5B%5D=Chile'
+    elsif answer.america_list == 'Argentina'
+      url = '/bottles?country%5B%5D=Argentina'
+    elsif answer.europe_list == 'France'
+      url = '/bottles?country%5B%5D=France'
+    elsif answer.europe_list == 'Italy'
+      url = '/bottles?country%5B%5D=Italy'
+    elsif answer.europe_list == 'Spain'
+      url = '/bottles?country%5B%5D=Spain'
+    elsif answer.europe_list == 'Portugal'
+      url = '/bottles?country%5B%5D=Portugal'
+    elsif answer.europe_list == 'Switzerland'
+      url = '/bottles?country%5B%5D=Switzerland'
+    elsif answer.europe_list == 'Germany'
+      url = '/bottles?country%5B%5D=Germany'
+    elsif answer.europe_list == 'Greece'
+      url = '/bottles?country%5B%5D=Greece'
+    elsif answer.oceania_list == 'New Zealand'
+      url = '/bottles?country%5B%5D=New+Zealand'
+    elsif answer.oceania_list == 'Australia'
+      url = '/bottles?country%5B%5D=Australia'
+    elsif answer.aromas_list == 'Fruits flavors'
+      url = '/bottles?aroma%5B%5D=Fruity'
+    elsif answer.aromas_list == 'Floral flavors'
+      url = '/bottles?aroma%5B%5D=Floral'
+    elsif answer.aromas_list == 'Herbal'
+      url = '/bottles?aroma%5B%5D=Herbal'
+    elsif answer.aromas_list == 'Woody'
+      url = '/bottles?aroma%5B%5D=Woody'
+    elsif answer.aromas_list == 'Spicy'
+      url = '/bottles?aroma%5B%5D=Spicy'
+    elsif answer.aromas_list == 'Mineral'
+      url = '/bottles?aroma%5B%5D=Mineral'
+    elsif answer.vintage_range
+      url = "/bottles?vintage%5B%5D=#{answer.vintage_range}"
     end
     return url
   end
