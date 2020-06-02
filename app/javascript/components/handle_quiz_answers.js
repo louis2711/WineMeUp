@@ -74,13 +74,22 @@ const handleQuizAnswers = () => {
       });
     });
   });
-  const personnalities = document.querySelectorAll('.personnalities');
-  personnalities.forEach((personnality) => {
-    personnality.addEventListener("click", (event) => {
-      const management_question = document.querySelector('.management-question')
-      management_question.style.display = "flex";
-    });
-  });
+  // const personnalities = document.querySelectorAll('.personnalities');
+  // personnalities.forEach((personnality) => {
+  //   personnality.addEventListener("click", (event) => {
+  //     const management_question = document.querySelector('.management-question');
+  //     console.log(management_question);
+  //     management_question.style.display = "flex";
+  //   });
+  // });
+  // const endQuestions = document.querySelectorAll('.end-question');
+  // endQuestions.forEach((endQuestion) => {
+  //   endQuestion.addEventListener("click", (event) => {
+  //     const submitButtonPage = document.querySelector('#submit-button');
+  //     console.log(submitButtonPage);
+  //     submitButtonPage.style.display = "flex";
+  //   });
+  // });
 };
 
 
