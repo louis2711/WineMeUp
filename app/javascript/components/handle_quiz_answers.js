@@ -3,7 +3,7 @@ const handleQuizAnswers = () => {
   const reasons = document.querySelectorAll('.reasons');
   reasons.forEach((reason) => {
     reason.addEventListener("click", (event) => {
-      reason.querySelector("input").checked = true;
+      // reason.querySelector("input").checked = true;
       const dependency = event.currentTarget.dataset.dependent;
       const reasonDependencies = document.querySelectorAll('.dependent-group');
       reasonDependencies.forEach((reasonDependency) => {
@@ -18,7 +18,7 @@ const handleQuizAnswers = () => {
   const explorations = document.querySelectorAll('.explorations');
   explorations.forEach((exploration) => {
     exploration.addEventListener("click", (event) => {
-      exploration.querySelector("input").checked = true;
+      // exploration.querySelector("input").checked = true;
       const explorationDependencies = document.querySelectorAll('.dependent-group-leveltwo');
       explorationDependencies.forEach((explorationDependency) => {
         if(event.currentTarget.dataset.dependent === explorationDependency.dataset.question) {
@@ -40,7 +40,7 @@ const handleQuizAnswers = () => {
   const colours = document.querySelectorAll('.colours');
   colours.forEach((colour) => {
     colour.addEventListener("click", (event) => {
-      colour.querySelector("input").checked = true;
+      // colour.querySelector("input").checked = true;
       const colourDependencies = document.querySelectorAll('.dependent-group-level-three-colours');
       colourDependencies.forEach((colourDependency) => {
         if(event.currentTarget.dataset.dependent === colourDependency.dataset.question) {
@@ -54,7 +54,7 @@ const handleQuizAnswers = () => {
   const regions = document.querySelectorAll('.regions');
   regions.forEach((region) => {
     region.addEventListener("click", (event) => {
-      region.querySelector("input").checked = true;
+      // region.querySelector("input").checked = true;
       const regionDependencies = document.querySelectorAll('.dependent-group-level-three-regions');
       regionDependencies.forEach((regionDependency) => {
         if(event.currentTarget.dataset.dependent === regionDependency.dataset.question) {
@@ -65,16 +65,25 @@ const handleQuizAnswers = () => {
       });
     });
   });
-  const personnalities = document.querySelectorAll('.personnalities');
-  personnalities.forEach((personnality) => {
-    personnality.addEventListener("click", (event) => {
-      personnality.querySelector("input").checked = true;
-    });
-  });
-  const endQuestions = document.querySelectorAll('.end-question');
-  endQuestions.forEach((endQuestion) => {
-    endQuestion.addEventListener("click", (event) => {
-      endQuestion.querySelector("input").checked = true;
+  // const personnalities = document.querySelectorAll('.personnalities');
+  // personnalities.forEach((personnality) => {
+  //   personnality.addEventListener("click", (event) => {
+  //     personnality.querySelector("input").checked = true;
+  //   });
+  // });
+  // const endQuestions = document.querySelectorAll('.end-question');
+  // endQuestions.forEach((endQuestion) => {
+  //   endQuestion.addEventListener("click", (event) => {
+  //     console.log(event.currentTarget);
+  //     // event.currentTarget.querySelector("input").checked = true;
+
+  //   });
+  // });
+  const formChecks = document.querySelectorAll('.form-check');
+  formChecks.forEach((formCheck) => {
+    formCheck.addEventListener("click", (event) => {
+      console.log(event.currentTarget);
+      event.currentTarget.querySelector("input").checked = true;
 
     });
   });

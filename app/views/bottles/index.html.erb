@@ -182,7 +182,7 @@
         </div>
       </div>
       <div class="btn-submit">
-        <input type="submit" class="submit btn-red">
+        <input type="submit" class="submit btn-red btn-submit-red">
       </div>
     </form>
 
@@ -190,9 +190,10 @@
       <% @bottles.each do |bottle|  %>
           <div class="card-bottle-index">
             <div class="card-bottle-button">
-              <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
-                <i class="fas fa-plus"></i>
-              </button>
+              <a href="#exampleModal" data-toggle="modal" class="btn-modal-index">
+                <%= image_tag "eye_bottles.svg" %>
+              </a>
+
             </div>
             <div class="card-bottle-index-img">
               <div class="img-bottle-index">
@@ -203,13 +204,13 @@
                 <% end %>
               </div>
             </div>
-            <div class="card-bottle-index-infos">
-              <div>
-                <h2 class="bottle-domain"><%= bottle.domain %></h2>
-                <p><%= bottle.appellation %></p>
+            <div class="card-bottle-domain-appellation">
+              <h2 class="bottle-domain"><%= bottle.domain %></h2>
+              <p><%= bottle.appellation %></p>
+            </div>
+<!--             <div class="card-bottle-appellation">
 
-              </div>
-             </div>
+            </div> -->
             <div class="card-footer-country-year">
               <div class="card-footer-country">
                 <% if bottle.region.present? %>
@@ -224,5 +225,7 @@
       <% end %>
     </div>
   </div>
-  <%= render 'shared/modalshow' %>
 </div>
+<% @bottles.each do |bottle|  %>
+  <%= render 'shared/modalshow', bottle: bottle  %>
+<% end %>
