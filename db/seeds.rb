@@ -282,7 +282,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/24111/product/76814(ok
 egon.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 egon.save!
 
-mosel = Bottle.new(appellation: "Mosel Pdo", domain: "Estate Riesling QbA", vintage: "2017", color: "White", grape_variety: "Coda di Volpe", aroma: "floral", characteristics: "Light", country: "Germany", region: "Moselle", price_range: "21", description: "")
+mosel = Bottle.new(appellation: "Mosel Pdo", domain: "Estate Riesling QbA", vintage: "2017", color: "White", grape_variety: "Coda di Volpe", aroma: "Floral", characteristics: "Light", country: "Germany", region: "Moselle", price_range: "21", description: "")
 file = URI.open("https://images.lavinia.fr/spree/products/25100/product/1DEDE60036128(ok).jpg?1587120782")
 mosel.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 mosel.save!
@@ -294,7 +294,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/22720/product/100836(o
 doc.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 doc.save!
 
-douro = Bottle.new(appellation: "Doc Douro", domain: "Quinta do Romeu", vintage: "2014", color: "White", grape_variety: "Gouveio, Arinto, Rabigato", aroma: "fruity", characteristics: "Light", country: "Portugal", region: "Douro", price_range: "22", description: "Au nez c'est un vin jeune avec une bonne intensité, les arômes ressentis sont les fruits mûrs (tel que la pomme, la pêche et le coing), les fruits tropicaux frais (fruit de la passion et ananas) et les fleurs. Avec une légère touche minérale. En bouche nous avons des saveurs crémeuses avec une acidité très fraîche à caractère fruité, il s'agit d'un vin frais, complexe et profond.L'ensemble révèle beaucoup d'énergie.")
+douro = Bottle.new(appellation: "Doc Douro", domain: "Quinta do Romeu", vintage: "2014", color: "White", grape_variety: "Gouveio, Arinto, Rabigato", aroma: "Fruity", characteristics: "Light", country: "Portugal", region: "Douro", price_range: "22", description: "Au nez c'est un vin jeune avec une bonne intensité, les arômes ressentis sont les fruits mûrs (tel que la pomme, la pêche et le coing), les fruits tropicaux frais (fruit de la passion et ananas) et les fleurs. Avec une légère touche minérale. En bouche nous avons des saveurs crémeuses avec une acidité très fraîche à caractère fruité, il s'agit d'un vin frais, complexe et profond.L'ensemble révèle beaucoup d'énergie.")
 file = URI.open("https://images.lavinia.fr/spree/products/23740/product/V000357.jpg?1570802839")
 douro.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 douro.save!
