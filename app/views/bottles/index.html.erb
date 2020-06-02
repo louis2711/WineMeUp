@@ -189,10 +189,8 @@
     <div class="card-container cards">
       <% @bottles.each do |bottle|  %>
           <div class="card-bottle-index">
-            <div class="card-bottle-button">
-              <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
-                <i class="fas fa-plus"></i>
-              </button>
+            <div class="card-bottle-button" data-id="<%= bottle.id %>">
+              <%= link_to "Plus","#", :html => {:class => 'btn'}, "data-toggle" => "modal", 'data-target' => "#bottleModal#{bottle.id}" %>
             </div>
             <div class="card-bottle-index-img">
               <div class="img-bottle-index">
@@ -224,5 +222,7 @@
       <% end %>
     </div>
   </div>
-  <%= render 'shared/modalshow' %>
 </div>
+<% @bottles.each do |bottle|  %>
+  <%= render 'shared/modalshow', bottle: bottle  %>
+<% end %>
