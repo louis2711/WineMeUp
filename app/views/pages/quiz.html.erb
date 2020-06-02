@@ -275,7 +275,7 @@
                   <p>Which variety?</p>
                   <div class="grouped-choices">
                     <% @grape_sparklings.each_with_index do |grape_sparkling, index| %>
-                      <%= f.input :question_grape_sparkling, input_html: {type: :radio, id: "grape-sparkling-#{index}", value: grape_sparkling, "data-toggle" => "tab", "data-target" => "#submit-button"}, label: grape_sparkling, wrapper_html: {class: "form-check"} %>
+                      <%= f.input :question_grape_sparkling, input_html: {type: :radio, id: "grape-sparkling-#{index}", value: grape_sparkling, "data-toggle" => "tab", "data-target" => "#submit-button"}, label: grape_sparkling, wrapper_html: {class: "form-check final-question"} %>
                     <% end %>
                   </div>
                 </div>
