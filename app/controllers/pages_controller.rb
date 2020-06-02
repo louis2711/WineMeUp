@@ -26,7 +26,7 @@ class PagesController < ApplicationController
     @grape_ports = ['Touriga Franca', 'Tinta Roriz', 'Tinta Barroca', 'Touriga Nacional', 'Tinto Cao']
     @grape_sparklings = ['Chardonnay', 'Pinot Noir', 'Pinot Meunier', 'Macabeo', 'Monastrell', 'Garnacha', 'Muscat Blanc à Petits Grains', 'Glera', 'Riesling']
     @meals = ['Red Meat', 'White Meat', 'Fish', 'Cheese', 'Dessert']
-    @americas = ['United States', 'Chile', 'Argentina']
+    @americas = ['United States', 'Argentina']
     @europes = ['France', 'Italy', 'Spain', 'Portugal', 'Switzerland', 'Germany', 'Greece']
     @oceanias = ['New-Zealand', 'Australia']
     @user_answer = UserAnswer.new

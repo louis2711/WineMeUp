@@ -4,14 +4,19 @@ width: 300px;
 margin-right: 10px;
 }
 
-.btn.btn-searchbar {
-  padding: 7px 25px 4px;
-  border-radius: inherit;
-  background-color: #b67a82;
-  border: solid 1px #b67a82;
-  color: white;
-  border-radius: 25px;
-}
+// .btn.btn-searchbar {
+//   padding: 7px 25px 7px;
+//   border-radius: inherit;
+//   background-color: #b67a82;
+//   border: solid 1px #b67a82;
+//   color: white;
+//   border-radius: 5px;
+//   &:hover {
+//     background-color: white;
+//     color: #b67a82;
+//     transition-duration: 0.3s;
+//   }
+// }
 
 .search-container {
   display: flex;
