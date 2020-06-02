@@ -37,22 +37,26 @@ class UserProfile < ApplicationRecord
     #create!(vineyard_management: vineyard_management, user_id: answer.user_id)
 
     if answer.regions_list == "America"
-      regions_list = "America"
+      regions = "America"
     elsif answer.regions_list == "Europe"
-      regions_list = "Europe"
+      regions = "Europe"
     elsif answer.regions_list == "Oceania"
-      regions_list = "Oceania"
+      regions = "Oceania"
+    elsif answer.regions_list == "Africa"
+      regions = "Africa"
     else
-      regions_list = "Africa"
+      regions = ""
     end
-    #create!(region: regions_list, user_id: answer.user_id)
+    #create!(region: regions, user_id: answer.user_id)
 
     if answer.america_list == "United States"
-      american_country = "United States"
+      country = "United States"
     elsif answer.america_list == "Chile"
-      american_country = "Chile"
+      country = "Chile"
+    elsif answer.america_list == "Argentina"
+      country = "Argentina"
     else
-      american_country = "Argentina"
+      country = ""
     end
 
     # if american_country
@@ -61,26 +65,30 @@ class UserProfile < ApplicationRecord
 
 
     if answer.europe_list == "France"
-      european_list = "France"
+      country = "France"
     elsif answer.europe_list == "Italy"
-      european_list = "Italy"
+      country = "Italy"
     elsif answer.europe_list == "Spain"
-      european_list = "Spain"
+      country = "Spain"
     elsif answer.europe_list == "Portugal"
-      european_list = "Portugal"
+      country = "Portugal"
     elsif answer.europe_list == "Switzerland"
-      european_list = "Switzerland"
+      country = "Switzerland"
     elsif answer.europe_list == "Germany"
-      european_list = "Germany"
+      country = "Germany"
+    elsif answer.europe_list == "Greece"
+      country = "Greece"
     else
-      european_list = "Greece"
+      country = ""
     end
     #create!(country: european_list, user_id: answer.user_id)
 
     if answer.oceania_list == "Australia"
-      oceanian_list = "Australia"
+      country = "Australia"
+    elsif answer.oceania_list == "New-Zealand"
+      country = "New-Zealand"
     else
-      oceanian_list = "New-Zealand"
+      country = ""
     end
     #create!(country: oceanian_list, user_id: answer.user_id)
 
@@ -94,44 +102,50 @@ class UserProfile < ApplicationRecord
       aromas = "Woody"
     elsif answer.aromas_list == "Spicy"
       aromas = "Spicy"
-    else
+    elsif answer.aromas_list == "Mineral"
       aromas = "Mineral"
+    else
+      aromas = ""
     end
     #create!(selected_aroma: aromas_list, user_id: answer.user_id)
 
     if answer.question_grape_red == "Cabernet Sauvignon"
-      grape_red = "Cabernet Sauvignon"
+      grape = "Cabernet Sauvignon"
     elsif answer.question_grape_red == "Cabernet Franc"
-      grape_red = "Cabernet Franc"
+      grape = "Cabernet Franc"
     elsif answer.question_grape_red == "Merlot"
-      grape_red = "Merlot"
+      grape = "Merlot"
     elsif answer.question_grape_red == "Pinot Noir"
-      grape_red = "Pinot Noir"
+      grape = "Pinot Noir"
     elsif answer.question_grape_red == "Gamay"
-      grape_red = "Gamay"
+      grape = "Gamay"
     elsif answer.question_grape_red == "Syrah"
-      grape_red = "Syrah"
+      grape = "Syrah"
     elsif answer.question_grape_red == "Grenache"
-      grape_red = "Grenache"
+      grape = "Grenache"
     elsif answer.question_grape_red == "Cinsault"
-      grape_red = "Cinsault"
+      grape = "Cinsault"
     elsif answer.question_grape_red == "Malbec"
-      grape_red = "Malbec"
+      grape = "Malbec"
+    elsif answer.question_grape_red == "Sangiovese"
+      grape = "Sangiovese"
     else
-      grape_red = "Sangiovese"
+      grape = ""
     end
     # if grape_red
     #   create!(selected_grape: grape_red, user_id: answer.user_id)
     # end
 
     if answer.question_grape_rose == "Syrah"
-      grape_rose = "Syrah"
+      grape = "Syrah"
     elsif answer.question_grape_rose == "Grenache"
-      grape_rose = "Grenache"
+      grape = "Grenache"
     elsif answer.question_grape_rose == "Cinsault"
-      grape_rose = "Cinsault"
+      grape = "Cinsault"
+    elsif answer.question_grape_rose == "Cabernet d\'Anjou"
+      grape = "Cabernet d\'Anjou"
     else
-      grape_rose = "Cabernet d\'Anjou"
+      grape = ""
     end
     # if grape_rose
     #   create!(selected_grape: grape_rose, user_id: answer.user_id)
@@ -139,57 +153,63 @@ class UserProfile < ApplicationRecord
 
 
     if answer.question_grape_sweet == "Chardonnay"
-      grape_sweet = "Chardonnay"
+      grape = "Chardonnay"
     elsif answer.question_grape_sweet == "Muscadelle"
-      grape_sweet = "Muscadelle"
+      grape = "Muscadelle"
     elsif answer.question_grape_sweet == "Sémillion"
-      grape_sweet = "Sémillion"
+      grape = "Sémillion"
     elsif answer.question_grape_sweet == "Gewurztraminer"
-      grape_sweet = "Gewurztraminer"
+      grape = "Gewurztraminer"
     elsif answer.question_grape_sweet == "Riesling"
-      grape_sweet = "Riesling"
+      grape = "Riesling"
     elsif answer.question_grape_sweet == "Chenin"
-      grape_sweet = "Chenin"
+      grape = "Chenin"
+    elsif answer.question_grape_sweet == "Furmint"
+      grape = "Furmint"
     else
-      grape_sweet = "Furmint"
+      grape = ""
     end
     # if grape_sweet
     #   create!(selected_grape: grape_sweet, user_id: answer.user_id)
     # end
 
     if answer.question_grape_white == "Chardonnay"
-      grape_white = "Chardonnay"
+      grape = "Chardonnay"
     elsif answer.question_grape_white == "Sauvignon"
-      grape_white = "Sauvignon"
+      grape = "Sauvignon"
     elsif answer.question_grape_white == "Chenin"
-      grape_white = "Chenin"
+      grape = "Chenin"
     elsif answer.question_grape_white == "Gewurztraminer"
-      grape_white = "Gewurztraminer"
+      grape = "Gewurztraminer"
     elsif answer.question_grape_white == "Riesling"
-      grape_white = "Riesling"
+      grape = "Riesling"
     elsif answer.question_grape_white == "Viognier"
-      grape_white = "Viognier"
+      grape = "Viognier"
     elsif answer.question_grape_white == "Ugni Blanc"
-      grape_white = "Ugni Blanc"
+      grape = "Ugni Blanc"
     elsif answer.question_grape_white == "Pinot Gris"
-      grape_white = "Pinot Gris"
+      grape = "Pinot Gris"
+    elsif answer.question_grape_white == "Sémillion"
+      grape = "Sémillion"
     else
-      grape_white = "Sémillion"
+      grape = ""
     end
     # if grape_white
     #   create!(selected_grape: grape_white, user_id: answer.user_id)
     # end
 
     if answer.question_grape_port == "Touriga Franca"
-      grape_port = "Touriga Franca"
+      grape = "Touriga Franca"
     elsif answer.question_grape_port == "Tinta Roriz"
-      grape_port = "Tinta Roriz"
+      grape = "Tinta Roriz"
     elsif answer.question_grape_port == "Tinta Barroca"
-      grape_port = "Tinta Barroca"
+      grape = "Tinta Barroca"
     elsif answer.question_grape_port == "Touriga Nacional"
-      grape_port = "Touriga Nacional"
+      grape = "Touriga Nacional"
+    elsif answer.question_grape_port == "Tinto Cao"
+      grape = "Tinto Cao"
     else
-      grape_port = "Tinto Cao"
+      grape = ""
     end
     # if grape_port
     #   create!(selected_grape: grape_port, user_id: answer.user_id)
@@ -197,28 +217,30 @@ class UserProfile < ApplicationRecord
 
 
     if answer.question_grape_sparkling == "Chardonnay"
-      grape_sparkling = "Chardonnay"
+      grape = "Chardonnay"
     elsif answer.question_grape_sparkling == "Pinot Noir"
-      grape_sparkling = "Pinot Noir"
+      grape = "Pinot Noir"
     elsif answer.question_grape_sparkling == "Pinot Meunier"
-      grape_sparkling = "Pinot Meunier"
+      grape = "Pinot Meunier"
     elsif answer.question_grape_sparkling == "Macabeo"
-      grape_sparkling = "Macabeo"
+      grape = "Macabeo"
     elsif answer.question_grape_sparkling == "Monastrell"
-      grape_sparkling = "Monastrell"
+      grape = "Monastrell"
     elsif answer.question_grape_sparkling == "Garnacha"
-      grape_sparkling = "Garnacha"
+      grape = "Garnacha"
     elsif answer.question_grape_sparkling == "Muscat Blanc à Petits Grains"
-      grape_sparkling = "Muscat Blanc à Petits Grains"
+      grape = "Muscat Blanc à Petits Grains"
     elsif answer.question_grape_sparkling == "Glera"
-      grape_sparkling = "Glera"
+      grape = "Glera"
+    elsif answer.question_grape_sparkling == "Riesling"
+      grape = "Riesling"
     else
-      grape_sparkling = "Riesling"
+      grape = ""
     end
     # if grape_sparkling
     #   create!(selected_grape: grape_sparkling, user_id: answer.user_id)
     # end
-    create!(color: color, vineyard_management: vineyard_management, selected_aroma: aromas, user_id: answer.user_id)
+    create!(color: color, vineyard_management: vineyard_management, selected_aroma: aromas, region: regions, country: country, selected_grape: grape, user_id: answer.user_id)
 
   end
 end
