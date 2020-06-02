@@ -188,8 +188,12 @@
 
     <div class="card-container cards">
       <% @bottles.each do |bottle|  %>
-        <%= link_to bottle_path(bottle), style: 'text-decoration: none' do %>
           <div class="card-bottle-index">
+            <div class="card-bottle-button">
+              <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
             <div class="card-bottle-index-img">
               <div class="img-bottle-index">
                 <% if bottle.photo.attached? %>
@@ -217,8 +221,8 @@
               </div>
             </div>
           </div>
-        <% end %>
       <% end %>
     </div>
   </div>
+  <%= render 'shared/modalshow' %>
 </div>
