@@ -113,6 +113,8 @@
                       <% dependent = 'europe_list' %>
                     <% elsif region == 'Oceania' %>
                       <% dependent = 'oceania_list' %>
+                    <% elsif region == 'Africa' %>
+                      <% dependent = 'submit-button' %>
                     <% end %>
                       <%= f.input :regions_list, input_html: {type: :radio, id: "region-#{index}", value: region, "data-toggle" => "tab", "data-target" => "##{dependent}"}, label: region, wrapper_html: {class: "form-check regions", data: {dependent:dependent}} %>
                     <% end %>
@@ -162,7 +164,7 @@
 
               <div class="tab-pane fade" id="vintage_range" role="tabpanel" aria-labelledby="vintage_range-tab">
                 <div class="dependent-group dependent-group-leveltwo end-question" data-question='vintage_range'>
-                  <%= f.input :vintage_range, label: "Select a year", collection: 1970..2020 %>
+                  <%= f.input :vintage_range, label: "Select a year", collection: 1995...2020 %>
                 </div>
                 <div class= "button-back">
                   <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
