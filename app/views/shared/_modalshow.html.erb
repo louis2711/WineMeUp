@@ -1,4 +1,4 @@
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="bottleModal<%= bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -8,8 +8,41 @@
         </button>
       </div>
       <div class="modal-body">
-      <p>"blablal"</p>
-      </div>
+        <div class="container container-show-bottle">
+          <div class="subcontainer-show-bottle">
+            <% if bottle.photo.attached? %>
+              <%= cl_image_tag bottle.photo.key, height: 400 %>
+            <% else %>
+              <%= image_tag "/#" %>
+            <% end %>
+          </div>
+          <div class="product-info">
+            <div class="bottle-info">
+              <h1><%= bottle.domain %><%= bottle.label %></h1>
+              <h2><%= bottle.appellation %><%= " - " %><%= bottle.region %></h2>
+              <h3><%= bottle.vintage %></h3>
+            </div>
+            <br>
+            <div class="bottle-infos-show">
+              <p><%= bottle.color %></p>
+              <p><%= bottle.characteristics %></p>
+              <p><%= bottle.aroma %></p>
+            </div>
+            <div class="bottle-price_range">
+              <p><strong>Price: </strong><%= bottle.price_range %> €</p>
+            </div>
+            <div class="other-info">
+              <p><strong>Additionnal information:</strong></p>
+              <p> <%= bottle.description %></p>
+            </div>
+            <div class="banner-content">
+              <div class="show-buttons">
+                <%= link_to "< Back to Bottles", bottles_path, class: "btn_show" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
     </div>
   </div>
 </div>

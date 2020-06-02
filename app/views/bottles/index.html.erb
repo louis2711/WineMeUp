@@ -193,6 +193,7 @@
               <a href="#exampleModal" data-toggle="modal" class="btn-modal-index">
                 <%= image_tag "eye_bottles.svg" %>
               </a>
+
             </div>
             <div class="card-bottle-index-img">
               <div class="img-bottle-index">
@@ -224,5 +225,7 @@
       <% end %>
     </div>
   </div>
-  <%= render 'shared/modalshow' %>
 </div>
+<% @bottles.each do |bottle|  %>
+  <%= render 'shared/modalshow', bottle: bottle  %>
+<% end %>
