@@ -27,12 +27,12 @@
   }
   p {
     margin: 0 auto;
-    font-size: 30px;
+    font-size: 33px;
     font-weight: bold;
     text-align: center;
     width: 685px;
     margin-bottom: 40px;
-    font-weight: 200;
+    font-weight: 500;
     color: rgb(40, 40, 40);
     // font-family: "GingerOTF", "Ginger", "Garamond", sans-serif;
 
@@ -103,6 +103,7 @@
   display: block;
   vertical-align: center;
   margin-bottom: 0;
+  font-size: 23px;
 }
 
 .grouped-choices .form-group input {
@@ -181,4 +182,5 @@
     transition-duration: 0.2s;
   }
 }
+
 

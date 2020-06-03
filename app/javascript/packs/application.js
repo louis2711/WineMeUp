@@ -48,3 +48,7 @@ document.addEventListener('turbolinks:load', () => {
     setTimeout(handleQuizAnswers(), 2000);
   };
 });
+
+$(function(){
+  $('[data-tooltip=tooltip]').tooltip();
+});
