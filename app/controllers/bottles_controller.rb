@@ -4,6 +4,13 @@ class BottlesController < ApplicationController
   def index
     @bottles = Bottle.all
     @bottles = Bottle.filter(params.slice(:vintage, :region, :domain, :price_range, :grape_variety, :color, :characteristics, :typical_meal, :aroma, :country))
+    if params[:color]
+      color_params = params[:color].map{|color| color.downcase.to_sym}
+      @varieties = color_params.map{|color| Bottle::GRAPE_VARIETY[color]}.flatten.uniq
+    else
+      @varieties = Bottle::GRAPE_VARIETY.values.flatten.uniq
+    end
+    @colors = Bottle::COLORS
   end
 
   def show

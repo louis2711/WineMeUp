@@ -33,6 +33,7 @@ import { choicesCustom } from '../components/choices_quiz.js';
 import { handleQuizAnswers } from '../components/handle_quiz_answers.js';
 import { collapse } from '../components/collapse.js';
 import { initSlider } from '../components/slider.js';
+import { colorFilter } from '../components/color_filter.js';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -41,6 +42,7 @@ document.addEventListener('turbolinks:load', () => {
   homeType();
   collapse();
   initSlider();
+  colorFilter();
   if (document.querySelector('.grouped-choices')) {
     choicesCustom();
   };

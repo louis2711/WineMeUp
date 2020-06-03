@@ -4,8 +4,15 @@ class Bottle < ApplicationRecord
   has_one_attached :photo
   has_many :feedbacks
   scope :filter_by_color, -> (color) { where color: color }
-  scope :filter_by_grape_variety, -> (grape_variety) {
-    where "grape_variety ilike ?", "%#{grape_variety}%" }
+  scope :filter_by_grape_variety, -> (grape_varieties) {
+    condition = grape_varieties.map do |grape_variety|
+      "grape_variety ilike ?"
+    end.join(" or ")
+    values = grape_varieties.map do |grape_variety|
+      "%#{ grape_variety }%"
+    end
+    where(condition,*values)
+  }
   scope :filter_by_aroma, -> (aroma) { where aroma: aroma }
   scope :filter_by_characteristics, -> (characteristics) {
     condition = characteristics.map do |characteristic|
@@ -28,4 +35,14 @@ class Bottle < ApplicationRecord
       where "price_range > ? and price_range < ?", price_range.split(",")[0], price_range.split(",")[1]
     end
     }
+
+  GRAPE_VARIETY = {
+    red: ["Carbernet Sauvignon", "Pinot Noir", "Cabernet Franc", "Merlot", "Gamay", "Grenache", "Cinsault", "Malbec", "Sangiovese", "Syrah"],
+    white: ["Sauvignon Blanc", "Chardonnay", "Chasselas", "Pinot Gris", "Chenin", "Riesling", "Viognier", "Semillon", "Trebbiano"],
+    rose: ["Grenache", "Cinsault", "Syrah", "Mourvèdre", "Carignan"],
+    sweet: ["Muscadelle", "Tokaj", "Gewurztraminer"],
+    port: ["Touriga Franca", "Tinta Roriz", "Tinta Barroca", "Touriga Nacional", "Tinto Cao"]
+  }
+
+  COLORS = ["red", "white", "rose", "sweet", "port", "sparkling"]
 end

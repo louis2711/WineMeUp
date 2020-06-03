@@ -61,7 +61,7 @@ beaune_champimonts.photo.attach(io: file, filename: "nes.png", content_type: "im
 beaune_champimonts.save!
 
 
-minuty_prestige = Bottle.new(appellation: "Minuty Prestige Rosé", domain: "Côtes de Provence", vintage: "2018", color: "Rosé", grape_variety: "Grenache, Tibouren, Syrah and Cinsault", aroma: "Fruity", characteristics: "Soft and full", country: "France", region: "Provence and Corsica", price_range: "", description: "")
+minuty_prestige = Bottle.new(appellation: "Minuty Prestige Rosé", domain: "Côtes de Provence", vintage: "2018", color: "Rose", grape_variety: "Grenache, Tibouren, Syrah and Cinsault", aroma: "Fruity", characteristics: "Soft and full", country: "France", region: "Provence and Corsica", price_range: "", description: "")
 file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740426.png")
 minuty_prestige.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 minuty_prestige.save!
@@ -113,7 +113,7 @@ file = URI.open("https://www.simonmaye.ch/wp-content/uploads/2018/11/PetiteArvin
 maye.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 maye.save!
 
-auvernier = Bottle.new(appellation: "Oeil de Perdrix Neuchâtel", domain: "Château d'Auvernier", vintage: "2018", color: "Rosé", grape_variety: "Oeil de Perdrix", aroma: "Fruity", characteristics: "Structured", country: "Switzerland", region: "Neuchâtel", price_range: "19", description: "ROBE SAUMONÉE, NEZ DE FRAMBOISE, C’EST UN VIN VIF, EXHUMANT DES ARÔMES DE PINOT NOIR.")
+auvernier = Bottle.new(appellation: "Oeil de Perdrix Neuchâtel", domain: "Château d'Auvernier", vintage: "2018", color: "Rose", grape_variety: "Oeil de Perdrix", aroma: "Fruity", characteristics: "Structured", country: "Switzerland", region: "Neuchâtel", price_range: "19", description: "ROBE SAUMONÉE, NEZ DE FRAMBOISE, C’EST UN VIN VIF, EXHUMANT DES ARÔMES DE PINOT NOIR.")
 file = URI.open("https://www.obrist.ch/assets/media/product/images/17165-17165-15124-12753-7326-4957-5650-1-11132-11864-12441-17459-18402-19137-zoom.png")
 auvernier.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 auvernier.save!
@@ -298,3 +298,5 @@ douro = Bottle.new(appellation: "Doc Douro", domain: "Quinta do Romeu", vintage:
 file = URI.open("https://images.lavinia.fr/spree/products/23740/product/V000357.jpg?1570802839")
 douro.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 douro.save!
+
+puts "FINISHED !"
