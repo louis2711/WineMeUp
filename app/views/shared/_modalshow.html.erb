@@ -35,7 +35,13 @@
             </div>
             <div class="banner-content">
               <div class="show-buttons">
-                <%= link_to "Add to my favorites", user_favorites_path(bottle_id:bottle.id), method: :post, class: "btn-red btn-favorites" %>
+                <% if controller_name == 'bottles' %>
+                  <%= link_to "Add to my favorites", user_favorites_path(bottle_id:bottle.id), method: :post, class: "btn-red btn-favorites" %>
+                <%# elsif controller_name == 'user_favorites' %>
+                  <%#= link_to user_favorite_path(bottle_id:bottle.id, user_favorite), method: :delete, do %>
+<!--                     <i class="far fa-trash-alt imgt"></i> -->
+                  <%# end %>
+                <% end %>
               </div>
             </div>
           </div>
