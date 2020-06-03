@@ -189,11 +189,10 @@
     <div class="card-container cards">
       <% @bottles.each do |bottle|  %>
           <div class="card-bottle-index">
-            <div class="card-bottle-button">
-              <a href="#exampleModal" data-toggle="modal" class="btn-modal-index">
+            <div class="card-bottle-button" data-id="<%= bottle.id %>">
+              <%= link_to "#", :html => {:class => 'btn'}, "data-toggle" => "modal", "data-target" => "#bottleModal#{bottle.id}" do %>
                 <%= image_tag "eye_bottles.svg" %>
-              </a>
-
+              <% end %>
             </div>
             <div class="card-bottle-index-img">
               <div class="img-bottle-index">
