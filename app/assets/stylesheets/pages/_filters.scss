@@ -24,6 +24,7 @@
     color: rgb(30, 30, 30);
   }
   .card-bottle-index-img {
+    margin-top: 40px;
     display: flex;
     justify-content: space-around;
   }
@@ -51,6 +52,7 @@
     transition-duration: 0.2s;
   }
   .card-bottle-button{
+    float: right;
     height: 20px;
     margin-bottom: 15px;
   }
@@ -133,4 +135,8 @@
 
 .btn-submit-red{
   padding: 8px 22px;
+}
+
+.btn-searchbar{
+  padding: 6px 25px 6px;
 }
