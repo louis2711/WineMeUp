@@ -1,0 +1,31 @@
+<div class="card-bottle-index">
+  <div class="card-bottle-button" data-id="<%= bottle.id %>">
+    <%= link_to "#", :html => {:class => 'btn'}, "data-toggle" => "modal", "data-target" => "#bottleModal#{bottle.id}" do %>
+      <%= image_tag "eye_bottles.svg" %>
+    <% end %>
+  </div>
+  <div class="card-bottle-index-img">
+    <div class="img-bottle-index">
+      <% if bottle.photo.attached? %>
+        <%= cl_image_tag bottle.photo.key, crop: :fill %>
+      <% else  %>
+        <img src="#" alt="">
+      <% end %>
+    </div>
+  </div>
+  <div class="card-bottle-domain-appellation">
+    <h2 class="bottle-domain"><%= bottle.domain %></h2>
+    <p><%= bottle.appellation %></p>
+  </div>
+  <div class="card-footer-country-year">
+    <div class="card-footer-country">
+      <% if bottle.region.present? %>
+        <p><%= bottle.region.upcase %></p>
+      <% end %>
+    </div>
+    <div class="card-bottle-year">
+      <p><%= bottle.vintage %></p>
+    </div>
+  </div>
+</div>
+
