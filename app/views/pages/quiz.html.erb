@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container quiz-container">
 
 
   <div class="row">
@@ -29,7 +29,7 @@
 
                   </div>
                   <div class= "button-back">
-                    <a class="nav-link nav-link-quiz-hide" id="question_personnality-tab" data-toggle="tab" href="#question_personnality" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                    <a class="nav-link nav-link-quiz-hide" id="question_personnality-tab" data-toggle="tab" href="#question_personnality" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
                 </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@
                     <%= f.input :question_reason, input_html: {type: :radio, id: "reason-#{index}", value: reason, "data-toggle" => "tab", "data-target" => "##{dependent}"}, label: reason, wrapper_html: {class: "form-check reasons", data: {dependent:dependent}} %>
                   <% end %>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_vineyard_management-tab" data-toggle="tab" href="#question_vineyard_management" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_vineyard_management-tab" data-toggle="tab" href="#question_vineyard_management" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question_exploration" role="tabpanel" aria-labelledby="question_exploration-tab">
@@ -71,7 +71,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="meals_list" role="tabpanel" aria-labelledby="meals_list-tab">
@@ -84,7 +84,7 @@
                   </div>
                 </div>
                 <div class= "button-back">
-                  <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                  <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
                 </div>
               </div>
 
@@ -97,7 +97,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="regions_list" role="tabpanel" aria-labelledby="regions_list-tab">
@@ -118,7 +118,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question-colour" role="tabpanel" aria-labelledby="question-colour-tab">
@@ -143,7 +143,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="aromas_list" role="tabpanel" aria-labelledby="aromas_list-tab">
@@ -156,7 +156,7 @@
                   </div>
                 </div>
                 <div class= "button-back">
-                  <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                  <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
                 </div>
               </div>
 
@@ -165,7 +165,7 @@
                   <%= f.input :vintage_range, label: "Select a year", collection: 1995...2020 %>
                 </div>
                 <div class= "button-back">
-                  <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                  <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
                   <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
                 </div>
               </div>
@@ -180,7 +180,7 @@
                   </div>
                 </div>
                 <div class= "button-back">
-                  <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                  <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
                 </div>
               </div>
 
@@ -194,7 +194,7 @@
                   </div>
                 </div>
                 <div class= "button-back">
-                  <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                  <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
                 </div>
               </div>
 
@@ -207,7 +207,7 @@
                       <% end %>
                     </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_red" role="tabpanel" aria-labelledby="question_grape_red-tab">
@@ -219,7 +219,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_rose" role="tabpanel" aria-labelledby="question_grape_rose-tab">
@@ -231,7 +231,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_sweet" role="tabpanel" aria-labelledby="question_grape_sweet-tab">
@@ -243,7 +243,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_white" role="tabpanel" aria-labelledby="question_grape_white-tab">
@@ -255,7 +255,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_port" role="tabpanel" aria-labelledby="question_grape_port-tab">
@@ -267,7 +267,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question_sparkling_port" role="tabpanel" aria-labelledby="question_grape_sparkling-tab">
@@ -279,13 +279,10 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
-
-             <div class= "container">
-               <h1>Click the button to see your match</h1>
-             </div>
               <div class="tab-pane fade" id="submit-button" role="tabpanel" aria-labelledby="submit-button-tab">
+                <p>Click the button to see your match</h1>
                 <div class="btn-submit-quiz">
                   <%= f.button :submit, "Don", class: "btn" %>
                 </div>
