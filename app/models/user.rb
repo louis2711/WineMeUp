@@ -6,5 +6,6 @@ class User < ApplicationRecord
 
   has_many :user_answers, dependent: :destroy
   has_one :user_profile, dependent: :destroy
+  has_many :user_favorite, dependent: :destroy
   # has_many :bottles
 end

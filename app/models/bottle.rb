@@ -1,5 +1,7 @@
 class Bottle < ApplicationRecord
 
+  has_many :user_favorite, dependent: :destroy
+
   include Filterable
   has_one_attached :photo
   has_many :feedbacks
