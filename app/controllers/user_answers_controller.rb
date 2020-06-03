@@ -9,7 +9,7 @@ class UserAnswersController < ApplicationController
     #redirect_to redirection(@user_answer)
 
     @user_profile = UserProfile.create_from_answer(@user_answer)
-    redirect_to user_profile_path(@user_profile)
+    redirect_to redirection(@user_answer)
   end
 
   private

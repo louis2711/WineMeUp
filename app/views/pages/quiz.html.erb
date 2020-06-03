@@ -282,9 +282,11 @@
                 <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
               <div class="tab-pane fade" id="submit-button" role="tabpanel" aria-labelledby="submit-button-tab">
-                <p>You finished the quiz !</h1>
-                <div class="btn-submit-quiz">
-                  <%= f.button :submit, "See my selection of bottles", class: "btn-red btn-submit-quiz" %>
+                <div class="btn-title-submit">
+                  <p>You finished the quiz !</h1>
+                  <div class="btn-submit-quiz">
+                    <%= f.button :submit, "See my selection of bottles", class: "btn btn-red btn-submit-quiz" %>
+                  </div>
                 </div>
               </div>
 
