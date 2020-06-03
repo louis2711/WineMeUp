@@ -3,6 +3,9 @@
     <div class="modal-content">
       <div class="modal-body">
         <div class="container container-show-bottle">
+          <div class="link-back-bottles">
+            <%= submit_tag 'X', :type => :reset, :class => "btn-close-modal", "data-dismiss" => "modal", "aria-hidden" => "true" %>
+          </div>
           <div class="subcontainer-show-bottle">
             <% if bottle.photo.attached? %>
               <%= cl_image_tag bottle.photo.key, height: 400 %>
@@ -32,7 +35,7 @@
             </div>
             <div class="banner-content">
               <div class="show-buttons">
-                <%= link_to "< Back to Bottles", bottles_path, class: "btn_show" %>
+                <%= link_to "Add to my favorites", user_favorites_path(bottle_id:bottle.id), method: :post, class: "btn-red btn-favorites" %>
               </div>
             </div>
           </div>

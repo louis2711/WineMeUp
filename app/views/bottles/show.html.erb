@@ -28,6 +28,7 @@
     <div class="banner-content">
       <div class="show-buttons">
         <%= link_to "< Back to Bottles", bottles_path, class: "btn_show" %>
+        <%= link_to "Add to my favorites", user_profile_path(@bottle), method: :post %>
       </div>
     </div>
 <!--
