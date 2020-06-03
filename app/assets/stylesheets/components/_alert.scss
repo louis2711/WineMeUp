@@ -4,3 +4,19 @@
   right: 16px;
   z-index: 1000;
 }
+
+.bottle-info h1 {
+    z-index: 10;
+    position: relative;
+}
+
+.bottle-info h2 {
+    z-index: 10;
+    position: relative;
+}
+
+.bottle-info img {
+  position: absolute;
+  left: 25%;
+  top: 0%;
+}

@@ -1,12 +1,6 @@
 <div class="modal fade" id="bottleModal<%= bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Your reservation</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
       <div class="modal-body">
         <div class="container container-show-bottle">
           <div class="subcontainer-show-bottle">
@@ -18,6 +12,7 @@
           </div>
           <div class="product-info">
             <div class="bottle-info">
+              <%= image_tag "Group.svg" %>
               <h1><%= bottle.domain %><%= bottle.label %></h1>
               <h2><%= bottle.appellation %><%= " - " %><%= bottle.region %></h2>
               <h3><%= bottle.vintage %></h3>
