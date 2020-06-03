@@ -37,64 +37,62 @@ jeanne = User.create(email: "jeanne@lewagon.fr", first_name: "jeanne", last_name
 jeanne.save!
 
 
-amiral_de_beychevelle = Bottle.new(appellation: "Saint Julien", domain: "Amiral de Beychevelle", vintage: "2015", color: "Red", grape_variety: "57% Cabernet Sauvignon, 43% Merlot", aroma: "Fruity", characteristics: "Round and tannic", country: "France", region: "Bordeaux", price_range: "", description: "")
-file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/739231.png")
-amiral_de_beychevelle.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-amiral_de_beychevelle.save!
+# amiral_de_beychevelle = Bottle.new(appellation: "Saint Julien", domain: "Amiral de Beychevelle", vintage: "2015", color: "Red", grape_variety: "57% Cabernet Sauvignon, 43% Merlot", aroma: "Fruity", characteristics: "Round and tannic", country: "France", region: "Bordeaux", price_range: "", description: "")
+# file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/739231.png")
+# amiral_de_beychevelle.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# amiral_de_beychevelle.save!
 
 
-chateau_du_tertre = Bottle.new(appellation: "Margaux", domain: "Château du Tertre", vintage: "2016", color: "Red", grape_variety: "75% Cabernet Sauvignon, 10% Merlot, 10% Cabernet Franc, 5% Petit Verdot", aroma: "Woody", characteristics: "Soft and velvety", country: "France", region: "Bordeaux", price_range: "", description: "")
-file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/734591.png")
-chateau_du_tertre.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-chateau_du_tertre.save!
+# chateau_du_tertre = Bottle.new(appellation: "Margaux", domain: "Château du Tertre", vintage: "2016", color: "Red", grape_variety: "75% Cabernet Sauvignon, 10% Merlot, 10% Cabernet Franc, 5% Petit Verdot", aroma: "Woody", characteristics: "Soft and velvety", country: "France", region: "Bordeaux", price_range: "", description: "")
+# file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/734591.png")
+# chateau_du_tertre.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# chateau_du_tertre.save!
 
 
-chateau_la_nerthe = Bottle.new(appellation: "Châteauneuf-du-Pape", domain: "Château La Nerthe", vintage: "2018", color: "White", grape_variety: "40% White Grenache, 40% Roussanne, 15% Clairette; 5% Bourboulenc", aroma: "Floral", characteristics: "Vivid and dry", country: "France", region: "Vallée du Rhône", price_range: "", description: "")
-file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/741261.png")
-chateau_la_nerthe.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-chateau_la_nerthe.save!
+# chateau_la_nerthe = Bottle.new(appellation: "Châteauneuf-du-Pape", domain: "Château La Nerthe", vintage: "2018", color: "White", grape_variety: "40% White Grenache, 40% Roussanne, 15% Clairette; 5% Bourboulenc", aroma: "Floral", characteristics: "Vivid and dry", country: "France", region: "Vallée du Rhône", price_range: "", description: "")
+# file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/741261.png")
+# chateau_la_nerthe.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# chateau_la_nerthe.save!
 
 
-beaune_champimonts = Bottle.new(appellation: "Domaine Chanson", domain: "Beaune Champimonts 1er Cru", vintage: "2015", color: "Red", grape_variety: "Pinot Noir", aroma: "Fruity", characteristics: "Powerful and robust", country: "France", region: "Bourgogne", price_range: "", description: "")
-file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/735881.png")
-beaune_champimonts.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-beaune_champimonts.save!
-
+# beaune_champimonts = Bottle.new(appellation: "Domaine Chanson", domain: "Beaune Champimonts 1er Cru", vintage: "2015", color: "Red", grape_variety: "Pinot Noir", aroma: "Fruity", characteristics: "Powerful and robust", country: "France", region: "Bourgogne", price_range: "", description: "")
+# file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/735881.png")
+# beaune_champimonts.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# beaune_champimonts.save!
 
 minuty_prestige = Bottle.new(appellation: "Minuty Prestige Rosé", domain: "Côtes de Provence", vintage: "2018", color: "Rose", grape_variety: "Grenache, Tibouren, Syrah and Cinsault", aroma: "Fruity", characteristics: "Soft and full", country: "France", region: "Provence and Corsica", price_range: "", description: "")
 file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740426.png")
 minuty_prestige.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 minuty_prestige.save!
 
-
-chateau_des_tours = Bottle.new(appellation: "Brouilly", domain: "Château des Tours", vintage: "2018", color: "Red", grape_variety: "Gamay", aroma: "Woody", characteristics: "Soft and velvety", country: "France", region: "Beaujolais", price_range: "", description: "")
-file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/738125.png")
-chateau_des_tours.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-chateau_des_tours.save!
-
-
-chardonnay_torrontes = Bottle.new(appellation: "Fantelli", domain: "Chardonnay Torrontes", vintage: "2019", color: "White", grape_variety: "55% Chardonnay, 45% Torrontes", aroma: "Fruity", characteristics: "Vivid and dry", country: "Argentina", region: "Argentina", price_range: "", description: "")
-file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/743199.png")
-chardonnay_torrontes.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-chardonnay_torrontes.save!
+# chateau_des_tours = Bottle.new(appellation: "Brouilly", domain: "Château des Tours", vintage: "2018", color: "Red", grape_variety: "Gamay", aroma: "Woody", characteristics: "Soft and velvety", country: "France", region: "Beaujolais", price_range: "", description: "")
+# file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/738125.png")
+# chateau_des_tours.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# chateau_des_tours.save!
 
 
-piedra_negra = Bottle.new(appellation: "Piedra Negra", domain: "Piedra Negra", vintage: "2019", color: "Red", grape_variety: "Malbec", aroma: "Fruity", characteristics: "Soft and velvety", country: "Argentina", region: "Mendoza", price_range: "", description: "")
-file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/744118.png")
-piedra_negra.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-piedra_negra.save!
+# chardonnay_torrontes = Bottle.new(appellation: "Fantelli", domain: "Chardonnay Torrontes", vintage: "2019", color: "White", grape_variety: "55% Chardonnay, 45% Torrontes", aroma: "Fruity", characteristics: "Vivid and dry", country: "Argentina", region: "Argentina", price_range: "", description: "")
+# file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/743199.png")
+# chardonnay_torrontes.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# chardonnay_torrontes.save!
 
 
-montecampo = Bottle.new(appellation: "Montecampo", domain: "Amarone Della Valpolicella", vintage: "2016", color: "Red", grape_variety: "Corvina, Rondinella, Molinara", aroma: "Fruity", characteristics: "Powerful and robust", country: "Italy", region: "Verona", price_range: "", description: "")
-file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/743084.png")
-montecampo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-montecampo.save!
+# piedra_negra = Bottle.new(appellation: "Piedra Negra", domain: "Piedra Negra", vintage: "2019", color: "Red", grape_variety: "Malbec", aroma: "Fruity", characteristics: "Soft and velvety", country: "Argentina", region: "Mendoza", price_range: "", description: "")
+# file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/744118.png")
+# piedra_negra.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# piedra_negra.save!
 
 
-pecorino_volo = Bottle.new(appellation: "Terre Di Chieti", domain: "Pecorino Volo", vintage: "2018", color: "White", grape_variety: "Pecorino", aroma: "Fruity", characteristics: "Vivid and dry", country: "Italy", region: "Abruzzo", price_range: "", description: "")
-file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740599.png")
-pecorino_volo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-pecorino_volo.save!
+# montecampo = Bottle.new(appellation: "Montecampo", domain: "Amarone Della Valpolicella", vintage: "2016", color: "Red", grape_variety: "Corvina, Rondinella, Molinara", aroma: "Fruity", characteristics: "Powerful and robust", country: "Italy", region: "Verona", price_range: "", description: "")
+# file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/743084.png")
+# montecampo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# montecampo.save!
+
+
+# pecorino_volo = Bottle.new(appellation: "Terre Di Chieti", domain: "Pecorino Volo", vintage: "2018", color: "White", grape_variety: "Pecorino", aroma: "Fruity", characteristics: "Vivid and dry", country: "Italy", region: "Abruzzo", price_range: "", description: "")
+# file = URI.open("https://www.monvinamoi.com/upload/images/PHOTOS_PRODUITS/740599.png")
+# pecorino_volo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# pecorino_volo.save!
 
 # Switzerland
 
@@ -125,12 +123,12 @@ file = URI.open("https://images.lavinia.fr/spree/products/13611/product/Achaval_
 achaval_ferrer.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 achaval_ferrer.save!
 
-monteviejo = Bottle.new(appellation: "Monteviejo", domain: "Lindaflor", vintage: "2013", color: "Red", grape_variety: "Malbec", aroma: "Fruity", characteristics: "Structured", country: "Argentina", region: "Mendoza", price_range: "40", description: "")
+monteviejo = Bottle.new(appellation: "Monteviejo", domain: "Lindaflor", vintage: "2013", color: "Red", grape_variety: "Malbec", aroma: "Fruity", characteristics: "Structured", country: "Argentina", region: "Mendoza", price_range: "40", description: "La Cuvée Lindaflor met ici à l'honneur le cépage qui la constitue à 100%, le malbec, par ailleurs emblématique de la viticulture de la province de Mendoza. C'est en 2005 un vin rond et bien structuré, sur des arômes complexes de cerise et de réglisse très mûrs, de poivre noir et des notes subtiles de noix de muscade. Une grande signature de Mendoza !")
 file = URI.open("https://images.lavinia.fr/spree/products/23997/product/76837(ok).jpg?1572519640")
 monteviejo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 monteviejo.save!
 
-monteviejo_chardonnay = Bottle.new(appellation: "Monteviejo", domain: "Lindaflor", vintage: "2017", color: "White", grape_variety: "Chardonnay", aroma: "Floral", characteristics: "Structured", country: "Argentina", region: "Mendoza", price_range: "34", description: "")
+monteviejo_chardonnay = Bottle.new(appellation: "Monteviejo", domain: "Lindaflor", vintage: "2017", color: "White", grape_variety: "Chardonnay", aroma: "Floral", characteristics: "Structured", country: "Argentina", region: "Mendoza", price_range: "34", description: "« Une fois les grappes entières pressées, le Lindaflor Chardonnay 2017 fermenté en cuves a été vinifié et élevé en barriques, dont 30% neuves. le vin a été élevé en barrique pendant 12 mois sur lies, avec bâtonnage. Légèrement boisé et épicé, il provient d'une parcelle unique plantée en 2004 et toujours utilisée pour ce vin. Le bois est bien intégré et il a une texture crémeuse tout en gardant la fraîcheur et les saveurs intenses. Vin propre et droit. » (Wine Advocate 2018 - Robert Parker) Une très belle cuvée de blanc !")
 file = URI.open("https://images.lavinia.fr/spree/products/23999/product/76839(ok).jpg?1572519840")
 monteviejo_chardonnay.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 monteviejo_chardonnay.save!
@@ -152,24 +150,24 @@ file = URI.open("https://images.lavinia.fr/spree/products/22599/product/75945(ok
 azizas_chardonnay.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 azizas_chardonnay.save!
 
-cape_mentelle = Bottle.new(appellation: "Cape Mentelle Margeret River", domain: "Cape Mentelle", vintage: "2017", color: "White", grape_variety: "Sauvignon Blanc & Sémillon", aroma: "Floral", characteristics: "Dry", country: "Australia", region: "Margaret River", price_range: "19", description: "")
+cape_mentelle = Bottle.new(appellation: "Cape Mentelle Margeret River", domain: "Cape Mentelle", vintage: "2017", color: "White", grape_variety: "Sauvignon Blanc & Sémillon", aroma: "Floral", characteristics: "Dry", country: "Australia", region: "Margaret River", price_range: "19", description: "L'expression la plus emblématique du terroir, une complémentarité parfaite entre la fraîcheur iodée de l'océan et la texture et l'ancrage des sols anciens de la région. Un vin frais et aromatique aux notes intenses d'agrumes et de melon.")
 file = URI.open("https://images.lavinia.fr/spree/products/23928/product/76696(ok).JPG?1572016592")
 cape_mentelle.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 cape_mentelle.save!
 
 # USA
 
-harlan = Bottle.new(appellation: "Harlan", domain: "Harlan Estate", vintage: "1995", color: "Red", grape_variety: "Cabernet Sauvignon", aroma: "Fruity", characteristics: "Powerful", country: "USA", region: "Napa Valley", price_range: "1236", description: "Situé sur les collines à l'ouest d'Oakville, en Californie, Harlan Estate produit des vins à partir des cépages bordelais traditionnels : cabernets, merlot et petit verdot. C'est un domaine familial, fondé par Bill Harlan. Conseillé par l'oenologue Michel Rolland, le domaine produit une cuvée principale ainsi qu'un excellent second vin nommé The Maiden.")
+harlan = Bottle.new(appellation: "Harlan", domain: "Harlan Estate", vintage: "1995", color: "Red", grape_variety: "Cabernet Sauvignon", aroma: "Fruity", characteristics: "Powerful", country: "United States", region: "Napa Valley", price_range: "1236", description: "Situé sur les collines à l'ouest d'Oakville, en Californie, Harlan Estate produit des vins à partir des cépages bordelais traditionnels : cabernets, merlot et petit verdot. C'est un domaine familial, fondé par Bill Harlan. Conseillé par l'oenologue Michel Rolland, le domaine produit une cuvée principale ainsi qu'un excellent second vin nommé The Maiden.")
 file = URI.open("https://images.lavinia.fr/spree/products/19356/product/Harlan_Cabernet_Sauvignon_1995_11731.jpg?1511799144")
 harlan.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 harlan.save!
 
-moraga = Bottle.new(appellation: "Moraga Bel Air", domain: "Moraga", vintage: "1998", color: "White", grape_variety: "Sauvignon Blanc", aroma: "Floral", characteristics: "Dry", country: "USA", region: "Los Angeles County", price_range: "158", description: "Un blanc typique du domaine qui tient toutes ses promesses. Il se présente avec beaucoup de caractère et possède une éclatante puissance en bouche.")
+moraga = Bottle.new(appellation: "Moraga Bel Air", domain: "Moraga", vintage: "1998", color: "White", grape_variety: "Sauvignon Blanc", aroma: "Floral", characteristics: "Dry", country: "United States", region: "Los Angeles County", price_range: "158", description: "Un blanc typique du domaine qui tient toutes ses promesses. Il se présente avec beaucoup de caractère et possède une éclatante puissance en bouche.")
 file = URI.open("https://images.lavinia.fr/spree/products/14873/product/Moraga_Bel_Air_blanc_1998_11819.jpg?1459342777")
 moraga.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 moraga.save!
 
-pahlmeyer = Bottle.new(appellation: "Pahlmeyer", domain: "Pahlmeyer", vintage: "1998", color: "Red", grape_variety: "Merlot", aroma: "Fruity", characteristics: "Structured", country: "USA", region: "Napa Valley", price_range: "207", description: "Ce Merlot 1998 est d'une grande finesse, certainement l'un des tous meilleurs produits dans la Napa Valley sur ce millésime. Un jus intense et riche, très juteux, des notes gourmandes cacaotées, de cerises noirs, une touche fumée et toastée : un grand flacon a pleine matûrité!")
+pahlmeyer = Bottle.new(appellation: "Pahlmeyer", domain: "Pahlmeyer", vintage: "1998", color: "Red", grape_variety: "Merlot", aroma: "Fruity", characteristics: "Structured", country: "United States", region: "Napa Valley", price_range: "207", description: "Ce Merlot 1998 est d'une grande finesse, certainement l'un des tous meilleurs produits dans la Napa Valley sur ce millésime. Un jus intense et riche, très juteux, des notes gourmandes cacaotées, de cerises noirs, une touche fumée et toastée : un grand flacon a pleine matûrité!")
 file = URI.open("https://images.lavinia.fr/spree/products/21422/product/NAPA_PAHLMEYER_MERLOT_1998-11752_.jpg?1546009295")
 pahlmeyer.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 pahlmeyer.save!
@@ -197,7 +195,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/21907/product/73755_la
 gevrey.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 gevrey.save!
 
-eugénie = Bottle.new(appellation: "Vosne-Romanée", domain: "Domaine Eugénie", vintage: "2015", color: "Red", grape_variety: "Pinot Noir", aroma: "Fruity", characteristics: "Vivid and dry", country: "Italy", region: "Abruzzo", price_range: "73", description: "Ce vin, d’une belle concentration, présente une trame équilibrée soutenue par une structure souple et fruitée.")
+eugénie = Bottle.new(appellation: "Vosne-Romanée", domain: "Domaine Eugénie", vintage: "2015", color: "Red", grape_variety: "Pinot Noir", aroma: "Fruity", characteristics: "Vivid and dry", country: "France", region: "Bourgogne", price_range: "73", description: "Ce vin, d’une belle concentration, présente une trame équilibrée soutenue par une structure souple et fruitée.")
 file = URI.open("https://images.lavinia.fr/spree/products/23973/product/70887(ok).JPG?1572517163")
 eugénie.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 eugénie.save!
@@ -210,7 +208,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/22127/product/Bera_Vit
 figli.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 figli.save!
 
-mastroberardino = Bottle.new(appellation: "Vesuvio Doc", domain: "Mastroberardino", vintage: "2018", color: "White", grape_variety: "Coda di Volpe", aroma: "floral", characteristics: "Light", country: "Italy", region: "Vesuvio", price_range: "21", description: "")
+mastroberardino = Bottle.new(appellation: "Vesuvio Doc", domain: "Mastroberardino", vintage: "2018", color: "White", grape_variety: "Coda di Volpe", aroma: "floral", characteristics: "Light", country: "Italy", region: "Vesuvio", price_range: "21", description: "Lacryma Christi del Vesuvio DOC Vin blanc avec un nom prestigieux et l’origine perdue dans la légende: Dieu a pleuré en trouvant le golfe de Naples, une partie du ciel prise de Lucifer et, où ses les larmes coulaient, la vigne de Lacryma Christi était née. Compte tenu de la nature extraordinaire du territoire, riche en cendres mêlées de lave et de lapilli, parmi lesquels la vigne a du mal à grimper, il n’est pas possible ignorer autant de force de la nature dans l'expression des arômes et des saveurs.")
 file = URI.open("https://images.lavinia.fr/spree/products/23295/product/Mastroberardino_76350.png?1564651278")
 mastroberardino.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 mastroberardino.save!
@@ -226,7 +224,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/22889/product/75834(ok
 della.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 della.save!
 
-dhjetë = Bottle.new(appellation: "Musto Carmelitano", domain: "Dhjetë", vintage: "2017", color: "White", grape_variety: "", aroma: "Fruity", characteristics: "Light", country: "Italy", region: "Basilicate", price_range: "11", description: "")
+dhjetë = Bottle.new(appellation: "Musto Carmelitano", domain: "Dhjetë", vintage: "2017", color: "White", grape_variety: "Muscat", aroma: "Fruity", characteristics: "Light", country: "Italy", region: "Basilicate", price_range: "11", description: "Dhjetë est un Moscato gourmand, vibrant et fruité. Cette cuvée séduit par ces fabuleux arômes de citron, d’abricot qui se poursuivent en bouche au travers de très fines bulles. Ses effluves d'orange vous emportent au pied du Mont Vultur. Une bulle parfaite pour s’évader.")
 file = URI.open("https://images.lavinia.fr/spree/products/25160/product/1ITITB0036135(ok).jpg?1587123602")
 dhjetë.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 dhjetë.save!
@@ -235,7 +233,7 @@ dhjetë.save!
 # Spain
 
 
-mastroberardino = Bottle.new(appellation: "Do Allela", domain: "Celler De Les Aus", vintage: "2018", color: "Red", grape_variety: "Mataro", aroma: "Woody", characteristics: "Light", country: "Spain", region: "Catalogne", price_range: "20", description: "")
+mastroberardino = Bottle.new(appellation: "Do Allela", domain: "Celler De Les Aus", vintage: "2018", color: "Red", grape_variety: "Mataro", aroma: "Woody", characteristics: "Light", country: "Spain", region: "Catalogne", price_range: "20", description: "Alta Alella Merla est un vin rouge naturel élaboré avec du Mataró (Monastrell) issu de vignobles plantés sur des sols en loam sablonneux, orientés au Sud-est et situés entre 150 et 300 mètres d’altitude. Une fois le raisin vendangé, il fermente pendant 20 jours à 25ºC dans une cuve en bois. Après ce délai, il est légèrement pressé et le vin est placé dans des fûts où il effectuera la fermentation malolactique et où il reposera pendant 3 mois avant d'être mis en bouteille sans ajouter de sulfites.")
 file = URI.open("https://images.lavinia.fr/spree/products/23295/product/Mastroberardino_76350.png?1564651278")
 mastroberardino.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 mastroberardino.save!
@@ -277,12 +275,12 @@ stellen.save!
 
 # Germany
 
-egon = Bottle.new(appellation: "Mosel Pdo", domain: "Egon Müller", vintage: "2018", color: "White", grape_variety: "Riesling", aroma: "Mineral", characteristics: "Dry", country: "Germany", region: "Moselle", price_range: "48", description: "")
+egon = Bottle.new(appellation: "Mosel Pdo", domain: "Egon Müller", vintage: "2018", color: "White", grape_variety: "Riesling", aroma: "Mineral", characteristics: "Dry", country: "Germany", region: "Moselle", price_range: "48", description: "Domaine mythique de la Sarre dont les plus grands vins s’arrachent à prix d’or, Egon Muller est situé à Wiltingen, sur la Sarre, à proximité de sa confluence avec la Moselle. Dans la famille Muller on se prénomme Egon de père en fils depuis cinq générations. Egon V est en charge du vignoble familial dont le cœur est constitué par les 8,5 hectares de vignes situées sur la fameuse colline schisteuse du Scharzhofberger, exclusivement plantées de Riesling dont 3 hectares de très vieilles vignes non-greffées. ")
 file = URI.open("https://images.lavinia.fr/spree/products/24111/product/76814(ok).jpg?1573121022")
 egon.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 egon.save!
 
-mosel = Bottle.new(appellation: "Mosel Pdo", domain: "Estate Riesling QbA", vintage: "2017", color: "White", grape_variety: "Coda di Volpe", aroma: "Floral", characteristics: "Light", country: "Germany", region: "Moselle", price_range: "21", description: "")
+mosel = Bottle.new(appellation: "Mosel Pdo", domain: "Estate Riesling QbA", vintage: "2017", color: "White", grape_variety: "Coda di Volpe", aroma: "Floral", characteristics: "Light", country: "Germany", region: "Moselle", price_range: "21", description: "Ce vin est extrêmement bien structuré avec une couleur dorée profonde et des caractéristiques puissantes mais aussi élégantes: Minéraux, pêche, poire, cumquat, pastèque, groseille, pamplemousse, avec une touche de groseille et de framboise. Un accord idéal avec la cuisine asiatique, en particulier les plats aigre-doux ou les sushis. Il sera également assorti aux plats de volaille et de fruits de mer les plus délicatement parfumés. Vegan")
 file = URI.open("https://images.lavinia.fr/spree/products/25100/product/1DEDE60036128(ok).jpg?1587120782")
 mosel.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 mosel.save!
