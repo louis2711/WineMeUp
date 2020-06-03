@@ -1,8 +1,62 @@
-<%= @user_profile.username %>
-<%= @user_profile.color %>
-<%= @user_profile.selected_aroma %>
-<%= @user_profile.selected_grape %>
-<% @recommended_bottles.each do |bottle| %>
-  <%= bottle.appellation %>
-  <%= bottle.domain %>
-<% end %>
+<div class="container-show-profile">
+  <div class="container">
+    <h1><%= "Tailor made for " %><%= @user_profile.username %></h1>
+      <h3><%= "based on your answers" %></h3>
+    <div class="flat-bar">
+    </div>
+    <div class="user-preferences">
+      <div class="user-profile-color">
+        <%= image_tag "https://cdn-3d.niceshops.com/upload/image/product/large/default/vallejo-game-color-gory-red-17-ml-279663-fr.jpg", class: "avatar", alt: "avatar-large" %>
+        <p><%= @user_profile.color %></p>
+      </div>
+      <div class="user-profile-aroma">
+        <div class="avatar preference-icon">
+          <%= image_tag "profile-icon-fruity.svg", alt: "avatar-large" %>
+        </div>
+        <p><%= @user_profile.selected_aroma %></p>
+      </div>
+      <div class="user-profile-grape">
+        <div class="avatar preference-icon">
+          <%= image_tag "profile-icon-bottle.svg", alt: "avatar-large" %>
+        </div>
+        <p><%= @user_profile.selected_grape %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card-container cards">
+      <% @recommended_bottles.each do |bottle| %>
+          <div class="card-bottle-index">
+            <div class="card-bottle-button">
+              <a href="#exampleModal" data-toggle="modal" class="btn-modal-index">
+                <%= image_tag "eye_bottles.svg" %>
+              </a>
+
+            </div>
+            <div class="card-bottle-index-img">
+              <div class="img-bottle-index">
+                <% if bottle.photo.attached? %>
+                  <%= cl_image_tag bottle.photo.key, crop: :fill %>
+                <% else  %>
+                  <img src="#" alt="">
+                <% end %>
+              </div>
+            </div>
+            <div class="card-bottle-domain-appellation">
+              <h2 class="bottle-domain"><%= bottle.domain %></h2>
+              <p><%= bottle.appellation %></p>
+            </div>
+            <div class="card-footer-country-year">
+              <div class="card-footer-country">
+                <% if bottle.region.present? %>
+                  <p><%= bottle.region.upcase %></p>
+                <% end %>
+              </div>
+              <div class="card-bottle-year">
+                <p><%= bottle.vintage %></p>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
