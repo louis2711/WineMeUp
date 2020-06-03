@@ -45,6 +45,6 @@ document.addEventListener('turbolinks:load', () => {
     choicesCustom();
   };
   if (document.querySelector("#new_user_answer")){
-    handleQuizAnswers();
+    setTimeout(handleQuizAnswers(), 2000);
   };
 });
