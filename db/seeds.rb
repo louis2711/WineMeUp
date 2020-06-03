@@ -125,12 +125,12 @@ file = URI.open("https://images.lavinia.fr/spree/products/13611/product/Achaval_
 achaval_ferrer.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 achaval_ferrer.save!
 
-monteviejo = Bottle.new(appellation: "Monteviejo", domain: "Lindaflor", vintage: "2013", color: "Red", grape_variety: "Malbec", aroma: "Fruity", characteristics: "Structured", country: "Argentina", region: "Mendoza", price_range: "40", description: "")
+monteviejo = Bottle.new(appellation: "Monteviejo", domain: "Lindaflor", vintage: "2013", color: "Red", grape_variety: "Malbec", aroma: "Fruity", characteristics: "Structured", country: "Argentina", region: "Mendoza", price_range: "40", description: "La Cuvée Lindaflor met ici à l'honneur le cépage qui la constitue à 100%, le malbec, par ailleurs emblématique de la viticulture de la province de Mendoza. C'est en 2005 un vin rond et bien structuré, sur des arômes complexes de cerise et de réglisse très mûrs, de poivre noir et des notes subtiles de noix de muscade. Une grande signature de Mendoza !")
 file = URI.open("https://images.lavinia.fr/spree/products/23997/product/76837(ok).jpg?1572519640")
 monteviejo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 monteviejo.save!
 
-monteviejo_chardonnay = Bottle.new(appellation: "Monteviejo", domain: "Lindaflor", vintage: "2017", color: "White", grape_variety: "Chardonnay", aroma: "Floral", characteristics: "Structured", country: "Argentina", region: "Mendoza", price_range: "34", description: "")
+monteviejo_chardonnay = Bottle.new(appellation: "Monteviejo", domain: "Lindaflor", vintage: "2017", color: "White", grape_variety: "Chardonnay", aroma: "Floral", characteristics: "Structured", country: "Argentina", region: "Mendoza", price_range: "34", description: "« Une fois les grappes entières pressées, le Lindaflor Chardonnay 2017 fermenté en cuves a été vinifié et élevé en barriques, dont 30% neuves. le vin a été élevé en barrique pendant 12 mois sur lies, avec bâtonnage. Légèrement boisé et épicé, il provient d'une parcelle unique plantée en 2004 et toujours utilisée pour ce vin. Le bois est bien intégré et il a une texture crémeuse tout en gardant la fraîcheur et les saveurs intenses. Vin propre et droit. » (Wine Advocate 2018 - Robert Parker) Une très belle cuvée de blanc !")
 file = URI.open("https://images.lavinia.fr/spree/products/23999/product/76839(ok).jpg?1572519840")
 monteviejo_chardonnay.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 monteviejo_chardonnay.save!
@@ -152,7 +152,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/22599/product/75945(ok
 azizas_chardonnay.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 azizas_chardonnay.save!
 
-cape_mentelle = Bottle.new(appellation: "Cape Mentelle Margeret River", domain: "Cape Mentelle", vintage: "2017", color: "White", grape_variety: "Sauvignon Blanc & Sémillon", aroma: "Floral", characteristics: "Dry", country: "Australia", region: "Margaret River", price_range: "19", description: "")
+cape_mentelle = Bottle.new(appellation: "Cape Mentelle Margeret River", domain: "Cape Mentelle", vintage: "2017", color: "White", grape_variety: "Sauvignon Blanc & Sémillon", aroma: "Floral", characteristics: "Dry", country: "Australia", region: "Margaret River", price_range: "19", description: "L'expression la plus emblématique du terroir, une complémentarité parfaite entre la fraîcheur iodée de l'océan et la texture et l'ancrage des sols anciens de la région. Un vin frais et aromatique aux notes intenses d'agrumes et de melon.")
 file = URI.open("https://images.lavinia.fr/spree/products/23928/product/76696(ok).JPG?1572016592")
 cape_mentelle.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 cape_mentelle.save!
@@ -210,7 +210,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/22127/product/Bera_Vit
 figli.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 figli.save!
 
-mastroberardino = Bottle.new(appellation: "Vesuvio Doc", domain: "Mastroberardino", vintage: "2018", color: "White", grape_variety: "Coda di Volpe", aroma: "floral", characteristics: "Light", country: "Italy", region: "Vesuvio", price_range: "21", description: "")
+mastroberardino = Bottle.new(appellation: "Vesuvio Doc", domain: "Mastroberardino", vintage: "2018", color: "White", grape_variety: "Coda di Volpe", aroma: "floral", characteristics: "Light", country: "Italy", region: "Vesuvio", price_range: "21", description: "Lacryma Christi del Vesuvio DOC Vin blanc avec un nom prestigieux et l’origine perdue dans la légende: Dieu a pleuré en trouvant le golfe de Naples, une partie du ciel prise de Lucifer et, où ses les larmes coulaient, la vigne de Lacryma Christi était née. Compte tenu de la nature extraordinaire du territoire, riche en cendres mêlées de lave et de lapilli, parmi lesquels la vigne a du mal à grimper, il n’est pas possible ignorer autant de force de la nature dans l'expression des arômes et des saveurs.")
 file = URI.open("https://images.lavinia.fr/spree/products/23295/product/Mastroberardino_76350.png?1564651278")
 mastroberardino.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 mastroberardino.save!
@@ -226,7 +226,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/22889/product/75834(ok
 della.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 della.save!
 
-dhjetë = Bottle.new(appellation: "Musto Carmelitano", domain: "Dhjetë", vintage: "2017", color: "White", grape_variety: "", aroma: "Fruity", characteristics: "Light", country: "Italy", region: "Basilicate", price_range: "11", description: "")
+dhjetë = Bottle.new(appellation: "Musto Carmelitano", domain: "Dhjetë", vintage: "2017", color: "White", grape_variety: "Muscat", aroma: "Fruity", characteristics: "Light", country: "Italy", region: "Basilicate", price_range: "11", description: "Dhjetë est un Moscato gourmand, vibrant et fruité. Cette cuvée séduit par ces fabuleux arômes de citron, d’abricot qui se poursuivent en bouche au travers de très fines bulles. Ses effluves d'orange vous emportent au pied du Mont Vultur. Une bulle parfaite pour s’évader.")
 file = URI.open("https://images.lavinia.fr/spree/products/25160/product/1ITITB0036135(ok).jpg?1587123602")
 dhjetë.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 dhjetë.save!
@@ -235,7 +235,7 @@ dhjetë.save!
 # Spain
 
 
-mastroberardino = Bottle.new(appellation: "Do Allela", domain: "Celler De Les Aus", vintage: "2018", color: "Red", grape_variety: "Mataro", aroma: "Woody", characteristics: "Light", country: "Spain", region: "Catalogne", price_range: "20", description: "")
+mastroberardino = Bottle.new(appellation: "Do Allela", domain: "Celler De Les Aus", vintage: "2018", color: "Red", grape_variety: "Mataro", aroma: "Woody", characteristics: "Light", country: "Spain", region: "Catalogne", price_range: "20", description: "Alta Alella Merla est un vin rouge naturel élaboré avec du Mataró (Monastrell) issu de vignobles plantés sur des sols en loam sablonneux, orientés au Sud-est et situés entre 150 et 300 mètres d’altitude. Une fois le raisin vendangé, il fermente pendant 20 jours à 25ºC dans une cuve en bois. Après ce délai, il est légèrement pressé et le vin est placé dans des fûts où il effectuera la fermentation malolactique et où il reposera pendant 3 mois avant d'être mis en bouteille sans ajouter de sulfites.")
 file = URI.open("https://images.lavinia.fr/spree/products/23295/product/Mastroberardino_76350.png?1564651278")
 mastroberardino.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 mastroberardino.save!
@@ -277,12 +277,12 @@ stellen.save!
 
 # Germany
 
-egon = Bottle.new(appellation: "Mosel Pdo", domain: "Egon Müller", vintage: "2018", color: "White", grape_variety: "Riesling", aroma: "Mineral", characteristics: "Dry", country: "Germany", region: "Moselle", price_range: "48", description: "")
+egon = Bottle.new(appellation: "Mosel Pdo", domain: "Egon Müller", vintage: "2018", color: "White", grape_variety: "Riesling", aroma: "Mineral", characteristics: "Dry", country: "Germany", region: "Moselle", price_range: "48", description: "Domaine mythique de la Sarre dont les plus grands vins s’arrachent à prix d’or, Egon Muller est situé à Wiltingen, sur la Sarre, à proximité de sa confluence avec la Moselle. Dans la famille Muller on se prénomme Egon de père en fils depuis cinq générations. Egon V est en charge du vignoble familial dont le cœur est constitué par les 8,5 hectares de vignes situées sur la fameuse colline schisteuse du Scharzhofberger, exclusivement plantées de Riesling dont 3 hectares de très vieilles vignes non-greffées. ")
 file = URI.open("https://images.lavinia.fr/spree/products/24111/product/76814(ok).jpg?1573121022")
 egon.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 egon.save!
 
-mosel = Bottle.new(appellation: "Mosel Pdo", domain: "Estate Riesling QbA", vintage: "2017", color: "White", grape_variety: "Coda di Volpe", aroma: "Floral", characteristics: "Light", country: "Germany", region: "Moselle", price_range: "21", description: "")
+mosel = Bottle.new(appellation: "Mosel Pdo", domain: "Estate Riesling QbA", vintage: "2017", color: "White", grape_variety: "Coda di Volpe", aroma: "Floral", characteristics: "Light", country: "Germany", region: "Moselle", price_range: "21", description: "Ce vin est extrêmement bien structuré avec une couleur dorée profonde et des caractéristiques puissantes mais aussi élégantes: Minéraux, pêche, poire, cumquat, pastèque, groseille, pamplemousse, avec une touche de groseille et de framboise. Un accord idéal avec la cuisine asiatique, en particulier les plats aigre-doux ou les sushis. Il sera également assorti aux plats de volaille et de fruits de mer les plus délicatement parfumés. Vegan")
 file = URI.open("https://images.lavinia.fr/spree/products/25100/product/1DEDE60036128(ok).jpg?1587120782")
 mosel.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 mosel.save!
