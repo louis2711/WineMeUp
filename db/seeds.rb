@@ -159,17 +159,17 @@ cape_mentelle.save!
 
 # USA
 
-harlan = Bottle.new(appellation: "Harlan", domain: "Harlan Estate", vintage: "1995", color: "Red", grape_variety: "Cabernet Sauvignon", aroma: "Fruity", characteristics: "Powerful", country: "USA", region: "Napa Valley", price_range: "1236", description: "Situé sur les collines à l'ouest d'Oakville, en Californie, Harlan Estate produit des vins à partir des cépages bordelais traditionnels : cabernets, merlot et petit verdot. C'est un domaine familial, fondé par Bill Harlan. Conseillé par l'oenologue Michel Rolland, le domaine produit une cuvée principale ainsi qu'un excellent second vin nommé The Maiden.")
+harlan = Bottle.new(appellation: "Harlan", domain: "Harlan Estate", vintage: "1995", color: "Red", grape_variety: "Cabernet Sauvignon", aroma: "Fruity", characteristics: "Powerful", country: "United States", region: "Napa Valley", price_range: "1236", description: "Situé sur les collines à l'ouest d'Oakville, en Californie, Harlan Estate produit des vins à partir des cépages bordelais traditionnels : cabernets, merlot et petit verdot. C'est un domaine familial, fondé par Bill Harlan. Conseillé par l'oenologue Michel Rolland, le domaine produit une cuvée principale ainsi qu'un excellent second vin nommé The Maiden.")
 file = URI.open("https://images.lavinia.fr/spree/products/19356/product/Harlan_Cabernet_Sauvignon_1995_11731.jpg?1511799144")
 harlan.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 harlan.save!
 
-moraga = Bottle.new(appellation: "Moraga Bel Air", domain: "Moraga", vintage: "1998", color: "White", grape_variety: "Sauvignon Blanc", aroma: "Floral", characteristics: "Dry", country: "USA", region: "Los Angeles County", price_range: "158", description: "Un blanc typique du domaine qui tient toutes ses promesses. Il se présente avec beaucoup de caractère et possède une éclatante puissance en bouche.")
+moraga = Bottle.new(appellation: "Moraga Bel Air", domain: "Moraga", vintage: "1998", color: "White", grape_variety: "Sauvignon Blanc", aroma: "Floral", characteristics: "Dry", country: "United States", region: "Los Angeles County", price_range: "158", description: "Un blanc typique du domaine qui tient toutes ses promesses. Il se présente avec beaucoup de caractère et possède une éclatante puissance en bouche.")
 file = URI.open("https://images.lavinia.fr/spree/products/14873/product/Moraga_Bel_Air_blanc_1998_11819.jpg?1459342777")
 moraga.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 moraga.save!
 
-pahlmeyer = Bottle.new(appellation: "Pahlmeyer", domain: "Pahlmeyer", vintage: "1998", color: "Red", grape_variety: "Merlot", aroma: "Fruity", characteristics: "Structured", country: "USA", region: "Napa Valley", price_range: "207", description: "Ce Merlot 1998 est d'une grande finesse, certainement l'un des tous meilleurs produits dans la Napa Valley sur ce millésime. Un jus intense et riche, très juteux, des notes gourmandes cacaotées, de cerises noirs, une touche fumée et toastée : un grand flacon a pleine matûrité!")
+pahlmeyer = Bottle.new(appellation: "Pahlmeyer", domain: "Pahlmeyer", vintage: "1998", color: "Red", grape_variety: "Merlot", aroma: "Fruity", characteristics: "Structured", country: "United States", region: "Napa Valley", price_range: "207", description: "Ce Merlot 1998 est d'une grande finesse, certainement l'un des tous meilleurs produits dans la Napa Valley sur ce millésime. Un jus intense et riche, très juteux, des notes gourmandes cacaotées, de cerises noirs, une touche fumée et toastée : un grand flacon a pleine matûrité!")
 file = URI.open("https://images.lavinia.fr/spree/products/21422/product/NAPA_PAHLMEYER_MERLOT_1998-11752_.jpg?1546009295")
 pahlmeyer.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 pahlmeyer.save!
@@ -197,7 +197,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/21907/product/73755_la
 gevrey.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 gevrey.save!
 
-eugénie = Bottle.new(appellation: "Vosne-Romanée", domain: "Domaine Eugénie", vintage: "2015", color: "Red", grape_variety: "Pinot Noir", aroma: "Fruity", characteristics: "Vivid and dry", country: "Italy", region: "Abruzzo", price_range: "73", description: "Ce vin, d’une belle concentration, présente une trame équilibrée soutenue par une structure souple et fruitée.")
+eugénie = Bottle.new(appellation: "Vosne-Romanée", domain: "Domaine Eugénie", vintage: "2015", color: "Red", grape_variety: "Pinot Noir", aroma: "Fruity", characteristics: "Vivid and dry", country: "France", region: "Bourgogne", price_range: "73", description: "Ce vin, d’une belle concentration, présente une trame équilibrée soutenue par une structure souple et fruitée.")
 file = URI.open("https://images.lavinia.fr/spree/products/23973/product/70887(ok).JPG?1572517163")
 eugénie.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 eugénie.save!
