@@ -1,5 +1,5 @@
 const collapse = () => {
-  const crosses = document.querySelectorAll('.container-filters a');
+  const crosses = document.querySelectorAll('.container-filters .collapse-sign');
   if (crosses) {
     crosses.forEach((e)=>{
       e.addEventListener('click', (event) => {
