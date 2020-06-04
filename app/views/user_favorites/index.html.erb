@@ -4,12 +4,12 @@
 <div class="container">
   <div class="card-container-favorites cards">
     <% @user_favorites.each do |user_favorite| %>
-      <%= render 'shared/bottles-cards', bottle: user_favorite.bottle %>
+      <%= render 'shared/bottles-cards', bottle: user_favorite.bottle, user_favorite: user_favorite %>
     <% end %>
   </div>
 </div>
 <% @user_favorites.each do |user_favorite|  %>
-  <%= render 'shared/modalshow', bottle: user_favorite.bottle %>
+  <%= render 'shared/modalshow', bottle: user_favorite.bottle, user_favorite: user_favorite %>
 <% end %>
 
 

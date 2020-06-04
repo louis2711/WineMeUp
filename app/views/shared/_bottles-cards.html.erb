@@ -1,8 +1,17 @@
 <div class="card-bottle-index">
   <div class="card-bottle-button" data-id="<%= bottle.id %>">
-    <%= link_to "#", :html => {:class => 'btn'}, "data-toggle" => "modal", "data-target" => "#bottleModal#{bottle.id}" do %>
-      <%= image_tag "eye_bottles.svg" %>
-    <% end %>
+    <div class="eye-button">
+      <%= link_to "#", :html => {:class => 'btn'}, "data-toggle" => "modal", "data-target" => "#bottleModal#{bottle.id}" do %>
+        <%= image_tag "eye_bottles.svg" %>
+      <% end %>
+    </div>
+    <div class="destroy-button">
+      <% if controller_name == 'user_favorites' %>
+        <%= link_to user_favorite_path(user_favorite), method: :delete, data: {confirm: "Are you sure?"} do %>
+          <i class="far fa-trash-alt fa-lg btn-destroy"></i>
+        <% end %>
+      <% end %>
+    </div>
   </div>
   <div class="card-bottle-index-img">
     <div class="img-bottle-index">
