@@ -9,7 +9,7 @@
   </div>
 </div>
 <% @user_favorites.each do |user_favorite|  %>
-  <%= render 'shared/modalshow', bottle: user_favorite.bottle %>
+  <%= render 'shared/modalshow', bottle: user_favorite.bottle, user_favorite: user_favorite %>
 <% end %>
 
 
