@@ -140,7 +140,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/16187/product/PENFOLD'
 penfolds_grange.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 penfolds_grange.save!
 
-john_duval = Bottle.new(appellation: "John Duval Entity", domain: "John Duval", vintage: "2014", color: "Red", grape_variety: "Syrah", aroma: "Spicy", characteristics: "Powerful", country: "Australia", region: "Shiraz", price_range: "37", description: "Identity Rouge est un vin qui s’ouvre sur des notes de mûres et de prunes. En bouche, ce vin est structuré avec une grande concentration de fruits noirs. Long et riche, il est équilibré grâce à des tannins savoureux, et de fines notes épicées. Un vin éclatant et intense qui révèle la beauté du terroir de Barossa.")
+john_duval = Bottle.new(appellation: "John Duval Entity", domain: "John Duval", vintage: "2014", color: "Red", grape_variety: "Syrah", aroma: "Spicy", characteristics: "Powerful", country: "Australia", region: "Shiraz", price_range: "37", description: "This wine expresses notes of blackberries and prunes. In terms of mouthfeel, this wine is structured with a high concentration of dark fruits. Longue and rich, it is stable thanks to tasty tannins, and small spicy notes. This wine is bright and intense and reveals the beauty of the Barossa terroir.")
 file = URI.open("https://images.lavinia.fr/spree/products/37818/product/1AUAU10025359.jpg?1588671809")
 john_duval.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 john_duval.save!
@@ -214,12 +214,12 @@ mastroberardino.photo.attach(io: file, filename: "nes.png", content_type: "image
 mastroberardino.save!
 
 valpolicella = Bottle.new(appellation: "Amarone Della Valpolicella", domain: "Bertani", vintage: "2009", color: "Red", grape_variety: "Cortese, Molinara, Rondinella", aroma: "Spicy", characteristics: "Structured", country: "Italy", region: "Vénétie", price_range: "180", description: "L’Amarone Classico de Bertani est un vin intemporel qui exprime à merveille le style unique du domaine. Bertani produit de l’Amarone Classico depuis 1958 avec une parfaite harmonie entre le temps, la Nature et l’Homme. L’affinage en tonneaux durant au moins six ans lui donne une grande structure et en fait l’un des vins rouges les plus aptes à vieillir au monde.")
-file = URI.open("https://images.lavinia.fr/spree/products/18075/product/La-Lagune_Haut-Medoc_2016_71179.jpg?1490963332")
+file = URI.open("https://s.tannico.it/media/catalog/product/cache/44/thumbnail/500x500/0dc2d03fe217f8c83829496872af24a0/b/e/bertani_6_1.jpg")
 valpolicella.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 valpolicella.save!
 
 
-della = Bottle.new(appellation: "Recioto Della Valpolicella", domain: "Quintarelli", vintage: "2007", color: "Red", grape_variety: "Corvina, Rondinella, Molinara", aroma: "Spicy", characteristics: "Powerful", country: "Italy", region: "Vénétie", price_range: "300", description: "A la dégustation, ce vin est exceptionnel. Il offre un bouquet complexe et délicat d'arômes de cerise noire, d'amandes amères, de réglisse, de cacao et de réglisse, complétés de notes balsamiques. La bouche est dotée d'un beau volume mais sans lourdeur, avec une matière dense, concentrée et fine, l'ensemble est très harmonieux et racé. Grand moment de dégustation en perspective !")
+della = Bottle.new(appellation: "Recioto Della Valpolicella", domain: "Quintarelli", vintage: "2007", color: "Red", grape_variety: "Corvina, Rondinella, Molinara", aroma: "Spicy", characteristics: "Powerful", country: "Italy", region: "Vénétie", price_range: "300", description: "This wine is truly exceptional. It offers a bouquet of complexity and delicacy, aromas of cherry, almonds, licorice, and cacao, completed with notes of balsamic. It is equipped with volume and density, concentrated but thin. As a whole it is very harmonious. Great tasting moment in perspective.")
 file = URI.open("https://images.lavinia.fr/spree/products/22889/product/75834(ok).jpg?1561027957")
 della.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 della.save!
@@ -243,7 +243,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/22718/product/100332(o
 espana.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 espana.save!
 
-duero = Bottle.new(appellation: "Do Ribera Del Duero", domain: "Bodegas y Viñedos Alión", vintage: "2014", color: "Red", grape_variety: "", aroma: "Spicy", characteristics: "High tannins", country: "Spain", region: "Ribera Del Duero", price_range: "91", description: "Les vins de chez Tempos Vega Sicilia sont certainement parmi les plus connus et les plus appréciés au monde. Le domaine a une histoire atypique, les vins ont un caractère très personnel et affirmé. Le propriétaire Pablo Álvarez Mezquiriz a su élaborer, au fil du temps, une gamme très prestigieuse de grands vins sur les terroirs d’Espagne et de Hongrie. Les vins se caractérisent par leur grande élégance, alliant à merveille tradition et modernité une signature unique.")
+duero = Bottle.new(appellation: "Do Ribera Del Duero", domain: "Bodegas y Viñedos Alión", vintage: "2014", color: "Red", grape_variety: "", aroma: "Spicy", characteristics: "High tannins", country: "Spain", region: "Ribera Del Duero", price_range: "91", description: "Wines from Tempos Vega Sicilia are certainly among most famous and appreciated wines in the world. The domain has an atypical history, wines show very personal characteristics. The owner, Pablo Álvarez Mezquiriz, managed to elaborate throughout the years a very prestigious selection of great wines in Spain and Hungary. They represent an elegance mixed with wonderful traditions and modernity. A unique signature.")
 file = URI.open("https://images.lavinia.fr/spree/products/23295/product/Mastroberardino_76350.png?1564651278")
 duero.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 duero.save!

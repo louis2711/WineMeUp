@@ -51,8 +51,6 @@ class UserAnswersController < ApplicationController
       url = '/bottles?country%5B%5D=Switzerland'
     elsif answer.europe_list == 'Germany'
       url = '/bottles?country%5B%5D=Germany'
-    elsif answer.europe_list == 'Greece'
-      url = '/bottles?country%5B%5D=Greece'
     elsif answer.oceania_list == 'New Zealand'
       url = '/bottles?country%5B%5D=New+Zealand'
     elsif answer.oceania_list == 'Australia'

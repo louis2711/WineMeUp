@@ -28,3 +28,9 @@
 .btn-destroy{
   color: #B67A82;
 }
+
+.btn-favorites{
+  &:hover{
+  text-decoration: none;
+  }
+}
