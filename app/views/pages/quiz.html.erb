@@ -22,11 +22,21 @@
                 <div class="grouped-choices management-question">
                   <p>Do you have a preference on how the wine is produced?</p>
                   <div class="grouped-choices">
-
-                    <% @production_types.each_with_index do |production_type, index| %>
-                      <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type, "data-toggle" => "tab", "data-target" => "#question_reason"}, label: production_type, wrapper_html: {class: "form-check"} %>
-                    <% end %>
-
+                     <% @production_types.each_with_index do |production_type, index| %>
+                        <% if index == 0 %>
+                          <span data-tooltip="tooltip" data-html="true" title="The <strong> organic </strong> cultivation of the grape means that the use of artificial chemicals such as pesticides, fungicides, herbicides, etc. is prohibited." data-placement="top">
+                            <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type, "data-toggle" => "tab", "data-target" => "#question_reason" }, label: production_type, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% elsif index == 1 %>
+                          <span data-tooltip="tooltip" data-html="true" title="<strong> vegan </strong> wines have no animal products, used in yeast or as a fining agent." data-placement="top">
+                            <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type, "data-toggle" => "tab", "data-target" => "#question_reason" }, label: production_type, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% else %>
+                          <span data-tooltip="tooltip" data-html="true" title="<strong> natural </strong> wine is often considered a return to basics, a wine stripped of all its additives, as it was done in the Middle Ages." data-placement="top">
+                            <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type, "data-toggle" => "tab", "data-target" => "#question_reason" }, label: production_type, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% end %>
+                      <% end %>
                   </div>
                   <div class= "button-back">
                     <a class="nav-link nav-link-quiz-hide" id="question_personnality-tab" data-toggle="tab" href="#question_personnality" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
@@ -151,7 +161,35 @@
                   <p>Which aroma?</p>
                   <div class="grouped-choices">
                     <% @aromas.each_with_index do |aroma, index| %>
-                      <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button"}, label: aroma, wrapper_html: {class: "form-check"} %>
+                            <% if index == 0 %>
+                          <span data-tooltip="tooltip" data-html="true" title="" data-placement="top">
+                            <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% elsif index == 1 %>
+                          <span data-tooltip="tooltip" data-html="true" title="Les vins <strong>vegan</strong> n'ont aucun produits d'origine animale, utilisé dans la levure ou encore en tant qu'agent de collage." data-placement="top">
+                            <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% elsif index == 2 %>
+                          <span data-tooltip="tooltip" data-html="true" title="Les vins <strong>vegan</strong> n'ont aucun produits d'origine animale, utilisé dans la levure ou encore en tant qu'agent de collage." data-placement="top">
+                            <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% elsif index == 3 %>
+                          <span data-tooltip="tooltip" data-html="true" title="Les vins <strong>vegan</strong> n'ont aucun produits d'origine animale, utilisé dans la levure ou encore en tant qu'agent de collage." data-placement="top">
+                            <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% elsif index == 4 %>
+                          <span data-tooltip="tooltip" data-html="true" title="Les vins <strong>vegan</strong> n'ont aucun produits d'origine animale, utilisé dans la levure ou encore en tant qu'agent de collage." data-placement="top">
+                            <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% elsif index == 5 %>
+                          <span data-tooltip="tooltip" data-html="true" title="Les vins <strong>vegan</strong> n'ont aucun produits d'origine animale, utilisé dans la levure ou encore en tant qu'agent de collage." data-placement="top">
+                            <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% else %>
+                          <span data-tooltip="tooltip" data-html="true" title="Le vin <strong>naturel</strong> est souvent considéré comme un retour aux sources, un vin dépouillé de tous ses additifs, comme il se faisait au Moyen-Âge." data-placement="top">
+                            <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% end %>
                     <% end %>
                   </div>
                 </div>

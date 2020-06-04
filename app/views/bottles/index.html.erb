@@ -111,7 +111,7 @@
               <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Italy") %> name="country[]" value="Italy"> Italy<span class="checkmark"></span></label></div>
               <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Spain") %> name="country[]" value="Spain"> Spain<span class="checkmark"></span></label></div>
               <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Portugal") %> name="country[]" value="Portugal"> Portugal<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Switzerland") %> name="country[]" value="Switzerland"> Switzerland<<span class="checkmark"></span>/label></div>
+              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Switzerland") %> name="country[]" value="Switzerland"> Switzerland<span class="checkmark"></span></label></div>
               <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Germany") %> name="country[]" value="Germany"> Germany<span class="checkmark"></span></label></div>
               <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Argentina") %> name="country[]" value="Argentina"> Argentina<span class="checkmark"></span></label></div>
               <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("South Africa") %> name="country[]" value="South Africa"> South Africa<span class="checkmark"></span></label></div>
@@ -187,43 +187,10 @@
       </div>
     </form>
 
-    <div class="card-container cards">
-      <% @bottles.each do |bottle|  %>
-        <div class="card-bottle-index">
-          <div class="card-bottle-button" data-id="<%= bottle.id %>">
-            <%= link_to "#", :html => {:class => 'btn'}, "data-toggle" => "modal", "data-target" => "#bottleModal#{bottle.id}" do %>
-              <%= image_tag "eye_bottles.svg" %>
-            <% end %>
-          </div>
-          <div class="card-bottle-index-img">
-            <div class="img-bottle-index">
-              <% if bottle.photo.attached? %>
-                <%= cl_image_tag bottle.photo.key, crop: :fill %>
-              <% else  %>
-                <img src="#" alt="">
-              <% end %>
-            </div>
-          </div>
-          <div class="card-bottle-domain-appellation">
-            <h2 class="bottle-domain"><%= bottle.domain %></h2>
-            <p><%= bottle.appellation %></p>
-          </div>
-<!--             <div class="card-bottle-appellation">
-
-          </div> -->
-          <div class="card-footer-country-year">
-            <div class="card-footer-country">
-              <% if bottle.region.present? %>
-                <p><%= bottle.region.upcase %></p>
-              <% end %>
-            </div>
-            <div class="card-bottle-year">
-              <p><%= bottle.vintage %></p>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
+  <div class="card-container cards">
+    <% @bottles.each do |bottle|  %>
+      <%= render 'shared/bottles-cards', bottle: bottle %>
+    <% end %>
   </div>
 </div>
 <% @bottles.each do |bottle|  %>

@@ -50,3 +50,7 @@ document.addEventListener('turbolinks:load', () => {
     handleQuizAnswers();
   };
 });
+
+$(function(){
+  $('[data-tooltip=tooltip]').tooltip();
+});

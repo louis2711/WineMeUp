@@ -18,7 +18,7 @@ class PagesController < ApplicationController
     @worlds = ['New world', 'Old world']
     @regions = ['America', 'Europe', 'Oceania', 'Africa']
     @colours = ['Red', 'Rosé', 'Sweet', 'White', 'Port', 'Sparkling']
-    @aromas = ['Fruit flavors', 'Herbal', 'Floral flavors', 'Woody', 'Spicy', 'Mineral']
+    @aromas = ['Fruity', 'Herbal', 'Floral flavors', 'Woody', 'Spicy', 'Mineral']
     @grape_reds = ['Cabernet Sauvignon', 'Cabernet Franc', 'Merlot', 'Pinot Noir', 'Gamay', 'Syrah', 'Grenache', 'Cinsault', 'Malbec', 'Sangiovese']
     @grape_roses = ['Syrah', 'Grenache', 'Cinsault', 'Cabernet d\'Anjou']
     @grape_sweets = ['Sauvignon', 'Muscadelle', 'Sémillion', 'Gewurztraminer', 'Riesling', 'Chenin', 'Furmint']
