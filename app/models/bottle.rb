@@ -43,7 +43,8 @@ class Bottle < ApplicationRecord
     white: ["Sauvignon Blanc", "Chardonnay", "Chasselas", "Pinot Gris", "Chenin", "Riesling", "Viognier", "Semillon", "Trebbiano"],
     rose: ["Grenache", "Cinsault", "Syrah", "Mourvèdre", "Carignan"],
     sweet: ["Muscadelle", "Tokaj", "Gewurztraminer"],
-    port: ["Touriga Franca", "Tinta Roriz", "Tinta Barroca", "Touriga Nacional", "Tinto Cao"]
+    port: ["Touriga Franca", "Tinta Roriz", "Tinta Barroca", "Touriga Nacional", "Tinto Cao"],
+    sparkling: []
   }
 
   COLORS = ["red", "white", "rose", "sweet", "port", "sparkling"]
