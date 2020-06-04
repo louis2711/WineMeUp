@@ -1,14 +1,17 @@
 
 .container-show-profile {
-  padding-top: 30px;
   background-color: #B67A82;
   margin-top: 75px;
   color: white;
-  padding-bottom: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
+
 .user-preferences {
-  margin-top: 50px;
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -91,7 +94,37 @@
   justify-content: space-around;
 }
 
-
 .aroma-img {
   height: 50px;
 }
+
+.grape-img {
+  height: 50px;
+}
+
+.meal-img {
+  height: 50px;
+}
+
+.user-profile-grape {
+  padding: 20px;
+  width: 120px;
+  height: 160px;
+}
+
+.user-profile-aroma {
+  padding: 20px;
+}
+
+.user-profile-color-container {
+  padding: 20px;
+}
+
+.user-profile-meal {
+  padding: 20px;
+}
+
+.user-profile-management {
+  padding: 20px;
+}
+
