@@ -31,8 +31,12 @@
                           <span data-tooltip="tooltip" data-html="true" title="<strong> vegan </strong> wines have no animal products, used in yeast or as a fining agent." data-placement="top">
                             <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type, "data-toggle" => "tab", "data-target" => "#question_reason" }, label: production_type, wrapper_html: {class: "form-check"} %>
                           </span>
-                        <% else %>
+                          <% elsif index == 2 %>
                           <span data-tooltip="tooltip" data-html="true" title="<strong> natural </strong> wine is often considered a return to basics, a wine stripped of all its additives, as it was done in the Middle Ages." data-placement="top">
+                            <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type, "data-toggle" => "tab", "data-target" => "#question_reason" }, label: production_type, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% else %>
+                          <span data-tooltip="tooltip" data-html="true" title="" data-placement="top">
                             <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type, "data-toggle" => "tab", "data-target" => "#question_reason" }, label: production_type, wrapper_html: {class: "form-check"} %>
                           </span>
                         <% end %>
