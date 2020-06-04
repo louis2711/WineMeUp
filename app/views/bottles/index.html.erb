@@ -33,8 +33,8 @@
             <div class="card card-body">
               <% @colors.each do |color| %>
                 <div>
-                  <label>
-                    <input type="checkbox" <%= "checked" if params[:color].to_a.include?(color.capitalize) %> name="color[]" value="<%= color.capitalize %>" class="color-checkbox"> <%= color.capitalize %>
+                  <label class="label-container">
+                    <input type="checkbox" <%= "checked" if params[:color].to_a.include?(color.capitalize) %> name="color[]" value="<%= color.capitalize %>" class="color-checkbox"> <%= color.capitalize %><span class="checkmark"></span>
                   </label>
                 </div>
               <% end %>
@@ -52,7 +52,7 @@
           <div class="collapse <%= "show" if params[:grapes] %>" id="grapes">
             <div class="card card-body">
               <% @varieties.sort.each do |variety| %>
-                <div><label><input type="checkbox" <%= "checked" if params[:grape_variety].to_a.include?(variety) %> name="grape_variety[]" value="<%= variety.capitalize %>"> <%= variety %></label></div>
+                <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:grape_variety].to_a.include?(variety) %> name="grape_variety[]" value="<%= variety.capitalize %>"> <%= variety %><span class="checkmark"></span></label></div>
               <% end %>
             </div>
           </div>
@@ -147,7 +147,7 @@
           <div class="collapse <%= "show" if params[:vintage] %>" id="vintage">
             <div class="card card-body">
               <% 1995.upto(2019) do |vintage| %>
-                <div><label><input type="checkbox" <%= "checked" if params[:vintage].to_a.include?(vintage.to_s) %> name="vintage[]" value="<%= vintage %>"> <%= vintage %></label></div>
+                <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:vintage].to_a.include?(vintage.to_s) %> name="vintage[]" value="<%= vintage %>"> <%= vintage %><span class="checkmark"></span></label></div>
               <% end %>
             </div>
           </div>
