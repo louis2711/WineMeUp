@@ -45,14 +45,18 @@
             <div>GRAPE VARIETY</div>
             <div>
               <a data-toggle="collapse" href="#grapes" role="button" aria-expanded="false" aria-controls="grape_variety" class="collapse-sign">
-                +
+                <%= params[:grapes] ? "-" : "+" %>
               </a>
             </div>
           </div>
           <div class="collapse <%= "show" if params[:grapes] %>" id="grapes">
             <div class="card card-body">
               <% @varieties.sort.each do |variety| %>
-                <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:grape_variety].to_a.include?(variety) %> name="grape_variety[]" value="<%= variety.capitalize %>"> <%= variety %><span class="checkmark"></span></label></div>
+                <div>
+                  <label class="label-container">
+                    <input type="checkbox" <%= "checked" if params[:grape_variety].to_a.include?(variety) %> name="grape_variety[]" value="<%= variety.capitalize %>"> <%= variety %>
+                  </label>
+                </div>
               <% end %>
             </div>
           </div>
@@ -61,18 +65,37 @@
             <div>AROMA</div>
             <div>
               <a data-toggle="collapse" href="#aromas" role="button" aria-expanded="false" aria-controls="aroma" class="collapse-sign">
-                +
+                <%= params[:aromas] ? "-" : "+" %>
               </a>
             </div>
           </div>
           <div class="collapse <%= "show" if params[:aroma] %>" id="aromas">
             <div class="card card-body">
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:aroma].to_a.include?("Fruity") %> name="aroma[]" value="Fruity"> Fruity<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:aroma].to_a.include?("Floral") %> name="aroma[]" value="Floral"> Floral<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:aroma].to_a.include?("Herbal") %> name="aroma[]" value="Herbal"> Herbal<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:aroma].to_a.include?("Woody") %> name="aroma[]" value="Woody"> Woody<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:aroma].to_a.include?("Spicy") %> name="aroma[]" value="Spicy"> Spicy<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:aroma].to_a.include?("Mineral") %> name="aroma[]" value="Mineral"> Mineral<span class="checkmark"></span></label></div>
+              <div>
+                <label class="label-container">
+                  <input type="checkbox" <%= "checked" if params[:aroma].to_a.include?("Fruity") %> name="aroma[]" value="Fruity"> Fruity<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:aroma].to_a.include?("Floral") %> name="aroma[]" value="Floral"> Floral<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:aroma].to_a.include?("Herbal") %> name="aroma[]" value="Herbal"> Herbal<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:aroma].to_a.include?("Woody") %> name="aroma[]" value="Woody"> Woody<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:aroma].to_a.include?("Spicy") %> name="aroma[]" value="Spicy"> Spicy<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:aroma].to_a.include?("Mineral") %> name="aroma[]" value="Mineral"> Mineral<span class="checkmark"></span>
+                </label>
+              </div>
             </div>
           </div>
 
@@ -80,20 +103,44 @@
             <div>CHARACTERISTICS</div>
             <div>
               <a data-toggle="collapse" href="#characteristics" role="button" aria-expanded="false" aria-controls="characteristics" class="collapse-sign">
-                +
+                <%= params[:characteristics] ? "-" : "+" %>
               </a>
             </div>
           </div>
           <div class="collapse <%= "show" if params[:characteristics] %>" id="characteristics">
             <div class="card card-body">
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Light") %> name="characteristics[]" value="Light"> Light<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Structured") %> name="characteristics[]" value="Structured"> Structured<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Powerful") %> name="characteristics[]" value="Powerful"> Powerful<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Acid") %> name="characteristics[]" value="Acid"> Acid<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Low Tannins") %> name="characteristics[]" value="Low Tannins"> Low Tannins<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("High Tannins") %> name="characteristics[]" value="High Tannins"> High Tannins<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Dry") %> name="characteristics[]" value="Dry"> Dry<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Sweet") %> name="characteristics[]" value="Sweet"> Sweet<span class="checkmark"></span></label></div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Light") %> name="characteristics[]" value="Light"> Light<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Structured") %> name="characteristics[]" value="Structured"> Structured<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Powerful") %> name="characteristics[]" value="Powerful"> Powerful<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Acid") %> name="characteristics[]" value="Acid"> Acid<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Low Tannins") %> name="characteristics[]" value="Low Tannins"> Low Tannins<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("High Tannins") %> name="characteristics[]" value="High Tannins"> High Tannins<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Dry") %> name="characteristics[]" value="Dry"> Dry<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:characteristics].to_a.include?("Sweet") %> name="characteristics[]" value="Sweet"> Sweet<span class="checkmark"></span>
+                </label>
+              </div>
             </div>
           </div>
 
@@ -101,23 +148,56 @@
             <div>COUNTRY</div>
             <div>
               <a data-toggle="collapse" href="#country" role="button" aria-expanded="false" aria-controls="country" class="collapse-sign">
-                +
+                <%= params[:country] ? "-" : "+" %>
               </a>
             </div>
           </div>
           <div class="collapse <%= "show" if params[:country] %>" id="country">
             <div class="card card-body">
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("France") %> name="country[]" value="France"> France<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Italy") %> name="country[]" value="Italy"> Italy<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Spain") %> name="country[]" value="Spain"> Spain<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Portugal") %> name="country[]" value="Portugal"> Portugal<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Switzerland") %> name="country[]" value="Switzerland"> Switzerland<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Germany") %> name="country[]" value="Germany"> Germany<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Argentina") %> name="country[]" value="Argentina"> Argentina<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("South Africa") %> name="country[]" value="South Africa"> South Africa<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Australia") %> name="country[]" value="Australia"> Australia<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("New Zealand") %> name="country[]" value="New Zealand"> New Zealand<span class="checkmark"></span></label></div>
-              <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("United States") %> name="country[]" value="United States"> United States<span class="checkmark"></span></label></div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("France") %> name="country[]" value="France"> France<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Italy") %> name="country[]" value="Italy"> Italy<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Spain") %> name="country[]" value="Spain"> Spain<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Portugal") %> name="country[]" value="Portugal"> Portugal<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Switzerland") %> name="country[]" value="Switzerland"> Switzerland<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Germany") %> name="country[]" value="Germany"> Germany<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Argentina") %> name="country[]" value="Argentina"> Argentina<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("South Africa") %> name="country[]" value="South Africa"> South Africa<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("Australia") %> name="country[]" value="Australia"> Australia<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("New Zealand") %> name="country[]" value="New Zealand"> New Zealand<span class="checkmark"></span>
+                </label>
+              </div>
+              <div>
+                <label class="label-container"><input type="checkbox" <%= "checked" if params[:country].to_a.include?("United States") %> name="country[]" value="United States"> United States<span class="checkmark"></span>
+                </label>
+              </div>
             </div>
           </div>
 
@@ -140,14 +220,18 @@
             <div>VINTAGE</div>
             <div>
               <a data-toggle="collapse" href="#vintage" role="button" aria-expanded="false" aria-controls="vintage" class="collapse-sign">
-                +
+                <%= params[:vintage] ? "-" : "+" %>
               </a>
             </div>
           </div>
           <div class="collapse <%= "show" if params[:vintage] %>" id="vintage">
             <div class="card card-body">
               <% 1995.upto(2019) do |vintage| %>
-                <div><label class="label-container"><input type="checkbox" <%= "checked" if params[:vintage].to_a.include?(vintage.to_s) %> name="vintage[]" value="<%= vintage %>"> <%= vintage %><span class="checkmark"></span></label></div>
+                <div>
+                  <label class="label-container">
+                    <input type="checkbox" <%= "checked" if params[:vintage].to_a.include?(vintage.to_s) %> name="vintage[]" value="<%= vintage %>"> <%= vintage %>
+                  </label>
+                </div>
               <% end %>
             </div>
           </div>
@@ -171,20 +255,25 @@
             <div>PRICE RANGE</div>
             <div>
               <a data-toggle="collapse" href="#prange" role="button" aria-expanded="false" aria-controls="prange" class="collapse-sign">
-                +
+                <%= params[:prange] ? "-" : "+" %>
               </a>
             </div>
           </div>
           <div class="collapse <%= "show" if params[:price_range] && params[:price_range] != "2,2000"  %>" id="prange">
             <div class="card card-body">
-              <b><%= params[:price_range] ? params[:price_range].to_s.split(",")[0] : "2" %></b> <input name="price_range" id="ex2" type="text" class="span2" value="" data-slider-min="2" data-slider-max="2000" data-slider-step="5" data-slider-value="<%= params[:price_range] ? "[#{params[:price_range]}]" : "[2, 2000]" %>" data-provide="slider" data-slider-tooltip="show"/> <b><%= params[:price_range] ? params[:price_range].to_s.split(",")[1] : "2000" %></b>
+              <b><%= params[:price_range] ? params[:price_range].to_s.split(",")[0] : "2" %></b>
+              <label>
+                <input name="price_range" id="ex2" type="text" class="span2" value=" " data-slider-min="2" data-slider-max="2000" data-slider-step="5" data-slider-value="<%= params[:price_range] ? "[#{params[:price_range]}]" : "[2, 2000]" %>" data-provide="slider" data-slider-tooltip="show"/>
+              </label>
+              <b><%= params[:price_range] ? params[:price_range].to_s.split(",")[1] : "2000" %></b>
             </div>
           </div>
         </div>
       </div>
-      <div class="btn-submit">
+      <!-- <div class="btn-submit">
         <input type="submit" class="submit btn-red btn-submit-red">
       </div>
+ -->
     </form>
 
   <div class="card-container cards">
