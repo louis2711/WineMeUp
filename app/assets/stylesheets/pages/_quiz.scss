@@ -104,6 +104,7 @@
   vertical-align: center;
   margin-bottom: 0;
   font-size: 23px;
+  color: rgb(40, 40, 40);
 }
 
 .grouped-choices .form-group input {
@@ -183,4 +184,6 @@
   }
 }
 
-
+.fade {
+  transition: opacity 0.3s linear;
+}
