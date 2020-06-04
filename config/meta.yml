@@ -1,0 +1,5 @@
+meta_product_name: "Wine Me Up"
+meta_title: "Wine Me Up - Wine Up Your Experience about Wine"
+meta_description: "Wine doesn't have to be complicated. We make it easy."
+meta_image: "WNUBadjusted.png" # should exist in `app/assets/images/`
+twitter_account: "@wine_me_up" # required for Twitter Cards

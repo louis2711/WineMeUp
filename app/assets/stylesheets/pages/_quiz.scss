@@ -79,7 +79,6 @@
   color: black;
   opacity: 1;
   border-radius: 5px;
-  flex: 0 0 33%;
   width: 30rem;
   height: 5rem;
 
@@ -104,6 +103,7 @@
   vertical-align: center;
   margin-bottom: 0;
   font-size: 23px;
+  color: rgb(40, 40, 40);
 }
 
 .grouped-choices .form-group input {
@@ -183,4 +183,6 @@
   }
 }
 
-
+.fade {
+  transition: opacity 0.3s linear;
+}
