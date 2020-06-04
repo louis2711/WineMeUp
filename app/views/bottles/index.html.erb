@@ -1,4 +1,4 @@
-   <div class="container index-bottles-container">
+<div class="container index-bottles-container">
   <div class="search-container">
     <div class="searchbar">
       <%= form_tag bottles_path, method: :get do %>
@@ -52,7 +52,7 @@
               <% @varieties.sort.each do |variety| %>
                 <div>
                   <label class="label-container">
-                    <input type="checkbox" <%= "checked" if params[:grape_variety].to_a.include?(variety) %> name="grape_variety[]" value="<%= variety.capitalize %>"> <%= variety %>
+                    <input type="checkbox" <%= "checked" if params[:grape_variety].to_a.include?(variety) %> name="grape_variety[]" value="<%= variety.capitalize %>"> <%= variety %><span class="checkmark"></span>
                   </label>
                 </div>
               <% end %>

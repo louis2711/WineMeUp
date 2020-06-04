@@ -162,7 +162,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/19356/product/Harlan_C
 harlan.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 harlan.save!
 
-moraga = Bottle.new(appellation: "Moraga Bel Air", domain: "Moraga", vintage: "1998", color: "White", grape_variety: "Sauvignon Blanc", aroma: "Floral", characteristics: "Dry", country: "United States", region: "Los Angeles County", price_range: "158", description: "A typical white of the estate which keeps all its promises. It presents itself with a lot of character and has a brilliant power on the palate.")
+moraga = Bottle.new(appellation: "Moraga Bel Air", domain: "Moraga", vintage: "1998", color: "White", grape_variety: "Sauvignon Blanc", aroma: "Floral", characteristics: "Dry", country: "United States", region: "L.A. County", price_range: "158", description: "A typical white of the estate which keeps all its promises. It presents itself with a lot of character and has a brilliant power on the palate.")
 file = URI.open("https://images.lavinia.fr/spree/products/14873/product/Moraga_Bel_Air_blanc_1998_11819.jpg?1459342777")
 moraga.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 moraga.save!
