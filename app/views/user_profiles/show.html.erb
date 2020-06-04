@@ -12,7 +12,7 @@
       <% if @user_profile.selected_aroma %>
         <div class="user-profile-aroma">
           <div class="avatar preference-icon">
-            <%= image_tag "#{Bottle::AROMAS[@user_profile.selected_aroma.downcase.to_sym]}.svg", alt: "avatar-large" %>
+            <%= image_tag "#{Bottle::AROMAS[@user_profile.selected_aroma.downcase.to_sym]}.svg", class: "aroma-img", alt: "avatar-large" %>
           </div>
           <p><%= @user_profile.selected_aroma %></p>
         </div>

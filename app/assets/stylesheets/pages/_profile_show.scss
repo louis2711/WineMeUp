@@ -30,7 +30,7 @@
     background-color: $red;
   }
   &.white {
-    background-color: $white;
+    background-color: $white-wine;
   }
   &.port {
     background-color: $port;
@@ -58,11 +58,15 @@
   }
 }
 
-.avatar {
+.avatar-preference-icon {
   width: 80px;
   height: 80px;
   background-color: white;
   border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .preference-icon {
@@ -80,5 +84,14 @@
   background-color: white;
 }
 
+.card-container {
+  margin-top: -75px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-around;
+}
 
 
+.aroma-img {
+  height: 50px;
+}
