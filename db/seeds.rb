@@ -101,10 +101,10 @@ file = URI.open("https://www.pywinery.com/2443-large_default/galotta-2015-grille
 galotta.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 galotta.save!
 
-chappaz = Bottle.new(appellation: "Grain Noir Valais", domain: "Marie Thérèse Chappaz", vintage: "2015", color: "Red", grape_variety: "Merlot", aroma: "Fruity", characteristics: "Dry", country: "Switzerland", region: "Valais", price_range: "69", description: "Robe grenat foncé. Nez original de baies noires (sureau, myrtille), agrumes confits, kiwi, café et cuir. Bouche pleine, délicate, droite, dotée de nombreux tannins satinés et d'une grande persistance aromatique.")
-file = URI.open("https://www.lespassionnesduvin.com/media/catalog/product/cache/1/thumbnail/198x/17f82f742ffe127f42dca9de82fb58b1/g/r/grain-noir-valais-chappaz-suisse-11404.jpg")
-chappaz.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-chappaz.save!
+# chappaz = Bottle.new(appellation: "Grain Noir Valais", domain: "Marie Thérèse Chappaz", vintage: "2015", color: "Red", grape_variety: "Merlot", aroma: "Fruity", characteristics: "Dry", country: "Switzerland", region: "Valais", price_range: "69", description: "Robe grenat foncé. Nez original de baies noires (sureau, myrtille), agrumes confits, kiwi, café et cuir. Bouche pleine, délicate, droite, dotée de nombreux tannins satinés et d'une grande persistance aromatique.")
+# file = URI.open("https://www.lespassionnesduvin.com/media/catalog/product/cache/1/thumbnail/198x/17f82f742ffe127f42dca9de82fb58b1/g/r/grain-noir-valais-chappaz-suisse-11404.jpg")
+# chappaz.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# chappaz.save!
 
 maye = Bottle.new(appellation: "Petite Arvine Valais", domain: "Simon Maye", vintage: "2019", color: "White", grape_variety: "Petite Arvine", aroma: "Fruity", characteristics: "Structured", country: "Switzerland", region: "Valais", price_range: "26", description: "Vin sec, expressif avec une acidité fine et salée soutenant des arômes de rhubarbe, fruit de la passion et pamplemousse")
 file = URI.open("https://www.simonmaye.ch/wp-content/uploads/2018/11/PetiteArvine-min.png")
@@ -174,15 +174,15 @@ pahlmeyer.save!
 
 # France
 
-pontet_canet = Bottle.new(appellation: "Pauillac", domain: "Château Pontet-Canet", vintage: "2013", color: "Red", grape_variety: "cabernet sauvignon, Merlot", aroma: "Fruity", characteristics: "Structured and powerful", country: "France", region: "Bordeaux", price_range: "110", description: "Pour le Château Pontet-Canet, propriété de la famille Tesseron depuis maintenant plus de 40 ans, le millésime 2013 sera synonyme de surprise! En effet, Château Pontet-Canet a déjà pris tout le monde de cours en décidant de commercialiser sa cuvée 2013 une semaine avant la grande étape des dégustations de la presse ; chose inédite dans l'histoire des primeurs!")
-file = URI.open("https://images.lavinia.fr/spree/products/9221/product/Chateau_Pontet-Canet_59041.jpg?1396021597")
-pontet_canet.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-pontet_canet.save!
+# pontet_canet = Bottle.new(appellation: "Pauillac", domain: "Château Pontet-Canet", vintage: "2013", color: "Red", grape_variety: "cabernet sauvignon, Merlot", aroma: "Fruity", characteristics: "Structured and powerful", country: "France", region: "Bordeaux", price_range: "110", description: "Pour le Château Pontet-Canet, propriété de la famille Tesseron depuis maintenant plus de 40 ans, le millésime 2013 sera synonyme de surprise! En effet, Château Pontet-Canet a déjà pris tout le monde de cours en décidant de commercialiser sa cuvée 2013 une semaine avant la grande étape des dégustations de la presse ; chose inédite dans l'histoire des primeurs!")
+# file = URI.open("https://images.lavinia.fr/spree/products/9221/product/Chateau_Pontet-Canet_59041.jpg?1396021597")
+# pontet_canet.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# pontet_canet.save!
 
-brane_cantenac = Bottle.new(appellation: "Margaux", domain: "Château Brane-Cantenac", vintage: "2016", color: "Red", grape_variety: "Merlot, Cabernet Franc, Cabernet Sauvignon, Carménère", aroma: "Fruity", characteristics: "Structured", country: "France", region: "Bordeaux", price_range: "100", description: "Les vins possèdent une grande richesse aromatique et une splendide trame tannique. Ils ont tous les atouts pour permettre une très longue garde. Le Millésime 2016 : un millésime exceptionnel et « exceptionnellement chanceux ». La chance a été présente de la floraison à la vendange. Les cabernets ont été absolument magnifiques, grâce à l’exceptionnelle résistance à la sécheresse de ce terroir. Un des, sinon le plus grand Brane !")
-file = URI.open("https://images.lavinia.fr/spree/products/18083/product/Chateau-Brane-Cantenac_Margaux_2016_71243.jpg?1490966555")
-brane_cantenac.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-brane_cantenac.save!
+# brane_cantenac = Bottle.new(appellation: "Margaux", domain: "Château Brane-Cantenac", vintage: "2016", color: "Red", grape_variety: "Merlot, Cabernet Franc, Cabernet Sauvignon, Carménère", aroma: "Fruity", characteristics: "Structured", country: "France", region: "Bordeaux", price_range: "100", description: "Les vins possèdent une grande richesse aromatique et une splendide trame tannique. Ils ont tous les atouts pour permettre une très longue garde. Le Millésime 2016 : un millésime exceptionnel et « exceptionnellement chanceux ». La chance a été présente de la floraison à la vendange. Les cabernets ont été absolument magnifiques, grâce à l’exceptionnelle résistance à la sécheresse de ce terroir. Un des, sinon le plus grand Brane !")
+# file = URI.open("https://images.lavinia.fr/spree/products/18083/product/Chateau-Brane-Cantenac_Margaux_2016_71243.jpg?1490966555")
+# brane_cantenac.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# brane_cantenac.save!
 
 la_lagune = Bottle.new(appellation: "Haut-Médoc", domain: "Château La Lagune", vintage: "2016", color: "Red", grape_variety: "Cabernet Sauvignon, Merlot, Petit Verdot", aroma: "Spicy", characteristics: "Structured", country: "France", region: "Bordeaux", price_range: "77", description: "This wine has gained a lot in aromatic purity and definition, while retaining its own character, due to the terroir of gravel from Ludon, and grape varieties using a good proportion of Petit Verdot.")
 file = URI.open("https://images.lavinia.fr/spree/products/18075/product/La-Lagune_Haut-Medoc_2016_71179.jpg?1490963332")
@@ -190,10 +190,10 @@ la_lagune.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 la_lagune.save!
 
 
-gevrey = Bottle.new(appellation: "Gevrey-Chambertin", domain: "Domaine Alain Burguet, 1er cru Lavaux St Jacques", vintage: "2018", color: "Red", grape_variety: "Pecorino", aroma: "Fruity", characteristics: "Powerful", country: "France", region: "Bourgogne", price_range: "120", description: "Situé dans le village bourguignon de Gevrey-Chambertin, le Domaine Alain Burguet produit, depuis le début des années 1990, des vins de Gevrey denses et parfumés. Accompagné de ses fils Jean-Luc et Eric qui l’accompagnent dans tous les travaux de la vigne et en cave, Alain Burguet privilégie une conduite proche de la culture biologique. Le Lavaux Saint Jacques offre des parfums de fruits noirs éclatants. La bouche, égalemment sur le fruit noir mais légèrement confituré, s'offre avec délice et puissance.")
-file = URI.open("https://images.lavinia.fr/spree/products/21907/product/73755_lavaux_burguet.jpg?1551437629")
-gevrey.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-gevrey.save!
+# gevrey = Bottle.new(appellation: "Gevrey-Chambertin", domain: "Domaine Alain Burguet, 1er cru Lavaux St Jacques", vintage: "2018", color: "Red", grape_variety: "Pecorino", aroma: "Fruity", characteristics: "Powerful", country: "France", region: "Bourgogne", price_range: "120", description: "Situé dans le village bourguignon de Gevrey-Chambertin, le Domaine Alain Burguet produit, depuis le début des années 1990, des vins de Gevrey denses et parfumés. Accompagné de ses fils Jean-Luc et Eric qui l’accompagnent dans tous les travaux de la vigne et en cave, Alain Burguet privilégie une conduite proche de la culture biologique. Le Lavaux Saint Jacques offre des parfums de fruits noirs éclatants. La bouche, égalemment sur le fruit noir mais légèrement confituré, s'offre avec délice et puissance.")
+# file = URI.open("https://images.lavinia.fr/spree/products/21907/product/73755_lavaux_burguet.jpg?1551437629")
+# gevrey.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# gevrey.save!
 
 eugénie = Bottle.new(appellation: "Vosne-Romanée", domain: "Domaine Eugénie", vintage: "2015", color: "Red", grape_variety: "Pinot Noir", aroma: "Fruity", characteristics: "Vivid and dry", country: "France", region: "Bourgogne", price_range: "73", description: "Ce vin, d’une belle concentration, présente une trame équilibrée soutenue par une structure souple et fruitée.")
 file = URI.open("https://images.lavinia.fr/spree/products/23973/product/70887(ok).JPG?1572517163")
@@ -243,10 +243,10 @@ file = URI.open("https://images.lavinia.fr/spree/products/22718/product/100332(o
 espana.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 espana.save!
 
-duero = Bottle.new(appellation: "Do Ribera Del Duero", domain: "Bodegas y Viñedos Alión", vintage: "2014", color: "Red", grape_variety: "", aroma: "Spicy", characteristics: "High tannins", country: "Spain", region: "Ribera Del Duero", price_range: "91", description: "Wines from Tempos Vega Sicilia are certainly among most famous and appreciated wines in the world. The domain has an atypical history, wines show very personal characteristics. The owner, Pablo Álvarez Mezquiriz, managed to elaborate throughout the years a very prestigious selection of great wines in Spain and Hungary. They represent an elegance mixed with wonderful traditions and modernity. A unique signature.")
-file = URI.open("https://images.lavinia.fr/spree/products/23295/product/Mastroberardino_76350.png?1564651278")
-duero.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-duero.save!
+# duero = Bottle.new(appellation: "Do Ribera Del Duero", domain: "Bodegas y Viñedos Alión", vintage: "2014", color: "Red", grape_variety: "", aroma: "Spicy", characteristics: "High tannins", country: "Spain", region: "Ribera Del Duero", price_range: "91", description: "Wines from Tempos Vega Sicilia are certainly among most famous and appreciated wines in the world. The domain has an atypical history, wines show very personal characteristics. The owner, Pablo Álvarez Mezquiriz, managed to elaborate throughout the years a very prestigious selection of great wines in Spain and Hungary. They represent an elegance mixed with wonderful traditions and modernity. A unique signature.")
+# file = URI.open("https://images.lavinia.fr/spree/products/23295/product/Mastroberardino_76350.png?1564651278")
+# duero.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+# duero.save!
 
 vino = Bottle.new(appellation: "Vino De Espana", domain: "Ismael Gozalo", vintage: "2016", color: "White", grape_variety: "Verdejo", aroma: "Herbal", characteristics: "Light", country: "Spain", region: "", price_range: "26", description: "Un vin minéral, dense, frais, long et complexe qui demande à être carafé.")
 file = URI.open("https://images.lavinia.fr/spree/products/20716/product/Ismael_Gozalo__2016_98098.png?1534494193")
