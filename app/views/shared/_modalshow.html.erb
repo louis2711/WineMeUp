@@ -37,10 +37,6 @@
               <div class="show-buttons">
                 <% if controller_name == 'bottles' %>
                   <%= link_to "Add to my favorites", user_favorites_path(bottle_id:bottle.id), method: :post, class: "btn-red btn-favorites" %>
-                <% elsif controller_name == 'user_favorites' %>
-                  <%= link_to user_favorite_path(user_favorite), method: :delete do %>
-                    <i class="far fa-trash-alt"></i>
-                  <% end %>
                 <% end %>
               </div>
             </div>
