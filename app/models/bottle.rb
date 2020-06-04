@@ -28,4 +28,7 @@ class Bottle < ApplicationRecord
       where "price_range > ? and price_range < ?", price_range.split(",")[0], price_range.split(",")[1]
     end
     }
+
+  AROMAS = {fruity: "profile-icon-fruity", herbal: "profile-icon-herbal", floral: "profile-icon-flower", woody: "profile-icon-woody", spicy: "profile-icon-spicy", mineral: "profile-icon-mineral"}
+
 end

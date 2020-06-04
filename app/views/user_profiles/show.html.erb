@@ -5,16 +5,18 @@
     <div class="flat-bar">
     </div>
     <div class="user-preferences">
-      <div class="user-profile-color">
-        <%= image_tag "https://cdn-3d.niceshops.com/upload/image/product/large/default/vallejo-game-color-gory-red-17-ml-279663-fr.jpg", class: "avatar", alt: "avatar-large" %>
+      <div class="user-profile-color-container">
+        <div class="user-profile-color <%= @user_profile.color == "Rosé" ? "rose" : @user_profile.color.downcase %>"></div>
         <p><%= @user_profile.color %></p>
       </div>
-      <div class="user-profile-aroma">
-        <div class="avatar preference-icon">
-          <%= image_tag "profile-icon-fruity.svg", alt: "avatar-large" %>
+      <% if @user_profile.selected_aroma %>
+        <div class="user-profile-aroma">
+          <div class="avatar preference-icon">
+            <%= image_tag "#{Bottle::AROMAS[@user_profile.selected_aroma.downcase.to_sym]}.svg", alt: "avatar-large" %>
+          </div>
+          <p><%= @user_profile.selected_aroma %></p>
         </div>
-        <p><%= @user_profile.selected_aroma %></p>
-      </div>
+      <% end %>
       <div class="user-profile-grape">
         <div class="avatar preference-icon">
           <%= image_tag "profile-icon-bottle.svg", alt: "avatar-large" %>
