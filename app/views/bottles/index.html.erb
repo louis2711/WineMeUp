@@ -1,6 +1,37 @@
-<div class="container">
 
   <h1 class="title-index-bottles"></h1>
+  <% if @answers.last.aromas_list != nil && @answers.last.question_vineyard_management %>
+    <div class="container-show-profile">
+      <div class="container">
+        <h1><%= "Tailor made for you"%></h1>
+          <h3><%= "based on your answers" %></h3>
+        <div class="flat-bar">
+        </div>
+        <div class="user-preferences">
+          <div class="user-profile-color-container">
+            <div class="user-profile-color red"></div>
+            <p>Red</p>
+          </div>
+          <% if @answers.last.aromas_list %>
+            <div class="user-profile-aroma">
+              <div class="avatar-preference-icon">
+                <%= image_tag "#{Bottle::AROMAS[@answers.last.aromas_list.downcase.to_sym]}.svg", class: "aroma-img", alt: "avatar-large" %>
+              </div>
+              <p><%= @answers.last.aromas_list %></p>
+            </div>
+          <% end %>
+          <div class="user-profile-grape">
+            <div class="avatar-preference-icon">
+              <%= image_tag "profile-icon-bottle.svg", alt: "avatar-large" %>
+            </div>
+            <p><%= @answers.last.question_vineyard_management %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% else %>
+  <% end %>
+<div class="container">
   <div class="search-container">
     <div class="searchbar">
       <%= form_tag bottles_path, method: :get do %>

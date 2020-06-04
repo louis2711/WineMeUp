@@ -11,6 +11,7 @@ class BottlesController < ApplicationController
       @varieties = Bottle::GRAPE_VARIETY.values.flatten.uniq
     end
     @colors = Bottle::COLORS
+    @answers = current_user.user_answers
   end
 
   def show
