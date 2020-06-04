@@ -1,4 +1,3 @@
-
 const handleQuizAnswers = () => {
   const reasons = document.querySelectorAll('.reasons');
   reasons.forEach((reason) => {
@@ -88,7 +87,6 @@ const handleQuizAnswers = () => {
     });
   });
 };
-
 
 
 export { handleQuizAnswers };
