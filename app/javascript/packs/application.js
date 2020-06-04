@@ -49,8 +49,9 @@ document.addEventListener('turbolinks:load', () => {
   if (document.querySelector("#new_user_answer")){
     handleQuizAnswers();
   };
-});
-
-$(function(){
   $('[data-tooltip=tooltip]').tooltip();
 });
+
+// $(function(){
+//   $('[data-tooltip=tooltip]').tooltip();
+// });
