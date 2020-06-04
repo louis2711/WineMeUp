@@ -1,6 +1,6 @@
 
   <h1 class="title-index-bottles"></h1>
-  <% if @answers.last.aromas_list != nil && @answers.last.question_vineyard_management %>
+  <% if @answers.last.aromas_list != nil && @answers.last.question_vineyard_management != nil %>
     <div class="container-show-profile">
       <!-- <div class="container"> -->
         <h2><%= "Tailor made for you :"%></h2>
@@ -40,7 +40,6 @@
           </div>
       <!-- </div> -->
     </div>
-  <% else %>
   <% end %>
 <div class="container index-bottles-container">
   <div class="search-container">
