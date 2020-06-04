@@ -162,7 +162,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/19356/product/Harlan_C
 harlan.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 harlan.save!
 
-moraga = Bottle.new(appellation: "Moraga Bel Air", domain: "Moraga", vintage: "1998", color: "White", grape_variety: "Sauvignon Blanc", aroma: "Floral", characteristics: "Dry", country: "United States", region: "Los Angeles County", price_range: "158", description: "Un blanc typique du domaine qui tient toutes ses promesses. Il se présente avec beaucoup de caractère et possède une éclatante puissance en bouche.")
+moraga = Bottle.new(appellation: "Moraga Bel Air", domain: "Moraga", vintage: "1998", color: "White", grape_variety: "Sauvignon Blanc", aroma: "Floral", characteristics: "Dry", country: "United States", region: "Los Angeles County", price_range: "158", description: "A typical white of the estate which keeps all its promises. It presents itself with a lot of character and has a brilliant power on the palate.")
 file = URI.open("https://images.lavinia.fr/spree/products/14873/product/Moraga_Bel_Air_blanc_1998_11819.jpg?1459342777")
 moraga.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 moraga.save!
@@ -184,7 +184,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/18083/product/Chateau-
 brane_cantenac.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 brane_cantenac.save!
 
-la_lagune = Bottle.new(appellation: "Haut-Médoc", domain: "Château La Lagune", vintage: "2016", color: "Red", grape_variety: "Cabernet Sauvignon, Merlot, Petit Verdot", aroma: "Spicy", characteristics: "Structured", country: "France", region: "Bordeaux", price_range: "77", description: "Le cru a beaucoup gagné en pureté aromatique et en définition, tout en conservant un caractère qui lui est propre, dû au terroir de graves de Ludon, et d'un encépagement faisant appel à une bonne proportion de petit verdot.")
+la_lagune = Bottle.new(appellation: "Haut-Médoc", domain: "Château La Lagune", vintage: "2016", color: "Red", grape_variety: "Cabernet Sauvignon, Merlot, Petit Verdot", aroma: "Spicy", characteristics: "Structured", country: "France", region: "Bordeaux", price_range: "77", description: "This wine has gained a lot in aromatic purity and definition, while retaining its own character, due to the terroir of gravel from Ludon, and grape varieties using a good proportion of Petit Verdot.")
 file = URI.open("https://images.lavinia.fr/spree/products/18075/product/La-Lagune_Haut-Medoc_2016_71179.jpg?1490963332")
 la_lagune.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 la_lagune.save!
@@ -267,7 +267,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/23717/product/76501.jp
 wo.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 wo.save!
 
-stellen = Bottle.new(appellation: "Simonsberg Stellenbosch Wo ", domain: "Warwick", vintage: "2013", color: "Red", grape_variety: "Pinotage", aroma: "Spicy", characteristics: "Powerful", country: "South Africa", region: "Coastal Region", price_range: "28", description: "Three Cape Ladies est un vin rouge sud-african très généreux en saveurs fruitées et mentholées. La bouche se montre très pleine, pulpeuse, gorgée de fruit compoté et d’épice. La structure soutient joliment cette belle matière, en douceur, avec des tanins bien intégrés et ce qu’il faut de fraîcheur. Du caractère et beaucoup de plaisir !")
+stellen = Bottle.new(appellation: "Simonsberg Stellenbosch Wo ", domain: "Warwick", vintage: "2013", color: "Red", grape_variety: "Pinotage", aroma: "Spicy", characteristics: "Powerful", country: "South Africa", region: "Coastal Region", price_range: "28", description: "Three Cape Ladies is a very generous South African red wine with fruity and minty flavors. The mouth is full, luscious, full of stewed fruit and spice. The structure nicely supports this beautiful material, smoothly, with well-integrated tannins and freshness." )
 file = URI.open("https://images.lavinia.fr/spree/products/24683/product/95730(ok).JPG?1581690928")
 stellen.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 stellen.save!
