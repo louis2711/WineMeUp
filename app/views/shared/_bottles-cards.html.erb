@@ -29,7 +29,7 @@
   <div class="card-footer-country-year">
     <div class="card-footer-country">
       <% if bottle.region.present? %>
-        <p><%= bottle.region.upcase %></p>
+        <p><%= bottle.country.upcase %><span class="region-bottle"> (<%= bottle.region %>)</span></p>
       <% end %>
     </div>
     <div class="card-bottle-year">
