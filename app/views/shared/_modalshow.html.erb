@@ -1,14 +1,11 @@
 <div class="modal fade" id="bottleModal<%= bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Your reservation</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
       <div class="modal-body">
         <div class="container container-show-bottle">
+          <div class="link-back-bottles">
+            <%= submit_tag 'X', :type => :reset, :class => "btn-close-modal", "data-dismiss" => "modal", "aria-hidden" => "true" %>
+          </div>
           <div class="subcontainer-show-bottle">
             <% if bottle.photo.attached? %>
               <%= cl_image_tag bottle.photo.key, height: 400 %>
@@ -18,6 +15,7 @@
           </div>
           <div class="product-info">
             <div class="bottle-info">
+              <%= image_tag "Group.svg" %>
               <h1><%= bottle.domain %><%= bottle.label %></h1>
               <h2><%= bottle.appellation %><%= " - " %><%= bottle.region %></h2>
               <h3><%= bottle.vintage %></h3>
@@ -37,7 +35,13 @@
             </div>
             <div class="banner-content">
               <div class="show-buttons">
-                <%= link_to "< Back to Bottles", bottles_path, class: "btn_show" %>
+                <% if controller_name == 'bottles' %>
+                  <%= link_to "Add to my favorites", user_favorites_path(bottle_id:bottle.id), method: :post, class: "btn-red btn-favorites" %>
+                <% elsif controller_name == 'user_favorites' %>
+                  <%= link_to user_favorite_path(user_favorite), method: :delete do %>
+                    <i class="far fa-trash-alt"></i>
+                  <% end %>
+                <% end %>
               </div>
             </div>
           </div>

@@ -1,6 +1,11 @@
+.quiz-container {
+  margin-top: 10vh !important;
+}
+
 .form-quiz {
   // background: white;
-  margin-top: 58px;
+  padding: 150px;
+  margin-top: 150px;
   margin-bottom: 80px;
   padding: 20px;
   border-radius: 5px;
@@ -22,13 +27,14 @@
   }
   p {
     margin: 0 auto;
-    font-size: 35px;
+    font-size: 33px;
     font-weight: bold;
     text-align: center;
     width: 685px;
-    padding-left: 80px;
     margin-bottom: 40px;
-    font-family: "GingerOTF", "Ginger", "Garamond", sans-serif;
+    font-weight: 500;
+    color: rgb(40, 40, 40);
+    // font-family: "GingerOTF", "Ginger", "Garamond", sans-serif;
 
   }
   .form-check {
@@ -45,6 +51,23 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 20px 0;
+  // a {
+  //   color: rgb(40, 40, 40);
+  //   // opacity: 0.7;
+  //   // &:hover{
+  //   //   opacity: 1;
+  //   //   transition-duration: 0.2s;
+  //   // }
+  // }
+  // .arrow-back{
+  //   color: #B67A82;
+  //   font-weight: bolder;
+  //   // opacity: 0.7;
+  //   // &:hover{
+  //   //   opacity: 1;
+  //   //   transition-duration: 0.2s;
+  //   // }
+  // }
 }
 
 .grouped-choices .form-group {
@@ -64,11 +87,15 @@
   &:hover {
     opacity: 0.6;
     cursor: pointer;
+    color: white;
   }
   &.active {
   background: #B67A82;
   color: white;
   opacity: 1;
+  label{
+    color: white;
+  }
   }
 }
 
@@ -76,6 +103,7 @@
   display: block;
   vertical-align: center;
   margin-bottom: 0;
+  font-size: 23px;
 }
 
 .grouped-choices .form-group input {
@@ -84,9 +112,16 @@
 }
 
 .btn-submit-quiz {
+  // display: flex;
+  // justify-content: space-around;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+}
+
+#submit-button{
   display: flex;
   justify-content: space-around;
-  text-align: center;
 }
 
 .dependent-group {
@@ -122,3 +157,30 @@
     justify-content: space-between;
     width: 100%;
 }
+
+.nav-link-quiz-hide{
+  margin-top: 20px;
+  opacity: 0.8;
+  color: rgb(40, 40, 40);
+    // opacity: 0.7;
+    // &:hover{
+    //   opacity: 1;
+    //   transition-duration: 0.2s;
+    // }
+  .arrow-back{
+    color: #B67A82;
+    font-weight: bolder;
+    // opacity: 0.7;
+    // &:hover{
+    //   opacity: 1;
+    //   transition-duration: 0.2s;
+    // }
+  }
+  &:hover{
+    color: rgb(40, 40, 40);
+    opacity: 1;
+    transition-duration: 0.2s;
+  }
+}
+
+

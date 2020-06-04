@@ -15,15 +15,16 @@
   }
   h2 {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     color: #B67A82;
   }
   p {
-    font-size: 10px;
+    font-size: 12px;
     font-style: italic;
     color: rgb(30, 30, 30);
   }
   .card-bottle-index-img {
+    margin-top: 40px;
     display: flex;
     justify-content: space-around;
   }
@@ -51,6 +52,7 @@
     transition-duration: 0.2s;
   }
   .card-bottle-button{
+    float: right;
     height: 20px;
     margin-bottom: 15px;
   }
@@ -133,4 +135,58 @@
 
 .btn-submit-red{
   padding: 8px 22px;
+}
+
+.btn-searchbar{
+  padding: 6px 25px 6px;
+}
+
+.label-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+  input{
+    position: absolute;
+    // display: hidden;
+    // opacity: 0;
+    cursor: pointer;
+    // height: 0;
+    // width: 0;
+    left: 0px;
+    height: 20px;
+    width: 20px;
+    &:checked ~.checkmark{
+      background-color: #B67A82;
+      &:after{
+        // display: block;
+        // left: 9px;
+        // top: 5px;
+        // width: 5px;
+        // height: 10px;
+        // border: solid white;
+        // border-width: 0 3px 3px 0;
+        // -webkit-transform: rotate(45deg);
+        // -ms-transform: rotate(45deg);
+        // transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  &:checked{
+    content: "";
+    position: absolute;
+    display: none;
+    background-color: green;
+  }
 }

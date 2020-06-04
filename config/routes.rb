@@ -3,11 +3,12 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :bottles, only: [:index, :show] do
-  resources :feedbacks, only: [:create]
+    resources :feedbacks, only: [:create]
   end
 
   resources :user_answers, only: [:create]
   resources :user_profiles, only: [:create, :show]
+  resources :user_favorites, only: [:create, :index, :destroy]
 
   get 'quiz', to:'pages#quiz'
 

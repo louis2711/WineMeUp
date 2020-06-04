@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container quiz-container">
 
 
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col">
       <div class="container form-post form-quiz">
           <%= simple_form_for(@user_answer) do |f| %>
             <div class="tab-content" id="myTabContent">
@@ -22,14 +22,24 @@
                 <div class="grouped-choices management-question">
                   <p>Do you have a preference on how the wine is produced?</p>
                   <div class="grouped-choices">
-
-                    <% @production_types.each_with_index do |production_type, index| %>
-                      <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type, "data-toggle" => "tab", "data-target" => "#question_reason"}, label: production_type, wrapper_html: {class: "form-check"} %>
-                    <% end %>
-
+                     <% @production_types.each_with_index do |production_type, index| %>
+                        <% if index == 0 %>
+                          <span data-tooltip="tooltip" data-html="true" title="The <strong> organic </strong> cultivation of the grape means that the use of artificial chemicals such as pesticides, fungicides, herbicides, etc. is prohibited." data-placement="top">
+                            <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type, "data-toggle" => "tab", "data-target" => "#question_reason" }, label: production_type, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% elsif index == 1 %>
+                          <span data-tooltip="tooltip" data-html="true" title="<strong> vegan </strong> wines have no animal products, used in yeast or as a fining agent." data-placement="top">
+                            <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type, "data-toggle" => "tab", "data-target" => "#question_reason" }, label: production_type, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% else %>
+                          <span data-tooltip="tooltip" data-html="true" title="<strong> natural </strong> wine is often considered a return to basics, a wine stripped of all its additives, as it was done in the Middle Ages." data-placement="top">
+                            <%= f.input :question_vineyard_management, input_html: {type: :radio, id: "production_type-#{index}", value: production_type, "data-toggle" => "tab", "data-target" => "#question_reason" }, label: production_type, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% end %>
+                      <% end %>
                   </div>
                   <div class= "button-back">
-                    <a class="nav-link nav-link-quiz-hide" id="question_personnality-tab" data-toggle="tab" href="#question_personnality" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                    <a class="nav-link nav-link-quiz-hide" id="question_personnality-tab" data-toggle="tab" href="#question_personnality" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
                 </div>
                 </div>
               </div>
@@ -50,7 +60,7 @@
                     <%= f.input :question_reason, input_html: {type: :radio, id: "reason-#{index}", value: reason, "data-toggle" => "tab", "data-target" => "##{dependent}"}, label: reason, wrapper_html: {class: "form-check reasons", data: {dependent:dependent}} %>
                   <% end %>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_vineyard_management-tab" data-toggle="tab" href="#question_vineyard_management" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_vineyard_management-tab" data-toggle="tab" href="#question_vineyard_management" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question_exploration" role="tabpanel" aria-labelledby="question_exploration-tab">
@@ -71,7 +81,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="meals_list" role="tabpanel" aria-labelledby="meals_list-tab">
@@ -84,7 +94,7 @@
                   </div>
                 </div>
                 <div class= "button-back">
-                  <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                  <a class="nav-link nav-link-quiz-hide" id="question_reason-tab" data-toggle="tab" href="#question_reason" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
                 </div>
               </div>
 
@@ -97,7 +107,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="regions_list" role="tabpanel" aria-labelledby="regions_list-tab">
@@ -118,7 +128,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question-colour" role="tabpanel" aria-labelledby="question-colour-tab">
@@ -143,7 +153,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="aromas_list" role="tabpanel" aria-labelledby="aromas_list-tab">
@@ -151,12 +161,40 @@
                   <p>Which aroma?</p>
                   <div class="grouped-choices">
                     <% @aromas.each_with_index do |aroma, index| %>
-                      <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button"}, label: aroma, wrapper_html: {class: "form-check"} %>
+                            <% if index == 0 %>
+                          <span data-tooltip="tooltip" data-html="true" title="Some types of fruity wine include, reds like Syrah, Malbec and Lumbrusco and whites like Riesling or Pinot Grigio, and they are best served chilled." data-placement="top">
+                            <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% elsif index == 1 %>
+                          <span data-tooltip="tooltip" data-html="true" title="Herbal aromas and flavors are derived from varietal characteristics or winemaking processes, such as harvesting under-ripened grapes or using aggressive extraction techniques. Herbaceous describes the smell of lawn, trimmed hedges, grass cuttings and more." data-placement="top">
+                            <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% elsif index == 2 %>
+                          <span data-tooltip="tooltip" data-html="true" title="From the white blended wines of the northern Rhône to the Torrontés wines made in Argentina's high-altitude vineyards, this flavor profile ranges from lemon to rose and jasmine, and can often lead to great complexity." data-placement="top">
+                            <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% elsif index == 3 %>
+                          <span data-tooltip="tooltip" data-html="true" title="Certain red wines are elevated by the woody aromas added notably through ageing (maturing) in oak barrels. Do you particularly like these smokey hints and characteristic caramel and vanilla aromas?" data-placement="top">
+                            <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% elsif index == 4 %>
+                          <span data-tooltip="tooltip" data-html="true" title="The most typical example of spicy red, defined by fruity notes of black currant, raspberry, blackberry and violet, that can develop into pepper, tobacco, musk, truffle, liquorice, clove and cinnamon." data-placement="top">
+                            <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% elsif index == 5 %>
+                          <span data-tooltip="tooltip" data-html="true" title="Mineral notes can describe aroma or taste or both. Think of the taste of the sea that you get from crunchy sea salt or oysters. The smell of a sidewalk after it rains. Sometimes it’s like chalk—if you’ve ever stood next to a chalkboard, you know what I’m talking about." data-placement="top">
+                            <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% else %>
+                          <span data-tooltip="tooltip" data-html="true" title="Le vin <strong>naturel</strong> est souvent considéré comme un retour aux sources, un vin dépouillé de tous ses additifs, comme il se faisait au Moyen-Âge." data-placement="top">
+                            <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
+                          </span>
+                        <% end %>
                     <% end %>
                   </div>
                 </div>
                 <div class= "button-back">
-                  <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                  <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
                 </div>
               </div>
 
@@ -165,7 +203,7 @@
                   <%= f.input :vintage_range, label: "Select a year", collection: 1995...2020 %>
                 </div>
                 <div class= "button-back">
-                  <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                  <a class="nav-link nav-link-quiz-hide" id="question_exploration-tab" data-toggle="tab" href="#question_exploration" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
                   <a class="nav-link nav-link-quiz-hide" id="submit-button-tab" data-toggle="tab" href="#submit-button" role="tab" aria-controls="submit-button" aria-selected="false">Next</a>
                 </div>
               </div>
@@ -180,7 +218,7 @@
                   </div>
                 </div>
                 <div class= "button-back">
-                  <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                  <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
                 </div>
               </div>
 
@@ -194,7 +232,7 @@
                   </div>
                 </div>
                 <div class= "button-back">
-                  <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                  <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
                 </div>
               </div>
 
@@ -207,7 +245,7 @@
                       <% end %>
                     </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="regions_list-tab" data-toggle="tab" href="#regions_list" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_red" role="tabpanel" aria-labelledby="question_grape_red-tab">
@@ -219,7 +257,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_rose" role="tabpanel" aria-labelledby="question_grape_rose-tab">
@@ -231,7 +269,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_sweet" role="tabpanel" aria-labelledby="question_grape_sweet-tab">
@@ -243,7 +281,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_white" role="tabpanel" aria-labelledby="question_grape_white-tab">
@@ -255,7 +293,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question_grape_port" role="tabpanel" aria-labelledby="question_grape_port-tab">
@@ -267,7 +305,7 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
 
               <div class="tab-pane fade" id="question_sparkling_port" role="tabpanel" aria-labelledby="question_grape_sparkling-tab">
@@ -279,15 +317,14 @@
                     <% end %>
                   </div>
                 </div>
-                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false">Back</a>
+                <a class="nav-link nav-link-quiz-hide" id="question_colour-tab" data-toggle="tab" href="#question_colour" role="tab" aria-controls="contact" aria-selected="false"><span class="arrow-back"> < </span>Back</a>
               </div>
-
-             <div class= "container">
-               <h1>Click the button to see your match</h1>
-             </div>
               <div class="tab-pane fade" id="submit-button" role="tabpanel" aria-labelledby="submit-button-tab">
-                <div class="btn-submit-quiz">
-                  <%= f.button :submit, "Don", class: "btn" %>
+                <div class="btn-title-submit">
+                  <p>You finished the quiz !</h1>
+                  <div class="btn-submit-quiz">
+                    <%= f.button :submit, "See my selection of bottles", class: "btn btn-red btn-submit-quiz" %>
+                  </div>
                 </div>
               </div>
 
