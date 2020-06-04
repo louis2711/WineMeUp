@@ -162,27 +162,27 @@
                   <div class="grouped-choices">
                     <% @aromas.each_with_index do |aroma, index| %>
                             <% if index == 0 %>
-                          <span data-tooltip="tooltip" data-html="true" title="" data-placement="top">
+                          <span data-tooltip="tooltip" data-html="true" title="Some types of fruity wine include, reds like Syrah, Malbec and Lumbrusco and whites like Riesling or Pinot Grigio, and they are best served chilled." data-placement="top">
                             <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
                           </span>
                         <% elsif index == 1 %>
-                          <span data-tooltip="tooltip" data-html="true" title="Les vins <strong>vegan</strong> n'ont aucun produits d'origine animale, utilisé dans la levure ou encore en tant qu'agent de collage." data-placement="top">
+                          <span data-tooltip="tooltip" data-html="true" title="Herbal aromas and flavors are derived from varietal characteristics or winemaking processes, such as harvesting under-ripened grapes or using aggressive extraction techniques. Herbaceous describes the smell of lawn, trimmed hedges, grass cuttings and more." data-placement="top">
                             <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
                           </span>
                         <% elsif index == 2 %>
-                          <span data-tooltip="tooltip" data-html="true" title="Les vins <strong>vegan</strong> n'ont aucun produits d'origine animale, utilisé dans la levure ou encore en tant qu'agent de collage." data-placement="top">
+                          <span data-tooltip="tooltip" data-html="true" title="From the white blended wines of the northern Rhône to the Torrontés wines made in Argentina's high-altitude vineyards, this flavor profile ranges from lemon to rose and jasmine, and can often lead to great complexity." data-placement="top">
                             <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
                           </span>
                         <% elsif index == 3 %>
-                          <span data-tooltip="tooltip" data-html="true" title="Les vins <strong>vegan</strong> n'ont aucun produits d'origine animale, utilisé dans la levure ou encore en tant qu'agent de collage." data-placement="top">
+                          <span data-tooltip="tooltip" data-html="true" title="Certain red wines are elevated by the woody aromas added notably through ageing (maturing) in oak barrels. Do you particularly like these smokey hints and characteristic caramel and vanilla aromas?" data-placement="top">
                             <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
                           </span>
                         <% elsif index == 4 %>
-                          <span data-tooltip="tooltip" data-html="true" title="Les vins <strong>vegan</strong> n'ont aucun produits d'origine animale, utilisé dans la levure ou encore en tant qu'agent de collage." data-placement="top">
+                          <span data-tooltip="tooltip" data-html="true" title="The most typical example of spicy red, defined by fruity notes of black currant, raspberry, blackberry and violet, that can develop into pepper, tobacco, musk, truffle, liquorice, clove and cinnamon." data-placement="top">
                             <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
                           </span>
                         <% elsif index == 5 %>
-                          <span data-tooltip="tooltip" data-html="true" title="Les vins <strong>vegan</strong> n'ont aucun produits d'origine animale, utilisé dans la levure ou encore en tant qu'agent de collage." data-placement="top">
+                          <span data-tooltip="tooltip" data-html="true" title="Mineral notes can describe aroma or taste or both. Think of the taste of the sea that you get from crunchy sea salt or oysters. The smell of a sidewalk after it rains. Sometimes it’s like chalk—if you’ve ever stood next to a chalkboard, you know what I’m talking about." data-placement="top">
                             <%= f.input :aromas_list, input_html: {type: :radio, id: "aroma-#{index}", value: aroma, "data-toggle" => "tab", "data-target" => "#submit-button" }, label: aroma, wrapper_html: {class: "form-check"} %>
                           </span>
                         <% else %>
