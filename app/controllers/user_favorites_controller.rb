@@ -9,7 +9,7 @@ class UserFavoritesController < ApplicationController
     @user_favorite.user = current_user
     @user_favorite.bottle_id = params[:bottle_id]
     @user_favorite.save!
-    redirect_to bottles_path, :notice => 'Your bottle has been added to your favorite!'
+    redirect_back(fallback_location:bottles_path, notice: 'Your bottle has been added to your favorite!')
   end
 
   def destroy
