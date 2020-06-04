@@ -1,0 +1,92 @@
+.container {
+  padding-top: 30px;
+}
+
+.container-show-profile {
+  background-color: #B67A82;
+  margin-top: 75px;
+  color: white;
+  padding-bottom: 30px;
+}
+
+.user-preferences {
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.user-profile-color {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  &.rose {
+    background-color: $rose;
+  }
+  &.red {
+    background-color: $red;
+  }
+  &.white {
+    background-color: $white;
+  }
+  &.port {
+    background-color: $port;
+  }
+  &.sweet {
+    background-color: $sweet;
+  }
+  &.sparkling {
+    background-image: asset-url("profile-icon-sparkling.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.user-profile-aroma {
+  &.preference-icon{
+    object-fit: contain;
+  }
+}
+
+.user-preferences {
+
+  p {
+    margin-top: 16px;
+  }
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border: 2px solid white;
+}
+
+.preference-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.flat-bar {
+  width: 150px;
+  height: 2px;
+  border-top: 50px;
+  border-width: 50px;
+  background-color: white;
+}
+
+.card-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-around;
+}
+
+

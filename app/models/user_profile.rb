@@ -49,64 +49,74 @@ class UserProfile < ApplicationRecord
     end
     #create!(region: regions, user_id: answer.user_id)
 
-    if answer.america_list == "United States"
-      country = "United States"
-    elsif answer.america_list == "Chile"
-      country = "Chile"
-    elsif answer.america_list == "Argentina"
-      country = "Argentina"
-    else
-      country = ""
+    if !answer.america_list.blank?
+      country = answer.america_list
     end
+    if !answer.europe_list.blank?
+      country = answer.europe_list
+    end
+    if !answer.oceania_list.blank?
+      country = answer.oceania_list
+    end
+
+    # if answer.america_list == "United States"
+    #   country = "United States"
+    # elsif answer.america_list == "Chile"
+    #   country = "Chile"
+    # elsif answer.america_list == "Argentina"
+    #   country = "Argentina"
+    # else
+    #   country = ""
+    # end
 
     # if american_country
     #   create!(country: american_country, user_id: answer.user_id)
     # end
 
-
-    if answer.europe_list == "France"
-      country = "France"
-    elsif answer.europe_list == "Italy"
-      country = "Italy"
-    elsif answer.europe_list == "Spain"
-      country = "Spain"
-    elsif answer.europe_list == "Portugal"
-      country = "Portugal"
-    elsif answer.europe_list == "Switzerland"
-      country = "Switzerland"
-    elsif answer.europe_list == "Germany"
-      country = "Germany"
-    elsif answer.europe_list == "Greece"
-      country = "Greece"
-    else
-      country = ""
-    end
+    # if answer.europe_list == "France"
+    #   country = "France"
+    # elsif answer.europe_list == "Italy"
+    #   country = "Italy"
+    # elsif answer.europe_list == "Spain"
+    #   country = "Spain"
+    # elsif answer.europe_list == "Portugal"
+    #   country = "Portugal"
+    # elsif answer.europe_list == "Switzerland"
+    #   country = "Switzerland"
+    # elsif answer.europe_list == "Germany"
+    #   country = "Germany"
+    # elsif answer.europe_list == "Greece"
+    #   country = "Greece"
+    # else
+    #   country = ""
+    # end
     #create!(country: european_list, user_id: answer.user_id)
 
-    if answer.oceania_list == "Australia"
-      country = "Australia"
-    elsif answer.oceania_list == "New-Zealand"
-      country = "New-Zealand"
-    else
-      country = ""
-    end
+    # if answer.oceania_list == "Australia"
+    #   country = "Australia"
+    # elsif answer.oceania_list == "New-Zealand"
+    #   country = "New-Zealand"
+    # else
+    #   country = ""
+    # end
     #create!(country: oceanian_list, user_id: answer.user_id)
 
-    if answer.aromas_list == "Fruit flavors"
-      aromas = "Fruit flavors"
-    elsif answer.aromas_list == "Herbal"
-      aromas = "Herbal"
-    elsif answer.aromas_list == "Floral flavors"
-      aromas = "Floral flavors"
-    elsif answer.aromas_list == "Woody"
-      aromas = "Woody"
-    elsif answer.aromas_list == "Spicy"
-      aromas = "Spicy"
-    elsif answer.aromas_list == "Mineral"
-      aromas = "Mineral"
-    else
-      aromas = ""
-    end
+    aromas = answer.aromas_list
+    # if answer.aromas_list == "Fruity"
+    #   aromas = "Fruity"
+    # elsif answer.aromas_list == "Herbal"
+    #   aromas = "Herbal"
+    # elsif answer.aromas_list == "Floral"
+    #   aromas = "Floral"
+    # elsif answer.aromas_list == "Woody"
+    #   aromas = "Woody"
+    # elsif answer.aromas_list == "Spicy"
+    #   aromas = "Spicy"
+    # elsif answer.aromas_list == "Mineral"
+    #   aromas = "Mineral"
+    # else
+    #   aromas = ""
+    # end
     #create!(selected_aroma: aromas_list, user_id: answer.user_id)
 
     if answer.question_grape_red == "Cabernet Sauvignon"

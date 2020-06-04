@@ -38,6 +38,10 @@ class Bottle < ApplicationRecord
     end
     }
 
+
+  AROMAS = {fruity: "profile-icon-fruity", herbal: "profile-icon-herbal", floral: "profile-icon-flower", woody: "profile-icon-woody", spicy: "profile-icon-spicy", mineral: "profile-icon-mineral"}
+
+
   GRAPE_VARIETY = {
     red: ["Carbernet Sauvignon", "Pinot Noir", "Cabernet Franc", "Merlot", "Gamay", "Grenache", "Cinsault", "Malbec", "Sangiovese", "Syrah"],
     white: ["Sauvignon Blanc", "Chardonnay", "Chasselas", "Pinot Gris", "Chenin", "Riesling", "Viognier", "Semillon", "Trebbiano"],
@@ -47,4 +51,5 @@ class Bottle < ApplicationRecord
   }
 
   COLORS = ["red", "white", "rose", "sweet", "port", "sparkling"]
+
 end
