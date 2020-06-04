@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 
@@ -18,9 +18,10 @@
   justify-content: space-around;
 }
 
+
 .user-profile-color {
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -57,13 +58,14 @@
 .user-preferences {
 
   p {
-    margin-top: 16px;
+    margin-top: 10px;
+    margin-bottom: 0px;
   }
 }
 
 .avatar-preference-icon {
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
   background-color: white;
   border: 2px solid white;
   border-radius: 50%;
@@ -108,24 +110,25 @@
 }
 
 .user-profile-grape {
-  padding: 20px;
-  width: 120px;
-  height: 160px;
+  padding: 20px 50px;
+  width: 165px;
+  height: 163px;
 }
 
 .user-profile-aroma {
-  padding: 20px;
+  padding: 20px 50px;
 }
 
 .user-profile-color-container {
-  padding: 20px;
+  padding: 20px 50px;
 }
 
 .user-profile-meal {
-  padding: 20px;
+  padding: 20px 50px;
+  width: 165px;
 }
 
 .user-profile-management {
-  padding: 20px;
+  padding: 20px 50px;
 }
 
