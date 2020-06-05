@@ -224,7 +224,7 @@ file = URI.open("https://images.lavinia.fr/spree/products/22889/product/75834(ok
 della.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 della.save!
 
-dhjetë = Bottle.new(appellation: "Musto Carmelitano", domain: "Dhjetë", vintage: "2017", color: "White", grape_variety: "Muscat", aroma: "Fruity", characteristics: "Light", country: "Italy", region: "Basilicate", price_range: "11", description: "Dhjetë est un Moscato gourmand, vibrant et fruité. Cette cuvée séduit par ces fabuleux arômes de citron, d’abricot qui se poursuivent en bouche au travers de très fines bulles. Ses effluves d'orange vous emportent au pied du Mont Vultur. Une bulle parfaite pour s’évader.")
+dhjetë = Bottle.new(appellation: "Musto Carmelitano", domain: "Dhjetë", vintage: "2017", color: "White", grape_variety: "Muscat", aroma: "Fruity", characteristics: "Light", country: "Italy", region: "Basilicate", price_range: "11", description: "Dhjetë is a fruity and vibrant Moscato. This vintage has delicious apricot and lemon aromas that are revealed along with thin bubbles. Its after taste of orange makes you travel to Mount Vulture.")
 file = URI.open("https://images.lavinia.fr/spree/products/25160/product/1ITITB0036135(ok).jpg?1587123602")
 dhjetë.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 dhjetë.save!
