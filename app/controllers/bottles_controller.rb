@@ -11,7 +11,7 @@ class BottlesController < ApplicationController
       @varieties = Bottle::GRAPE_VARIETY.values.flatten.uniq
     end
     @colors = Bottle::COLORS
-    @answers = current_user.user_answers
+    @answers = current_user.user_answers if user_signed_in? && current_user.user_answers.exist?
   end
 
   def show
